@@ -1,0 +1,10 @@
+file: results/fire_dsl_baseline_e3_generalization_predictions.csv
+scored_rows: 600
+skipped_todo_rows: 0
+exact_dsl_match: 0.00%
+fenced_code_format: 65.17%
+python_parse_ok: 51.33%
+fire_dsl_executable: 26.17%
+format_error_rows: 209
+parse_error_rows: 292
+execution_error_rows: 443

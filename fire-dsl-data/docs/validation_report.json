@@ -1,0 +1,59 @@
+{
+  "package_version": "student-final-code-sft-with-ideas-augmentation",
+  "recommended_training_file": "train/fire_operator_dsl_sft_code.jsonl",
+  "recommended_eval_seen_file": "eval/fire_operator_dsl_eval_code_public.jsonl",
+  "recommended_eval_heldout_file": "eval/fire_operator_dsl_eval_code_generalization.jsonl",
+  "answer_format": "```dsl_fire\nresult = <DSL>\n```",
+  "record_counts": {
+    "pretrain_domain": 7262,
+    "pretrain_domain_ideas_augmented": 3754,
+    "sft_code_default": 10049,
+    "sft_code_ideas_augmented": 4049,
+    "sft_plain_auxiliary": 14049,
+    "sft_plain_ideas_augmented": 4049,
+    "sft_reasoning_short_optional": 8049,
+    "sft_reasoning_ideas_augmented": 4049,
+    "eval_code_public_seen": 2000,
+    "eval_code_generalization_heldout": 600
+  },
+  "validation_summary": {
+    "operator_count": 59,
+    "missing_operators": [],
+    "minimum_operator_coverage_required_in_references": 30,
+    "operators_below_minimum": {},
+    "forbidden_token_scan_passed": true,
+    "schema_error_files": {},
+    "format_error_files": {},
+    "dsl_reference_validation": {
+      "total_references": 46894,
+      "unique_dsl": 2284,
+      "syntax_failures": 0,
+      "execution_failures": 0,
+      "first_syntax": [],
+      "first_execution": []
+    },
+    "train_eval_overlap": {
+      "train_unique_dsl": 2044,
+      "public_unique_dsl": 1000,
+      "public_overlap_train": 1000,
+      "generalization_unique_dsl": 240,
+      "generalization_overlap_train": 0,
+      "generalization_overlap_public": 0
+    },
+    "field_coverage": {
+      "close": 888,
+      "industry": 163,
+      "vwap": 311,
+      "market_cap": 434,
+      "pb": 409,
+      "volume": 469,
+      "high": 120,
+      "low": 120,
+      "open": 203
+    },
+    "operator_coverage_min": 31,
+    "operator_coverage_max": 1624
+  },
+  "ideas_augmentation_note": "ideas(1).json rows are included through proxy mappings under the course field set. Rows mapping to held-out generalization DSL were removed from training files.",
+  "student_package_note": "DPO/RLAIF/RLVR and mixed-format files are excluded from this student package. Use the default code-block SFT file first."
+}

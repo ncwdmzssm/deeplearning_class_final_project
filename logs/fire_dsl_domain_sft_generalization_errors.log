@@ -1,0 +1,5 @@
+file: results/fire_dsl_domain_sft_generalization_predictions.csv
+semantic_mismatch: 214
+parse_error: 211
+execution_error: 120
+format_error: 55

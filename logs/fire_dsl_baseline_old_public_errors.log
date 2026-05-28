@@ -1,0 +1,6 @@
+file: results/fire_dsl_baseline_old_public_predictions.csv
+format_error: 1163
+parse_error: 368
+execution_error: 255
+semantic_mismatch: 166
+exact_match: 48

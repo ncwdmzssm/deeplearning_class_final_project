@@ -1,0 +1,5 @@
+file: results/fire_dsl_baseline_e3_generalization_predictions.csv
+format_error: 209
+semantic_mismatch: 146
+parse_error: 141
+execution_error: 104

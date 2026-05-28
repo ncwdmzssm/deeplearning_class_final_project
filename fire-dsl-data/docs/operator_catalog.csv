@@ -1,0 +1,60 @@
+﻿operator,description,source
+absolute,对输入信号逐元素取绝对值。,DVM Pack + FactorSearch
+add,对两个同类型信号或信号与常数逐元素相加。,DVM Pack + FactorSearch
+cbrt,对 Value 信号逐元素取立方根。,FactorSearch
+diff,计算时间窗口内的差分变化。,DVM Pack + FactorSearch
+div,对两个信号逐元素相除，常用于构造比值或比例因子。,DVM Pack + FactorSearch
+eq,判断两个输入是否逐元素相等，输出布尔条件信号。,DVM Pack + FactorSearch
+exp,对 Value 信号逐元素做指数变换。,FactorSearch
+ge,判断第一个输入是否逐元素大于等于第二个输入。,DVM Pack + FactorSearch
+group_mean,按类别分组计算均值或组内统计值。,FactorSearch
+group_std,按类别分组计算标准差或组内标准化统计。,DVM Pack + FactorSearch
+gt,判断第一个输入是否逐元素大于第二个输入。,DVM Pack + FactorSearch
+le,判断第一个输入是否逐元素小于等于第二个输入。,DVM Pack + FactorSearch
+log,对正值信号逐元素取自然对数。,DVM Pack + FactorSearch
+log10,对正值信号逐元素取以 10 为底的对数。,FactorSearch
+log1p,对输入逐元素计算 log(1 + x)，适合处理小幅变化或非负值。,FactorSearch
+logical_and,对两个布尔信号逐元素执行逻辑与。,DVM Pack + FactorSearch
+logical_not,对布尔信号逐元素取反。,FactorSearch
+logical_or,对两个布尔信号逐元素执行逻辑或。,DVM Pack + FactorSearch
+logical_xor,对两个布尔信号逐元素执行逻辑异或。,FactorSearch
+lt,判断第一个输入是否逐元素小于第二个输入。,DVM Pack + FactorSearch
+mask,根据布尔条件保留、替换或屏蔽对应位置的数值。,DVM Pack + FactorSearch
+maximum,对两个输入逐元素取较大值。,DVM Pack
+minimum,对两个输入逐元素取较小值。,DVM Pack
+mod,对两个同类型 Value 信号逐元素取模。,FactorSearch
+mul,对两个信号或信号与常数逐元素相乘。,DVM Pack + FactorSearch
+ne,判断两个输入是否逐元素不相等，输出布尔条件信号。,DVM Pack + FactorSearch
+neg,对输入信号逐元素取负。,DVM Pack + FactorSearch
+pct_change,计算时间窗口内的百分比变化或收益率。,DVM Pack + FactorSearch
+pos,提取输入信号的正向部分或正值变换。,FactorSearch
+power,对输入信号逐元素做幂运算。,DVM Pack + FactorSearch
+recip,对输入信号逐元素取倒数。,FactorSearch
+shift,将时间序列信号按窗口或步长滞后，用于引用历史值。,DVM Pack + FactorSearch
+sign,对输入信号逐元素取符号。,FactorSearch
+sqrt,对非负 Value 信号逐元素取平方根。,DVM Pack + FactorSearch
+square,对输入信号逐元素平方。,FactorSearch
+sub,对两个信号或信号与常数逐元素相减。,DVM Pack + FactorSearch
+ts_argmax,在时间窗口内寻找最大值对应的位置或序号。,FactorSearch
+ts_argmaxmin,在时间窗口内比较最大值与最小值位置关系或相关序号统计。,FactorSearch
+ts_argmin,在时间窗口内寻找最小值对应的位置或序号。,FactorSearch
+ts_corr,在时间窗口内计算两个信号的滚动相关性。,FactorSearch
+ts_last,取时间窗口内最后一个有效观测值。,FactorSearch
+ts_max,计算时间窗口内的滚动最大值。,FactorSearch
+ts_mean,计算时间窗口内均值，也可用于分钟数据聚合到日频。,DVM Pack + FactorSearch
+ts_min,计算时间窗口内的滚动最小值。,DVM Pack + FactorSearch
+ts_prod,计算时间窗口内的滚动乘积。,FactorSearch
+ts_quantile,计算时间窗口内的滚动分位数。,FactorSearch
+ts_reg_res,在时间窗口内做滚动回归并输出残差。,FactorSearch
+ts_std,计算时间窗口内的滚动标准差。,DVM Pack + FactorSearch
+ts_sum,计算时间窗口内求和，也可用于分钟数据聚合到日频。,DVM Pack + FactorSearch
+ts_var,计算时间窗口内的滚动方差。,FactorSearch
+ts_win_cumsum,在分钟窗口内做累计求和，并可桥接输出到日频。,FactorSearch
+where,根据布尔条件在两个候选值之间逐元素选择。,DVM Pack + FactorSearch
+xs_corr,在横截面上计算两个信号之间的相关性。,FactorSearch
+xs_mean,按日期做横截面均值聚合。,DVM Pack + FactorSearch
+xs_median,按日期做横截面中位数聚合。,FactorSearch
+xs_prod,按日期做横截面乘积聚合。,FactorSearch
+xs_quantile,按日期做横截面分位数聚合。,FactorSearch
+xs_std,按日期做横截面标准差聚合。,DVM Pack + FactorSearch
+xs_sum,按日期做横截面求和聚合。,FactorSearch

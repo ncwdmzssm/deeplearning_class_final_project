@@ -1,0 +1,5 @@
+file: results/fire_dsl_baseline_old_generalization_predictions.csv
+parse_error: 173
+format_error: 157
+execution_error: 138
+semantic_mismatch: 132

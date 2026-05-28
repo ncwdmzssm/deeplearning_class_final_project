@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# large model weights
+*.pth
+*.pt
+*.bin
+*.safetensors
+
+# optional runtime caches
+.cache/
+wandb/
+runs/
+minimind/
