@@ -1,0 +1,422 @@
+{
+  "source_file": "ideas(1).json",
+  "source_nodes": 611,
+  "source_ideas": 4765,
+  "mapped_rows": 4049,
+  "skipped_rows": 698,
+  "default_sft_appended": 4049,
+  "plain_sft_appended": 4049,
+  "reasoning_sft_appended": 4049,
+  "pretrain_appended": 3754,
+  "mapping_policy": "Only course fields are used. Ideas requiring unavailable market index, fundamentals, news, options, order-book, or analyst data are either skipped or mapped to an explicit price/volume/value/size/industry proxy.",
+  "skipped_examples": [
+    {
+      "node_id": "factor_taxonomy.trend.absolute_trend.moving_average_structure_trend.dual_ma_trend",
+      "node_key": "dual_ma_trend",
+      "node_name": "双均线趋势",
+      "idea_id": "863f5c5b7a5e463785b81f3dc664baf4",
+      "mapping": "unsupported_external_data",
+      "text": "Create a dual moving-average slope-confirmation factor by multiplying the sign of the short-minus-long moving-average spread by the slope of the long moving average over a recent period. The mechanism requires both local and broader trend agreement: a bulli..."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.absolute_trend.path_accumulation_trend.cumulative_nav_path_trend",
+      "node_key": "cumulative_nav_path_trend",
+      "node_name": "累积净值路径趋势",
+      "idea_id": "6e8b95b836e94b7e96d180de70bb94f6",
+      "mapping": "unsupported_external_data",
+      "text": "Build a directional-consistency factor from the sign persistence of first differences in cumulative NAV. From the cumulative NAV series, calculate period-to-period NAV changes, then estimate the proportion of changes that share the same sign as the window’s..."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.relative_trend.industry_relative_trend.within_industry_ranking_persistence",
+      "node_key": "within_industry_ranking_persistence",
+      "node_name": "行业中排序持续性",
+      "idea_id": "6660da3d91fc4adfbfdfad64358845e8",
+      "mapping": "unsupported_external_data",
+      "text": "Build a pairwise win-persistence factor that decomposes within-industry ranking into repeated head-to-head contests. For each stock and each date, compare its trend signal with every other stock in the same industry and record a binary win or loss for each..."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.relative_trend.cross_sectional_trend.ranking_change_trend",
+      "node_key": "ranking_change_trend",
+      "node_name": "排名变化趋势",
+      "idea_id": "db9eb36f1db149238ad3828d62b107ac",
+      "mapping": "unsupported_external_data",
+      "text": "Construct a factor that detects sector-relative rank migration net of industry crowding. On each date, first compute the stock’s cross-sectional rank on a base signal within the full universe, then compute the stock’s rank within its own industry or sector...."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.relative_trend.multi_reference_relative_trend.market_and_industry_dual_reference",
+      "node_key": "market_and_industry_dual_reference",
+      "node_name": "市场+行业双参照",
+      "idea_id": "1246fc4258174a12b8d6770e98e596ac",
+      "mapping": "unsupported_external_data",
+      "text": "Construct a dual-reference relative drawdown containment factor that rewards stocks whose ongoing trend suffers less deterioration than both the market and the industry during recent adverse phases. Over a rolling window, compute each series’ pathwise drawd..."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.residual_trend.dynamic_residual_trend.rolling_regression_residual_trend",
+      "node_key": "rolling_regression_residual_trend",
+      "node_name": "滚动回归残差趋势",
+      "idea_id": "094276b2e9d64d5dbf8257c92c9bf2ad",
+      "mapping": "unsupported_external_data",
+      "text": "Define a factor based on cross-horizon consistency of rolling regression residual trends. For each stock, estimate residuals from a rolling factor model, then compute both a short-horizon residual trend slope and a longer-horizon residual trend slope from t..."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.trend_stability.robustness.stable_across_windows",
+      "node_key": "stable_across_windows",
+      "node_name": "多窗口下稳定",
+      "idea_id": "6756484e31f74cdd9848af85a3eeb8cf",
+      "mapping": "unsupported_external_data",
+      "text": "Create a multi-resolution trend vote factor using standardized momentum scores computed over several windows and transformed into comparable z-scores within each date's cross section. For each asset, count the share of windows where the standardized momentu..."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.trend_acceleration.turning_point_detection.acceleration_to_deceleration",
+      "node_key": "acceleration_to_deceleration",
+      "node_name": "加速转减速",
+      "idea_id": "234a26a5a4554f489ccb83f6b6db3adc",
+      "mapping": "unsupported_external_data",
+      "text": "Construct a turning-point factor from the ratio between short-horizon momentum and the change in that momentum, treating acceleration-to-deceleration as a state where momentum remains positive but its derivative turns negative. The factor should reward asse..."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.trend_acceleration.multi_scale_acceleration.high_to_low_freq_transmission",
+      "node_key": "high_to_low_freq_transmission",
+      "node_name": "高频向低频传导",
+      "idea_id": "d7f8f6b0fcdb46b0aba2e38d4de6784e",
+      "mapping": "unsupported_external_data",
+      "text": "Define a factor using the transmission of high-frequency drawdown recovery behavior into low-frequency trend renewal. At the intraday level, identify local adverse excursions against the prevailing short-horizon move and measure how quickly and completely t..."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.trend_consistency.dimension_consistency.stock_and_group_trend_agree",
+      "node_key": "stock_and_group_trend_agree",
+      "node_name": "个股趋势与所属组别趋势一致",
+      "idea_id": "8653ea63f3194b9097bc9fab24653c53",
+      "mapping": "unsupported_external_data",
+      "text": "Build a rank-trend agreement factor by comparing the stock’s cross-sectional percentile rank within its group on recent performance to the group’s own percentile rank versus the broader market or sector hierarchy, then rewarding cases where both ranks imply..."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.trend_consistency.dimension_consistency.stock_and_group_trend_agree",
+      "node_key": "stock_and_group_trend_agree",
+      "node_name": "个股趋势与所属组别趋势一致",
+      "idea_id": "fcbc41874cb840b1a71b15a8f50f1dcc",
+      "mapping": "unsupported_external_data",
+      "text": "Construct a participation breadth factor at the stock level by measuring whether the stock’s trend direction matches the majority trend direction of peer stocks inside its group, with the majority direction itself summarized as the group trend. The factor c..."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.trend_consistency.signal_vote_consistency.weighted_consistency",
+      "node_key": "weighted_consistency",
+      "node_name": "加权一致性",
+      "idea_id": "f9b1f81e12c54af0a6004e4b3cdff495",
+      "mapping": "unsupported_external_data",
+      "text": "Define a persistence-weighted consistency factor where each trend rule contributes a directional vote whose weight depends on how long that rule has continuously maintained the same sign without reversal. For each constituent signal, compute a run-length or..."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.trend_consistency.signal_vote_consistency.weighted_consistency",
+      "node_key": "weighted_consistency",
+      "node_name": "加权一致性",
+      "idea_id": "a63d0dfe0f054dceb0d21b7ad3972ace",
+      "mapping": "unsupported_external_data",
+      "text": "Create a correlation-debiased weighted vote factor by first generating several directional trend signals and then down-weighting signals that are highly redundant with other active signals, using recent pairwise correlation or mutual similarity of their his..."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.trend_crowdedness.sentiment_crowded_trend.high_attention_trend",
+      "node_key": "high_attention_trend",
+      "node_name": "高关注度趋势",
+      "idea_id": "dd14a731dd5e4d6eb5520dd1ef9baa83",
+      "mapping": "unsupported_external_data",
+      "text": "Build a factor that measures retail-dominant attention embedded in a trend. Estimate recent trend direction and magnitude, then decompose attention into retail-oriented and institutional-oriented proxies, for example social-media mentions, mobile-search act..."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.trend_crowdedness.sentiment_crowded_trend.hot_theme_trend",
+      "node_key": "hot_theme_trend",
+      "node_name": "热门题材趋势",
+      "idea_id": "27a7017da0534fbe8e2478e981b0a731",
+      "mapping": "unsupported_external_data",
+      "text": "Construct a stock-level hot-theme trend factor by first mapping each stock to one or more market themes using concept-board or topic-tag classifications, then computing for each theme the recent acceleration in cross-sectional capital concentration, defined..."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.trend_crowdedness.sentiment_crowded_trend.narrative_driven_trend",
+      "node_key": "narrative_driven_trend",
+      "node_name": "叙事驱动趋势",
+      "idea_id": "02adcb7140244ccb93aac908142b0dc2",
+      "mapping": "unsupported_external_data",
+      "text": "Design a narrative-to-fundamental divergence factor that measures how much the dominant public story implies future growth or transformation that is not yet corroborated by hard operating evidence. Use text extraction to quantify the intensity of themes suc..."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.trend_crowdedness.sentiment_crowded_trend.narrative_driven_trend",
+      "node_key": "narrative_driven_trend",
+      "node_name": "叙事驱动趋势",
+      "idea_id": "dcc08f56326e4b4683afb9dda820b327",
+      "mapping": "unsupported_external_data",
+      "text": "Build a narrative sentiment skew factor that captures cases where the bullishness of discussion is extreme relative to informational richness. Use text models to estimate both sentiment and specificity for each mention, where specificity distinguishes concr..."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.trend_crowdedness.fragile_crowded_trend.crowding_prone_to_reflexive_break",
+      "node_key": "crowding_prone_to_reflexive_break",
+      "node_name": "拥挤后易反身破裂趋势",
+      "idea_id": "67d4b9dc6a45435bb17d64671f146226",
+      "mapping": "unsupported_external_data",
+      "text": "Build a factor from trend narrowing and failed breadth confirmation within a stock’s related ecosystem, such as industry peers, supply-chain links, or thematic constituents. Measure whether the asset has continued making strong gains while the fraction of r..."
+    },
+    {
+      "node_id": "factor_taxonomy.trend.trend_crowdedness.fragile_crowded_trend.crowding_prone_to_reflexive_break",
+      "node_key": "crowding_prone_to_reflexive_break",
+      "node_name": "拥挤后易反身破裂趋势",
+      "idea_id": "1f0bddbc8fb141c8b413d78dec022e5b",
+      "mapping": "unsupported_external_data",
+      "text": "Create a factor based on reversal sensitivity to small negative surprises after a crowded ascent by estimating asymmetric downside convexity conditional on prior trend strength. Measure the asset’s average reaction to modest market, sector, macro, or news-r..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.medium_term_mean_reversion.long_ma_deviation_repair.deviation_from_long_ma",
+      "node_key": "deviation_from_long_ma",
+      "node_name": "相对长期均线偏离",
+      "idea_id": "19aa753172424984a56d1a9e886d085b",
+      "mapping": "unsupported_external_data",
+      "text": "Create a long-MA repair breadth factor using cross-sectional crowding in deviations. On each date, compute each stock’s signed percentage distance from its long moving average and also the cross-sectional average and dispersion of those distances within its..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.sentiment_overheat_reversal.over_optimism_reversal.hot_theme_chasing_fade",
+      "node_key": "hot_theme_chasing_fade",
+      "node_name": "热点追涨回落",
+      "idea_id": "e18691f8daa24515b74ae0c1d9b19e65",
+      "mapping": "unsupported_external_data",
+      "text": "Build a cross-theme migration exhaustion factor by detecting stocks that become new recipients of speculative capital rotating out of previously crowded themes into an emerging hot theme. Measure whether the stock belongs to a concept whose attention, turno..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.sentiment_overheat_reversal.over_pessimism_reversal.sentiment_bottom_rebound",
+      "node_key": "sentiment_bottom_rebound",
+      "node_name": "情绪冰点反弹",
+      "idea_id": "0c41210754e248ff9e8fe544081074fe",
+      "mapping": "unsupported_external_data",
+      "text": "Build a factor around insider or strategic-holder contrarian activity after public pessimism extremes. Detect stocks with recent sentiment-bottom conditions using sharp drawdown, elevated negative coverage, and poor retail engagement tone. Among them, score..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.sentiment_overheat_reversal.consecutive_extreme_behavior_reversal.limit_up_streak_fade",
+      "node_key": "limit_up_streak_fade",
+      "node_name": "连板后回落",
+      "idea_id": "1ae6f7291eaf4002a2d1eec1eb6c632d",
+      "mapping": "unsupported_external_data",
+      "text": "Define a failed-seal factor that measures repeated inability to maintain upper-limit conditions after a limit-up streak. After identifying the streak, track on the next trading day how often the stock trades near or at the daily upper bound, how long it sta..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.sentiment_overheat_reversal.consecutive_extreme_behavior_reversal.limit_up_streak_fade",
+      "node_key": "limit_up_streak_fade",
+      "node_name": "连板后回落",
+      "idea_id": "6ade4a9e7fca41ea91cfcffaed93ad9a",
+      "mapping": "unsupported_external_data",
+      "text": "Create an abnormal turnover release factor by comparing turnover during the first pullback day after a limit-up streak with the average turnover during the streak itself, while also conditioning on weak closing behavior. The hypothesis is that a sharp surge..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.sentiment_overheat_reversal.consecutive_extreme_behavior_reversal.limit_up_streak_fade",
+      "node_key": "limit_up_streak_fade",
+      "node_name": "连板后回落",
+      "idea_id": "00492fb872dd4940abc513dc2da0be8c",
+      "mapping": "unsupported_external_data",
+      "text": "Build a leader-to-laggard decoupling factor by identifying stocks that completed a limit-up streak while belonging to a hot thematic cluster, then measuring whether the stock underperforms both its sector or concept peers and the equal-weighted basket of re..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.sentiment_overheat_reversal.consecutive_extreme_behavior_reversal.limit_up_streak_fade",
+      "node_key": "limit_up_streak_fade",
+      "node_name": "连板后回落",
+      "idea_id": "45153193a8714c41b9143329196fec27",
+      "mapping": "unsupported_external_data",
+      "text": "Create a capital-trap factor based on the quality of breakout retention after a limit-up streak. Compute the distance between the first post-streak close and key reference levels formed during the streak, such as the previous limit-up close average or the b..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.sentiment_overheat_reversal.consecutive_extreme_behavior_reversal.consecutive_big_drop_repair",
+      "node_key": "consecutive_big_drop_repair",
+      "node_name": "连续大跌后修复",
+      "idea_id": "824d89acda16486f87d33aed081bb3ea",
+      "mapping": "unsupported_external_data",
+      "text": "Define a gap-exhaustion reversal factor for stocks that have undergone consecutive big down days, then examine the next session’s opening gap relative to the previous close and intraday recovery from that open. The signal is strongest when the stock opens w..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.sentiment_overheat_reversal.consecutive_extreme_behavior_reversal.consecutive_big_drop_repair",
+      "node_key": "consecutive_big_drop_repair",
+      "node_name": "连续大跌后修复",
+      "idea_id": "ca21a8376c16485b9545a5fdf46bd553",
+      "mapping": "unsupported_external_data",
+      "text": "Build a downside acceleration exhaustion factor using the shape of the consecutive decline itself. Within a multi-day big-drop sequence, compute whether each successive day contributes less incremental downside than the previous day after adjusting for vola..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.sentiment_overheat_reversal.consecutive_extreme_behavior_reversal.consecutive_big_drop_repair",
+      "node_key": "consecutive_big_drop_repair",
+      "node_name": "连续大跌后修复",
+      "idea_id": "d88a826a8a774afbaa8fde8a67440133",
+      "mapping": "unsupported_external_data",
+      "text": "Build a breadth-confirmed individual repair factor that combines stock-specific consecutive big drops with subsequent improvement in local peer behavior. After identifying a stock’s serial sharp decline, measure not only its own rebound but also whether oth..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.sentiment_overheat_reversal.over_consensus_sentiment_reversal.narrative_overheat_reversal",
+      "node_key": "narrative_overheat_reversal",
+      "node_name": "叙事过热反转",
+      "idea_id": "ee4152f5320343e3b08d53995a79877b",
+      "mapping": "unsupported_external_data",
+      "text": "Construct a narrative overheat reversal factor by identifying stocks whose recent news and social-media text are unusually concentrated in a single hot theme while contemporaneous fundamental disclosures remain sparse. Measure topic concentration with a rol..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.sentiment_overheat_reversal.over_consensus_sentiment_reversal.narrative_overheat_reversal",
+      "node_key": "narrative_overheat_reversal",
+      "node_name": "叙事过热反转",
+      "idea_id": "98452300acce4d4b8997657ecc82da92",
+      "mapping": "unsupported_external_data",
+      "text": "Define a cross-source disagreement overheat factor that captures when the same bullish narrative is embraced by retail-facing channels but not by information-dense institutional channels. Compute sentiment and topic exposure separately from retail social me..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.sentiment_overheat_reversal.over_consensus_sentiment_reversal.narrative_overheat_reversal",
+      "node_key": "narrative_overheat_reversal",
+      "node_name": "叙事过热反转",
+      "idea_id": "ede18ac36beb471c8015bb943603b5e2",
+      "mapping": "unsupported_external_data",
+      "text": "Define an identity overheat reversal factor based on the extent to which a stock is discussed through category labels and symbolic narratives rather than company-specific economics. Measure the fraction of mentions that refer to broad identity tags such as..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.sentiment_overheat_reversal.over_consensus_sentiment_reversal.narrative_overheat_reversal",
+      "node_key": "narrative_overheat_reversal",
+      "node_name": "叙事过热反转",
+      "idea_id": "f778f63806a14847a347658dd2f1d789",
+      "mapping": "unsupported_external_data",
+      "text": "Create a narrative crowding factor from co-mention centrality within a dynamic text network. Build a graph where edges connect stocks frequently mentioned together in the same hot theme, estimate each stock’s centrality within currently trending narrative c..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.deviation_reversal.cross_sectional_deviation.deviation_from_group_median",
+      "node_key": "deviation_from_group_median",
+      "node_name": "偏离组内中位数",
+      "idea_id": "d81f98f0b5084c48ab7c78d3f3384fad",
+      "mapping": "unsupported_external_data",
+      "text": "Construct an analyst-expectation reversal factor by grouping stocks by industry and market-cap segment, measuring the recent change in analyst earnings revisions or recommendation sentiment for each stock, and comparing it to the median revision change of t..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.post_event_repair_reversal.post_gap_event_repair",
+      "node_key": "post_gap_event_repair",
+      "node_name": "跳空事件后修复",
+      "idea_id": "c6c1f1148b0a4dd7af6d6cb6ba81fc99",
+      "mapping": "unsupported_external_data",
+      "text": "Create a market-decoupled gap repair factor that isolates stock-specific repair from broader index reversal. After a stock gaps, estimate how much of its subsequent repair can be explained by the repair of the sector or market index over the same horizon, u..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.post_event_repair_reversal.event_mispricing_repair",
+      "node_key": "event_mispricing_repair",
+      "node_name": "事件误定价修复",
+      "idea_id": "2baa234b49384679af31fc19a0ae9c19",
+      "mapping": "unsupported_external_data",
+      "text": "Design a litigation or regulatory headline repair factor by flagging major legal, investigation, or enforcement announcements and quantifying the event-day collapse relative to ex ante exposure inferred from text similarity to prior cases, balance-sheet leg..."
+    },
+    {
+      "node_id": "factor_taxonomy.reversal.structural_reversal.funding_crowding_reversal",
+      "node_key": "funding_crowding_reversal",
+      "node_name": "资金拥挤反转",
+      "idea_id": "f1d3c2f66ac747c79c0fdd41192f28e7",
+      "mapping": "unsupported_external_data",
+      "text": "Create a crowding-reversal signal from ETF and thematic basket transmission by detecting stocks that have risen mainly because they are heavily owned by hot funds receiving large subscriptions rather than because of stock-specific information. Estimate each..."
+    },
+    {
+      "node_id": "factor_taxonomy.risk.total_volatility.range_based_volatility",
+      "node_key": "range_based_volatility",
+      "node_name": "区间波动",
+      "idea_id": "fb267a16766642e28b267989a7fc642c",
+      "mapping": "unsupported_external_data",
+      "text": "Construct a normalized intraday range factor by computing, for each day, the log high-to-low range divided by the absolute overnight gap measured from previous close to current open, then averaging this ratio over a rolling window. The mechanism targets sto..."
+    },
+    {
+      "node_id": "factor_taxonomy.risk.total_volatility.range_based_volatility",
+      "node_key": "range_based_volatility",
+      "node_name": "区间波动",
+      "idea_id": "d68113aec2f14dc1b970b03b5678cf23",
+      "mapping": "unsupported_external_data",
+      "text": "Form a range asymmetry factor by computing separate upward excursion and downward excursion components, such as high relative to the higher of open and close and low relative to the lower of open and close, then taking their difference or ratio after standa..."
+    },
+    {
+      "node_id": "factor_taxonomy.risk.idiosyncratic_volatility.idiosyncratic_volatility_stability",
+      "node_key": "idiosyncratic_volatility_stability",
+      "node_name": "特质波动稳定性",
+      "idea_id": "8eed461a1bf84137a7f85748f25710b7",
+      "mapping": "unsupported_external_data",
+      "text": "Define an event-insensitivity factor by identifying broad market stress days and firm-specific announcement days, computing each stock’s residual-based idiosyncratic volatility before and after those events, and measuring how consistently the stock maintain..."
+    },
+    {
+      "node_id": "factor_taxonomy.risk.volatility_change.rising_volatility",
+      "node_key": "rising_volatility",
+      "node_name": "波动上升",
+      "idea_id": "f9d1aff58935400b851f975b81bbb121",
+      "mapping": "unsupported_external_data",
+      "text": "Design an options-linked rising-volatility factor by comparing the change in implied volatility to the change in realized volatility and focusing on assets where both are moving upward together. Compute the recent time-series increase in at-the-money implie..."
+    },
+    {
+      "node_id": "factor_taxonomy.risk.volatility_change.shrinking_volatility",
+      "node_key": "shrinking_volatility",
+      "node_name": "波动收缩",
+      "idea_id": "04e8f7f79f654a4492b4fa550b9a8f9c",
+      "mapping": "unsupported_external_data",
+      "text": "Define a factor based on the reduction of cross-horizon volatility disagreement, motivated by the idea that shrinking volatility often coincides with convergence of short-, medium-, and slightly longer-term risk estimates. Estimate realized volatility over..."
+    },
+    {
+      "node_id": "factor_taxonomy.risk.volatility_change.volatility_jump",
+      "node_key": "volatility_jump",
+      "node_name": "波动跳变",
+      "idea_id": "4862775ad2cb401d8afb14ad20ba6271",
+      "mapping": "unsupported_external_data",
+      "text": "Define a volatility-of-volatility jump factor by measuring abrupt day-to-day changes in realized volatility itself, using the absolute or squared innovation of daily realized volatility relative to a forecasting model based on its recent autoregressive patt..."
+    },
+    {
+      "node_id": "factor_taxonomy.risk.volatility_change.volatility_regime_switch",
+      "node_key": "volatility_regime_switch",
+      "node_name": "波动 regime 切换",
+      "idea_id": "9e4211bddca743f7b601eb936c7fb621",
+      "mapping": "unsupported_external_data",
+      "text": "Create a volatility regime-switch factor using the ratio between short-horizon realized volatility and the asset’s own long-horizon variance forecast error. First generate a baseline conditional variance forecast from a standard volatility model, then measu..."
+    },
+    {
+      "node_id": "factor_taxonomy.risk.volatility_change.volatility_regime_switch",
+      "node_key": "volatility_regime_switch",
+      "node_name": "波动 regime 切换",
+      "idea_id": "1d941427d1f74640abe5d3168ee53875",
+      "mapping": "unsupported_external_data",
+      "text": "Construct a term-structure-based volatility regime-switch factor by comparing near-term implied volatility with longer-dated implied volatility and testing whether the slope has shifted relative to the asset’s own realized-volatility regime. A strongly inve..."
+    },
+    {
+      "node_id": "factor_taxonomy.risk.risk_exposure.market_risk_exposure",
+      "node_key": "market_risk_exposure",
+      "node_name": "市场风险暴露",
+      "idea_id": "6b5cadb35bea436f8295d9d3b3d380bc",
+      "mapping": "unsupported_external_data",
+      "text": "Build a dynamic beta instability factor by estimating rolling market beta over multiple overlapping subperiods and then measuring the time-series variability, trend, or mean absolute change of those beta estimates. The factor is high for stocks whose market..."
+    },
+    {
+      "node_id": "factor_taxonomy.risk.risk_exposure.industry_risk_exposure",
+      "node_key": "industry_risk_exposure",
+      "node_name": "行业风险暴露",
+      "idea_id": "395596b8ffae42b7b41eda4b927cd37b",
+      "mapping": "unsupported_external_data",
+      "text": "Build a factor from supply-chain implied industry exposure by linking each firm’s disclosed major customers and suppliers to their industry classifications, then computing the revenue-weighted customer industry concentration and cost-weighted supplier indus..."
+    },
+    {
+      "node_id": "factor_taxonomy.risk.risk_exposure.industry_risk_exposure",
+      "node_key": "industry_risk_exposure",
+      "node_name": "行业风险暴露",
+      "idea_id": "ec168dd7b3024cb89dc6283ac32824d8",
+      "mapping": "unsupported_external_data",
+      "text": "Create a text-based hidden industry exposure factor using management discussion, business description, and segment-report disclosures to extract the frequency and intensity of references to end-markets or applications associated with specific industries. Ma..."
+    },
+    {
+      "node_id": "factor_taxonomy.risk.risk_exposure.industry_risk_exposure",
+      "node_key": "industry_risk_exposure",
+      "node_name": "行业风险暴露",
+      "idea_id": "84afb260be2e402fb4abad03e51526a9",
+      "mapping": "unsupported_external_data",
+      "text": "Build a geographic-industry interaction exposure factor by combining each firm’s regional revenue distribution with region-level industry activity weights, such as local dependence on construction, autos, semiconductors, or real estate. For each firm, compu..."
+    },
+    {
+      "node_id": "factor_taxonomy.risk.risk_exposure.industry_risk_exposure",
+      "node_key": "industry_risk_exposure",
+      "node_name": "行业风险暴露",
+      "idea_id": "0cfbccbb14264673b66f965e1e6277f6",
+      "mapping": "unsupported_external_data",
+      "text": "Create a balance-sheet-based industry dependency factor by measuring the share of assets, receivables, inventories, and contract assets that are specifically tied to counterparties or projects in certain industries, using note disclosures, segment data, and..."
+    }
+  ],
+  "removed_for_heldout_decontamination": {
+    "dsl": "pct_change(close, 120)",
+    "code_rows": 18,
+    "plain_rows": 18,
+    "reasoning_rows": 18,
+    "pretrain_rows": 313,
+    "reason": "This proxy DSL overlapped with the held-out generalization eval split."
+  }
+}

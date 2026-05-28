@@ -1,0 +1,6 @@
+question,expected,prediction,manual_score,notes
+"请生成过去20日收益率标准差的 DSL。","ts_std(returns, 20)","TODO","TODO","TODO"
+"解释 rank(close) 的含义。","rank(close) 表示对收盘价做横截面排序，用来比较股票之间收盘价的相对大小。","TODO","TODO","TODO"
+"把“过去10日成交量均值”转换成 DSL。","ts_mean(volume, 10)","TODO","TODO","TODO"
+"修正错误表达式：tsmax(high, 5)。","ts_max(high, 5)","TODO","TODO","TODO"
+"生成一个收盘价和成交量20日相关性因子。","correlation(close, volume, 20)","TODO","TODO","TODO"

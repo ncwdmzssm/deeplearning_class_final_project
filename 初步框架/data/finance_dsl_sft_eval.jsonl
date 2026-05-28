@@ -1,0 +1,10 @@
+{"conversations":[{"role":"user","content":"请生成过去20日收益率标准差的 DSL。"},{"role":"assistant","content":"ts_std(returns, 20)"}]}
+{"conversations":[{"role":"user","content":"解释 rank(close) 的含义。"},{"role":"assistant","content":"rank(close) 表示对收盘价做横截面排序，用来比较股票之间收盘价的相对大小。"}]}
+{"conversations":[{"role":"user","content":"把“过去10日成交量均值”转换成 DSL。"},{"role":"assistant","content":"ts_mean(volume, 10)"}]}
+{"conversations":[{"role":"user","content":"修正错误表达式：tsmax(high, 5)。"},{"role":"assistant","content":"ts_max(high, 5)"}]}
+{"conversations":[{"role":"user","content":"生成一个收盘价和成交量20日相关性因子。"},{"role":"assistant","content":"correlation(close, volume, 20)"}]}
+{"conversations":[{"role":"user","content":"解释 delta(volume, 5)。"},{"role":"assistant","content":"delta(volume, 5) 表示当前成交量与5期前成交量的差值，用于刻画成交量变化。"}]}
+{"conversations":[{"role":"user","content":"把“收盘价过去30日均值”写成 DSL。"},{"role":"assistant","content":"ts_mean(close, 30)"}]}
+{"conversations":[{"role":"user","content":"解释 ts_rank(returns, 10)。"},{"role":"assistant","content":"ts_rank(returns, 10) 表示当前收益率在过去10个交易日收益率序列中的时间序列排名。"}]}
+{"conversations":[{"role":"user","content":"修正错误 DSL：correlation(close,volume)。"},{"role":"assistant","content":"correlation(close, volume, 10)"}]}
+{"conversations":[{"role":"user","content":"请生成一个简单价格反转因子。"},{"role":"assistant","content":"-delta(close, 5)"}]}
