@@ -1,0 +1,8 @@
+/home/student/work/minimind-fire-project/fire-dsl-data/tools/fire_operator_dsl.py:121: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  return _to_frame(value, reference).fillna(False).astype(bool)
+file: results/fire_dsl_domain_sft_public_predictions.csv
+semantic_mismatch: 536
+parse_error: 511
+exact_match: 381
+execution_error: 376
+format_error: 196

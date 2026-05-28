@@ -1,0 +1,6 @@
+file: results/fire_dsl_domain_256_l4_public_predictions.csv
+exact_match: 786
+format_error: 782
+parse_error: 217
+execution_error: 111
+semantic_mismatch: 104
