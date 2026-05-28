@@ -1,0 +1,10 @@
+file: results/fire_dsl_domain_256_l4_public_predictions.csv
+scored_rows: 2000
+skipped_todo_rows: 0
+exact_dsl_match: 39.30%
+fenced_code_format: 60.85%
+python_parse_ok: 50.05%
+fire_dsl_executable: 44.35%
+format_error_rows: 783
+parse_error_rows: 999
+execution_error_rows: 1113

@@ -1,0 +1,10 @@
+file: results/fire_dsl_domain_sft_t001_generalization_predictions.csv
+scored_rows: 600
+skipped_todo_rows: 0
+exact_dsl_match: 0.00%
+fenced_code_format: 91.83%
+python_parse_ok: 55.67%
+fire_dsl_executable: 37.17%
+format_error_rows: 49
+parse_error_rows: 266
+execution_error_rows: 377

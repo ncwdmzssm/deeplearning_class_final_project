@@ -1,0 +1,2000 @@
+[1] code_public_0576_0: ```dsl_fire result 30) ```
+[2] code_public_0347_0: ```dsl_fire result = minimum(maximum(div(sub(open, xs_mean(open)), xs_std(open)), -3.0), 3.0) ```
+[3] code_public_0885_1: ```dsl_fire result = sub(ts_st minim 20), xs_quantile(ts_std(pct_change(close, 1), 20), 0.2)) ```
+[4] code_public_0965_1: ```dsl_fire result.pct_change(close, 30) ```
+[5] code_public_0216_0: ```dsl_fire result = mod(eq(sign(sub(low, xs_mean(low))), 1.0), div(sub(low, xs_mean(low)), xs_std(low))), 0.0) ```
+[6] code_public_0852_1: ```dsl_fire result = sub(vwap, xs_quantile(vwap, 0.2)) ```
+[7] code_public_0389_1: ```dslf(ts_prod(add(1.0, pct_change(close, 1)), 60), 1.0) ```
+[8] code_public_0048_0: ```dsl_fire result ts_prod(add(1.0, pct_change(high, 20)), 20) ```
+[9] code_public_0635_0: ```dsl_fire result = neg(mul(div(ts_mean(volume, 5), ts_mean(volume, 60)), pct_change(close, 5))) ```
+[10] code_public_0313_1: ```dsl_fire result = where(gt(ts_std(pct_change(close, 1), 20), group_mean(ts_std(pct_change(close, 1), 20), industry)),
+[11] code_public_0168_1: ```dsl_fire result = div(sub(vwap, shift(vwap, 5)), shift(vwap, 5)) ```
+[12] code_public_0483_1: ```dsl_fire result = neg(mul(div(ts_mean(volume, 2), ts_mean(volume, 30)), pct_change(close, 2))) ```
+[13] code_public_0071_1: ```dsl_fire result.0)) ```
+[14] code_public_0290_1: ```dslical_fire result = where(le(div(volume, market_cap), group_mean(div(volume, market_cap), industry)), neg(div(sub(d
+[15] code_public_0146_0: ```dsl_fire result = cbrt(pct_change(close, 2)) ```
+[16] code_public_0890_1: ```dsl_fire result.arararararmaxmin(pb,pb, 15) ```
+[17] code_public_0800_1: ```dslf(ts_prod(add(1.0, pct_change(close, 1)), 2), 1.0) ```
+[18] code_public_0822_1: ```dsl_fireirereg_res), xs_mean(log(recip(pb))), div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_c
+[19] code_public_0156_0: ```dslf(open, 60) ```
+[20] code_public_0307_0: ```dsl_fire result.0) ```
+[21] code_public_0537_1: ```dsl_fireire result = where(gtdiv(sub(sqrt(recip(pb)), xs_mean(sqrt(recip(pb))), div(sub(log(market_cap), xs_mean(log(
+[22] code_public_0529_1: ```dsl_fire result = sub(low, xs_quantile(low, 0.2)) ```
+[23] code_public_0491_0: ```dsl_fire result 30)
+[24] code_public_0817_1: ```dsl_fire result = ts_argmaxmin(close, 15) ```
+[25] code_public_0324_0: ```dsl_fire result ts_ ts_var(pct_change(close, 1), 90) ```
+[26] code_public_0133_0: ```dsl_fire result.reg_res(pct_change(open, 30)) ```
+[27] code_public_0574_1: ```dsl_fire result = log10(ts_mean(volume, 30)) ```
+[28] code_public_0132_0: ```dsl_fire result = neg(mul(div(ts_mean(volume, 5), ts_mean(volume, 30)), pct_change(close, 5))) ```
+[29] code_public_0082_0: ```dsl_fire result = where(logical_or(gt(recip(pb), xs_mean(recip(pb))), le(ts_std(pct_change(close, 1), 20), xs_mean(ts
+[30] code_public_0860_1: ```dsl_fire result = ts_), 0.0) ```
+[31] code_public_0012_0: ```dsl_fire result.pct_change(vwap, 2), 60) ```
+[32] code_public_0840_1: ```dsl_fire result = div(sub(ts_std(pct_change(close, 1), 45), group_mean(ts_std(pct_change(close, 1), 45), industry)), 
+[33] code_public_0144_1: ```dsl_fire result = sqrt(absolute(pct_change(open, 20))) ```
+[34] code_public_0707_1: ```dsl_fire result = ts_), 0.0) ```
+[35] code_public_0750_0: ```dsl_fire result ts_), 0.0) ```
+[36] code_public_0695_1: ```dsl_fire result = where(le(vwap, xs_median(vwap)), neg(div(sub(vwap, xs_mean(vwap)), xs_std(vwap))), 0.0) ```
+[37] code_public_0725_0: ```dsl_fire result = div(sub(div(sub(close, vwap), vwap), group_mean(div(sub(close, vwap), vwap), industry)), group_std(
+[38] code_public_0244_1: ```dsl_fire result = div(sub(market_cap, xs_median(market_cap)), xs_std(market_cap)) ```
+[39] code_public_0883_1: ```dsl_fire result = div(sub(log1p(ts_mean(volume, 5)), group_mean(log1p(ts_mean(volume, 5)), industry)), group_std(log1
+[40] code_public_0603_0: ```dsl_fire result = div(absolute(recip(pb)), xs_sum(absolute(recip(pb)))) ```
+[41] code_public_0636_0: ```dsl_fireireirehfire result.gmaximum(div(sub(low, xs_mean(low)), xs_std(low)), 0.0) ```
+[42] code_public_0926_0: ```dsl_fire result(recip(pb), log(market_cap), 60) ```
+[43] code_public_0171_1: ```dsl_fire result = log10(add(1.1.1.1.1000.1)) 10000hhum) ab 10000hrecip(pb) ```
+[44] code_public_0284_1: ```dsl_fire result = div(sub(ts_max(high, 20), close), ts_max(high, 20)) ```
+[45] code_public_0752_1: ```dsl_fire result = where(logical_not(ge(volume, ts_mean(volume, 20))), neg(pct_change(close, 5)), 0.0) ```
+[46] code_public_0001_0: ```dsl_fire result absolute(pct_change(op 0.1)))) ```
+[47] code_public_0585_0: ```dsl_fire result = where(le(close, xs_median(close)), neg(div(sub(close, xs_mean(close)), xs_std(close))), 0.0) ```
+[48] code_public_0623_1: ```dslfximumf 100000.0) ```
+[49] code_public_0674_1: ```dsl_fire result.25) ```
+[50] code_public_0536_0: ```dsl_fire result 30) ```
+[51] code_public_0526_0: ```dsl_fire result = sub(div(absoluteabsolute(div(volume, market_cap)), xs_sum(absolute(div(volume, market_cap)))), div(
+[52] code_public_0465_1: ```dsl_fire result.pct_change(open, 30) ```
+[53] code_public_0266_1: ```dsl_fire result.0), gt(pct_change(close, 1), 0.0), 0.0) ```
+[54] code_public_0899_1: ```dsl_fire result.pct_change(close, 5), ```
+[55] code_public_0108_0: ```dsl_fire result ts_), 0.0) ```
+[56] code_public_0130_0: ```dsl_fire result = sub(div(close, xs_sum(close)), div(volume, xs_sum(volume))) ```
+[57] code_public_0315_0: ```dsl_fireire result = sub(div(volume, market_cap), xs_quantile(div(volume, market_cap), 0.2)) ```
+[58] code_public_0318_0: ```dsl_fire result = sqrt(absolute(pct_change(vwap, 10))) ```
+[59] code_public_0995_0: ```dsl_fireireire result 45)) ```
+[60] code_public_0811_0: ```dsl_fire result = add(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))), div(sub(close, vw
+[61] code_public_0173_1: ```dsl_fire result = minimum(maximum(div(sub(high, group_mean(high, industry)), group_std(high, industry)), -4.0), 3.0) 
+[62] code_public_0820_0: ```dsl_fire result(pb, 10000.0) ```
+[63] code_public_0115_0: ```dsl_fire result = subsub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))), 0.0) ```
+[64] code_public_0437_1: ```dsl_fire result = sub(pb, xs_median(pb)) ```
+[65] code_public_0759_1: ```dslffffff(market_cap, 100000.0) ```
+[66] code_public_0122_1: ```dsl_fire result.25) ```
+[67] code_public_0605_1: ```dsl_fire result = absolute(pct_change(close, 20))rt(ts_std(pct_change(close, 1), 20), ts_std(pct_change(close, 1), 1m
+[68] code_public_0545_0: ```dsl_fire result = where(logical_or(gt(log(market_cap), xs_mean(log(market_cap))), gt(div(volume, market_cap), xs_mean
+[69] code_public_0876_0: ```dsl_fire result = exp(minimum(div(sub(high, xs_mean(high)), xs_std(high)), 3.0)) ```
+[70] code_public_0818_0: ```dsl_fire result = minimum(maximum(div(sub(oplose, xs_mean(open)), xs_std(open)), -4.0), 4.0) ```
+[71] code_public_0306_1: ```dsl_fire result.0) ```
+[72] code_public_0787_1: ```dsl_fire result.25) ```
+[73] code_public_0047_0: ```dsl_fire result.0) ```
+[74] code_public_0662_1: ```dsl_fire result.reg_res(pct_change(close, 3)) ```
+[75] code_public_0416_0: ```dsl_fire result = minimum(pct_change(high, 10), 0.0) ```
+[76] code_public_0462_1: ```dsl_fire result = where(logical_and(gt(log(recip(pb)), xs_mean(log(recip(pb)))), gt(pct_change(close, 60), xs_mean(pc
+[77] code_public_0846_1: ```dslf 100000) result = log000.0) ```
+[78] code_public_0831_1: ```dsl_fire result = power(absolute(pct_change(market_cap, 20)), 0.5) ```
+[79] code_public_0262_0: ```dsl_fire result = exp(minimum(pct_change(pb, 10), 0.1)) ```
+[80] code_public_0331_0: ```dsl_fire result = exp(minimum(div(sub(pb, xs_mean(pb)), xs_std(pb)), 1.0)) ```
+[81] code_public_0663_1: ```dsl_fire result = x
+[82] code_public_0994_0: ```dsl_fire result = neg(mul(div(ts_mean(volume, 3), ts_mean(volume, 90)), pct_change(close, 3)))) ```
+[83] code_public_0024_0: ```dsl_fire result = absolute(pct_change(vwap, 5))) ```
+[84] code_public_0602_0: ```dsl_fire result = ts_argmin(close, 7) ```
+[85] code_public_0869_1: ```dsl_fire result = minimum(maximum(div(sub(open, group_mean(oplose, industry)), group_std(oplose, industry)), -3.0), 3
+[86] code_public_0752_0: ```dsl_fire result = where(logical_not(ge(volume, ts_mean(volume, 20))), neg(pct_change(close, 5)), 0.0) ```
+[87] code_public_0996_1: ```dsl_fire result = square) ```
+[88] code_public_0407_0: ```dsl_fire result = sub(div(pb, xs_sum(pb)), div(marksum(mark_cap, xs_sum(market_cap))), xs_sum(absolute(pct_change(mar
+[89] code_public_0917_1: ```dsl_fire result = absolute(div(sub(log(recip(pb)), xs_mean(log(rec))))) ```
+[90] code_public_0923_0: ```dsl_fire result.0)) ```
+[91] code_public_0741_1: ```dsl_fireire result = sub(div(absoluteabsolute(ts_st v(pct_change(close, 1), 20)), xs_sum(absolute(ts_std(pct_change(c
+[92] code_public_0963_1: ```dsl_fire result = sub(pb, xs_quantile(pb, 0.7)) ```
+[93] code_public_0965_0: ```dsl_fire result
+[94] code_public_0338_0: ```dsl_fire result 45) ```
+[95] code_public_0396_1: ```dsl_fire result.pct_change(open, 90) ```
+[96] code_public_0634_0: ```dsl_fire result = neg(div(sub(close, shift(close, 3)), shift(close, 3)) ```
+[97] code_public_0749_1: ```dsl_fire result ts_regreg_res(pct_change(vwap, 10)))) ```
+[98] code_public_0484_0: ```dsl_fire result ts_reg_res(pct_change(high, 10), 0.0) ```
+[99] code_public_0581_0: ```dsl_fire result = pct_change(open, 7) ``` ```
+[100] code_public_0912_0: ```dsl_fire result =```
+[101] code_public_0141_0: ```dsl_fire result ts_win_cumsum(pct_change(close, 1), 3) ```
+[102] code_public_0931_0: ```dsl_fire result.0) ```
+[103] code_public_0190_1: ```dsl_fire result = div(sub(pct_change(close, 20), group_mean(pct_change(close, 20), industry)), group_std(pct_change(c
+[104] code_public_0847_1: ```dsl_fire result.reres(pct_change(vwap, 1), 45) ```
+[105] code_public_0560_0: ```dsl_fire result ts_sum(pct_change(close, 1), 5) ```
+[106] code_public_0330_0: ```dsl_fire result = sub(market_cap, ts_quantile(market_cap, 90, 0.7)) ```
+[107] code_public_0029_0: ```dsl_fire result = where(logical_xor(gt(log1p(ts_memean(volume, 20)), x), xs_mean(log1p(ts_mean(volume, 20))), le(ts_s
+[108] code_public_0655_1: ```dsl_fire result = add(div(sub(sqrt(recip(pb)), group_mean(sqrt(recip(pb)), industry)), group_std(sqrt(recip(pb)), ind
+[109] code_public_0586_1: ```dsl_fire result = neg(ts_argmax(market_cap, 20)) ```
+[110] code_public_0653_1: ```dsl_fire result.0)) ```
+[111] code_public_0325_1: ```dsl_fire result = div(sub(volume, group_mean(volume, industry)), group_std(volume, industry)) ```
+[112] code_public_0562_1: ```dsl_fire result = ts_prod(add(1.0, pct_change(pb, 1)), 20) ```
+[113] code_public_0144_0: ```dsl_fire result = sqrt(absolute(pct_change(open, 20))) ```
+[114] code_public_0114_1: ```dsl_fire result = power(absolute(pct_change(low, 20)), 0.5) ```
+[115] code_public_0736_0: ```dsl_fire result = minimum(pct_change(volume, 3), 0.0) ```
+[116] code_public_0430_0: ```dsl_fire result
+[117] code_public_0323_0: ```dsl_fire result
+[118] code_public_0204_0: ```dsl_fire result ts_argmaxmin(vwap, 45) ```
+[119] code_public_0218_1: ```dsl_fire result = power(absolutepct_change(vwap, 10)), 0.25) ```
+[120] code_public_0827_1: ```dsl_fire result = where(logical_xor(ne(sign(pct_change(close, 1)), -1.0), gt(neg(log(market_cap)), xs_mean(neg(log(ma
+[121] code_public_0422_1: ```dslfflogical_not logical_not, ts_not, 20)) ```
+[122] code_public_0200_0: ```dsl_fire result = minimum(maximum(div(sub(pb, xs_mean(pb)), xs_std(pb)), -2.0), 2.0) ```
+[123] code_public_0279_1: ```dsl_fire result = where(ge(pb, xs_mean(pb)), pb, xs_mean(pb)) ```
+[124] code_public_0400_0: ```dsl_fire result = where(logical_not(lt(close, ts_mean(close, 20))), neg(pct_change(close, 5)), 0.0) ```
+[125] code_public_0795_0: ```dsl_fire result = div(sub(close, ts_min(low, 45)), ts_min(low, 45)) ```
+[126] code_public_0377_0: ```dsl_fire result = where(gt(pct_change(close, 20), group_mean(pct_change(close, 20), industry)), div(sub(pct_change(cl
+[127] code_public_0462_0: ```dsl_fire result = where(logical_and(gt(log(recip(pb)), xs_mean(log(recip(pb)))), gt(pct_change(close, 60), xs_mean(pc
+[128] code_public_0511_0: ```dsl_fire result = mod(volume, 10000.0) ```
+[129] code_public_0068_0: ```dsl_fire result = sub(close, ts_quantile(close, 30, 0.8)) ```
+[130] code_public_0627_1: ```dsl_fire result ts_argmax(pb, 10) ```
+[131] code_public_0360_1: ```dsl_fire result = where(logical_not(gt(close, ts_mean(close, 20))), neg(pct_change(close, 2)), 0.0) ```
+[132] code_public_0450_0: ```dsl_fire result = sub(high, group_mean(high, industryimhigh, industry)), div(sub(high, group_mean(high, industry)), g
+[133] code_public_0439_0: ```dsl_fire result = absolute(pct_change(vwap, 10)) ```
+[134] code_public_0564_0: ```dsl_fire result.0) ```
+[135] code_public_0761_0: ```dsl_fire result = where(gt(log1p(ts_mean(volume, 20)), group_mean(log1p(ts_mean(volume, 20)), industry)), div(sub(log
+[136] code_public_0912_1: ```dsl_fire result = add(div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), industry)) ```
+[137] code_public_0112_0: ```dsl_fire result = cbrt(pct_change(open, 2)) ```
+[138] code_public_0542_0: ```dsl_fireire result.
+[139] code_public_0283_1: ```dsl_fire result = ts_prod(add(1.0, pct_change(v, 1)), 45) ```
+[140] code_public_0119_0: ```dsl_fire result = minimum(maximum(div(sub(v, group_mean(v, industry)), group_std(volume, industry)), -2.0), 3.0) ```
+[141] code_public_0227_0: ```dsl_fire result
+[142] code_public_0587_1: ```dsl_fire resultreg_res(close, 10), div(sub(close, ts_min(low, 10)), sub(ts_max(hen, 10), ts_min(low, 10))) ```
+[143] code_public_0384_1: ```dsl_fire result = where(logical_or(gt(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))), x
+[144] code_public_0797_0: ```dsl_fire result ts_pct_change(open, 3)) ```
+[145] code_public_0720_1: ```dsl_fire result = ab 100.0divabsolute(ts_std(pct_change(close, 1), 20)), group_mean(ts_std(pct_change(close, 1), 20),
+[146] code_public_0198_0: ```dsl_fire result.0)) ```
+[147] code_public_0398_0: ```dsl_fireireirefire(gt(recip(pb), xs_mean(recip(pb))), neg(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(
+[148] code_public_0328_1: ```dsl_fire result = power(absolute(pct_change(pb, 2)), 0.5) ```
+[149] code_public_0335_0: ```dsl_fire result ts_argmaxmin(close, 30) ```
+[150] code_public_0022_1: ```dslf(ts_mean(pct_change(close, 1), 3), ts_var(pct_change(close, 1), 60)) ```
+[151] code_public_0973_0: ```dsl_fire result = sub(close, ts_quantile(close, 15, 0.8)) ```
+[152] code_public_0751_0: ```dsl_fire result = div(sub(ts_std(pct_change(close, 1), 20), xs_mean(ts_std(pct_change(close, 1), 20))), xs_std(ts_std
+[153] code_public_0225_1: ```dsl_fire result = sub(log(market_cap), xs_quantile(log(market_cap), 0.8)) ```
+[154] code_public_0353_1: ```dsl_fire result = ts_prod(add(1.0, pct_change(v, 1)), 10) ```
+[155] code_public_0456_1: ```dsl_fire result.0) ```
+[156] code_public_0918_1: ```dsl_fire result ts_argmaxmin(vwap, 10) ```
+[157] code_public_0448_0: ```dsl_fire result = mod(market_cap, 10000.0) ```
+[158] code_public_0028_1: ```dsl_fireire result = sub(div(absoluteabsolute(log1p(ts_mean(volume, 20))), xs_sum(absolute(log1p(ts_mean(volume, 20))
+[159] code_public_0351_1: ```dsl_fire result ts_argmaxmin(vwap, 30) ```
+[160] code_public_0971_1: ```dsl_fire result = pct_change(open, 2) ```
+[161] code_public_0432_1: ```dsl_fire result = power(absolute(pct_change(volume, 15)), 0.25) ```
+[162] code_public_0286_1: ```dsl_fire result = sub(ne.2)) ```
+[163] code_public_0468_0: ```dsl_fire result = where(logical_xor(gt(recip(pb), xs_mean(recip(pb))), le(ts_std(pct_change(close, 1), 20), xs_mean(t
+[164] code_public_0821_0: ```dsl_fire result.pct_change(close, 60) ``` ```
+[165] code_public_0486_1: ```dsl_fire result = minimum(maximum(div(sub(low, group_mean(low, industry)), group_std(low, industry)), -1.0), 1.0) ```
+[166] code_public_0272_0: ```dsl_fire result = ts_reg_res(pct_change(close, 20), log(market_cap), 45) ```
+[167] code_public_0003_1: ```dsl_fire result = neg(pct_change(close, 7)) ```
+[168] code_public_0239_1: ```dsl_fire result.pct_change(vwap, 60)) ```
+[169] code_public_0792_0: ```dsl_fire result = ts_corr(recip(pb), log(market_cap), 15) ```
+[170] code_public_0526_1: ```dsl_fire result = sub(div(absoluteabsolute(div(volume, market_cap)), xs_sum(absolute(div(volume, market_cap)))), div(
+[171] code_public_0708_0: ```dsl_fire result = neg(mul(div(ts_mean(volume, 5), ts_mean(volume, 90)), pct_change(close, 5)))) ```
+[172] code_public_0862_1: ```dsl_fire result = sub(low, xs_quantile(low, 0.8)) ```
+[173] code_public_0304_0: ```dslf(open, 7) ```
+[174] code_public_0663_0: ```dsl_fire result = x
+[175] code_public_0667_0: ```dsl_fire result = recip(pb) ```
+[176] code_public_0182_1: ```dsl_fire result = div(sub(vwap, shift(vwap, 7)), shift(vwap, 7)) ```
+[177] code_public_0856_1: ```dsl_fire result.0) ```
+[178] code_public_0156_1: ```dslf(open, 60) ```
+[179] code_public_0977_0: ```dsl_fire result))
+[180] code_public_0286_0: ```dsl_fireire result(ne(sign(pct_change(close, 2), 0.2)) ```
+[181] code_public_0451_0: ```dsl_fire result = minimum(maximum(div(sub(market_cap, xs_mean(market_cap)), xs_std(market_cap)), -2.0), 2.0) ```
+[182] code_public_0233_1: ```dsl_fire result = where(logical_and(gt(close, ts_mean(close, 20)), ge(volume, ts_mean(volume, 20))), pct_change(close
+[183] code_public_0608_0: ```dsl_fire result = where(eq(sign(sub(volume, xs_mean(volume))), 1.0), div(sub(volume, xs_mean(volume)), xs_std(volume)
+[184] code_public_0790_0: ```dsl_fire result = sub(ts_std(pct_change(close, 1), 20), ts_std(pct_change(close, 1), 120)) ```
+[185] code_public_0866_1: ```dsl_fire result = exp(minimum(div(sub(v, xs_mean(volume)), xs_std(volume)), 2.0)) ```
+[186] code_public_0281_0: ```dsl_fireireire subs_sqrt(recip(pb)), neg(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap)))
+[187] code_public_0344_1: ```dsl_fire result = maximum(pct_change(pb, 3), 0.0) ```
+[188] code_public_0104_0: ```dsl_fire result = div(sub(neg(log(market_cap)), group_mean(neg(log(market_cap)), industry)), group_std(neg(log(market
+[189] code_public_0299_0: ```dslf(open, 100) ```
+[190] code_public_0280_0: ```dsl_fire result.0) ```
+[191] code_public_0590_0: ```dsl_fire result ts_reg_res(pct_change(close, 15)))) ```
+[192] code_public_0086_0: ```dsl_fire result = div(sub(low, group_mean(low, industry)), group_std(low, industry)) ```
+[193] code_public_0668_1: ```dsl_fire result = power(absolute(pct_change(pb, 3)), 0.25) ```
+[194] code_public_0558_1: ```dsl_fire result.0) ```
+[195] code_public_0572_0: ```dsl_fire result
+[196] code_public_0412_0: ```dsl_fire result = ts_reg_res(div(volume, market_cap), pct_change(close, 5), 30) ```
+[197] code_public_0501_1: ```dsl_fire result = add(div(sub(sqrt(recip(pb)), group_mean(sqrt(recip(pb)), industry)), group_std(sqrt(recip(pb)), ind
+[198] code_public_0102_1: ```dsl_fireireire result = where(gt(sqrt(recip(pb)), xs_mean(sqrt(recip(pb)))), div(sub(log(market_cap), xs_mean(log(mar
+[199] code_public_0915_1: ```dsl_fire result.0)) ```
+[200] code_public_0069_1: ```dsl_fire result.pct_change(vwap, 30)) ```
+[201] code_public_0643_0: ```dsl_fire result = ts_corr(recip(pb), log(market_cap), 30) ```
+[202] code_public_0519_1: ```dsl_fire result = power(absolute(pct_change(pb, 10)), 0.25) ```
+[203] code_public_0152_0: ```dsl_fire result = power(absolute(pct_change(close, 2)), 0.25) ```
+[204] code_public_0633_0: ```dsl_fire result = absolute(pct_change(close, 15))rt) ```
+[205] code_public_0128_1: ```dsl_fire result = div(sub(volume, ts_lastmean(volume, 10)), 10)), ts_last(shift(volume, 1), 10)) ```
+[206] code_public_0008_1: ```dsl_fire result = ts_argmaxmin(market_cap, 15) ```
+[207] code_public_0403_1: ```dsl_fire result = power(absolute(pct_change(market_cap, 10)), 0.25) ```
+[208] code_public_0890_0: ```dsl_fire result.argmaxmin(pb, 15) ```
+[209] code_public_0269_0: ```dsl_fire result = sub(pct_change(open, 20), pct_change(open, 20)) ```
+[210] code_public_0621_1: ```dsl_fire result = minimum(pct_change(volume, 10), 0.0) ```
+[211] code_public_0952_0: ```dsl_fire result = add(sqrt(recip(pb)), pct_change(close, 20)) ```
+[212] code_public_0439_1: ```dsl_fire result = absolute(pct_change(vwap, 10)) ```
+[213] code_public_0532_1: ```dsl_fire result.pct_change(open, 60) ```
+[214] code_public_0000_1: ```dsl_fire result.0)) ```
+[215] code_public_0506_0: ```dsl_fire result = sub(pb, xs_quantile(pb, 0.5)) ```
+[216] code_public_0418_0: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), le(ts_std(pct_change(close, 1), 20), xs_mean(t
+[217] code_public_0900_0: ```dsl_fire result
+[218] code_public_0371_0: ```dsl_fire result.0) ```
+[219] code_public_0449_1: ```dslf(pct_change(pb, 1), 0.0) ```
+[220] code_public_0794_1: ```dsl_fire result = where(logical_xor(gt(recip(pb), xs_mean(recip(pb))), le(ts_std(pct_change(close, 1), 20), xs_mean(t
+[221] code_public_0253_1: ```dsl_fire result = sub(div(volume, market_cap), xs_quantile(div(volume, market_cap), 0.8)) ```
+[222] code_public_0727_0: ```dsl_fire result ts_argmaxmin(vwap, 60) ```
+[223] code_public_0492_0: ```dsl_fire result = sub(close, ts_quantile(close, 90, 0.8)) ```
+[224] code_public_0157_0: ```dsl_fire result = where(logical_xor(lt(close, ts_mean(close, 20)), le(volume, ts_mean(volume, 20))), pct_change(close
+[225] code_public_0535_1: ```dsl_fire result = add(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))), log1p(ts_mean(vol
+[226] code_public_0504_0: ```dsl_fire result ts_win_cumsum(pct_change(close, 1), 10) ```
+[227] code_public_0786_1: ```dsl_fire result = div(sub(close, group_mean(close, industry)), group_std(close, industry)) ```
+[228] code_public_0884_1: ```dsl_fire result = ts_sum(pct_change(market_cap, 1), 15) ```
+[229] code_public_0674_0: ```dsl_fire result = power(absolutepct_change(high, 10)), 0.25) ```
+[230] code_public_0558_0: ```dsl_fire result.0) ```
+[231] code_public_0083_1: ```dsl_fireireire divabsoluteabsolute(div(sub(close, vwap), vwap)), xs_sum(absolute(div(sub(close, vwap), vwap))))) ```
+[232] code_public_0039_0: ```dsl_fire result = sub(vwap, ts_quantile(vwap, 5, 0.7)) ```
+[233] code_public_0225_0: ```dsl_fireire result = sub(log(market_cap), xs_quantile(log(market_cap), 0.8)) ```
+[234] code_public_0196_0: ```dsl_fire result = ts_win_cumsum(pct_change(pb, 1), 15) ```
+[235] code_public_0100_1: ```dslf(close, 10) ```
+[236] code_public_0906_1: ```dsl_fire result = log(market_cap)) ```
+[237] code_public_0931_1: ```dslf(pb, 5000.0) ```
+[238] code_public_0669_1: ```dsl_fire result = exp(minimum(pct_change(volume, 3), 0.1)) ```
+[239] code_public_0771_1: ```dsl_fire result = neg(mul(div(ts_mean(volume, 5), ts_mean(volume, 20)), pct_change(close, 5))) ```
+[240] code_public_0383_0: ```dsl_fire result.1)) ```
+[241] code_public_0147_0: ```dsl_fire result.pct_change(close, 30)) ```
+[242] code_public_0134_1: ```dsl_fire result ts_argmaxmin(vwap, 90) ```
+[243] code_public_0332_0: ```dsl_fire result = sub(pct_change(close, pct_change(close, 20), pct_change(close, 60)) ```
+[244] code_public_0256_0: ```dsl_fire result = where(logical_xor(gt(div(sub(recip(pb), xsmean(rerecip(pb))), xs_std(recip(pb))), xs_mean(div(sub(r
+[245] code_public_0970_0: ```dsl_fire result 45)) ```
+[246] code_public_0990_0: ```dsl_fire result = where(logical_xor(gt(div(sub(recip(pb), xsmean(rerecip(pb))), xs_std(recip(pb))), xs_mean(div(sub(r
+[247] code_public_0136_1: ```dsl_fire result = sub(pb, ts_quantile(pb, 5, 0.7)) ```
+[248] code_public_0802_1: ```dslf(ts_mean(pct_change(close, 1), 30), ts_var(pct_change(close, 1), 60)) ```
+[249] code_public_0749_0: ```dsl_fire result ts_absolute(pct_change(vwap, 10)))) ```
+[250] code_public_0008_0: ```dsl_fire result = ts_argmaxmin(market_cap, 15) ```
+[251] code_public_0310_0: ```dsl_fire result.0), logical_reg_res(volume,ts_mean(volume, 20)), 0.0) ```
+[252] code_public_0155_0: ```dsl_fire result = power(absolute(pct_change(low, 20)), 0.25) ```
+[253] code_public_0979_1: ```dsl_fire result = ts_win_cumsum(pct_change(pb, 1), 5) ```
+[254] code_public_0572_1: ```dsl_fire result = power(absolute(pct_change(market_cap, 7)), 0.5) ```
+[255] code_public_0343_0: ```dsl_fire result.pct_change(open, 10)) ```
+[256] code_public_0085_1: ```dsl_fire result = xs_corr(recip(pb), div(volume, market_cap)) ```
+[257] code_public_0158_0: ```dsl_fire result = log10(recip(pb)) ```
+[258] code_public_0007_1: ```dsl_fire result.25) ```
+[259] code_public_0047_1: ```dsl_fire result.0) ```
+[260] code_public_0160_0: ```dslical_not(gt(recip(pb), group_mean(recip(pb), industry)), neg(div(sub(recip(pb), group_mean(recip(pb), industry)), 
+[261] code_public_0123_1: ```dsl_fire result ts_argmax mod(pb, 90) ```
+[262] code_public_0671_0: ```dsl_fire result = div(high, group_mean(high, industryimrecip(pb), industry)), div(sub(high, group_mean(high, industry
+[263] code_public_0744_0: ```dsl_fire result.pct_change(open, 30)) ```
+[264] code_public_0475_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(open, 5))) ```
+[265] code_public_0861_0: ```dsl_fire result 45)) ```
+[266] code_public_0986_0: ```dsl_fire result
+[267] code_public_0179_1: ```dsl_fire result = sub(close, ts_quantile(close, 15, 0.7)) ```
+[268] code_public_0626_1: ```dsl_fire result = power(absolute(pct_change(market_cap, 5)), 0.5) ```
+[269] code_public_0788_1: ```dslfffffffffreg_res(pct_change(oplose, 7), 0.1)) ```
+[270] code_public_0649_0: ```dsl_fire result = sub(high, xs_quantile(high, 0.8)) ```
+[271] code_public_0192_0: ```dsl_fire result
+[272] code_public_0793_0: ```dsl_fire result ts_prod(add(1.0, pct_change(v, 15)), 0.) ```
+[273] code_public_0027_1: ```dsl_fire result = power(absolute(pct_change(close, 45)), 0.5) ```
+[274] code_public_0214_1: ```dsl_fire result = sub(v, ts_quantile(volume, 10, 0.7)) ```
+[275] code_public_0202_0: ```dsl_fire result ts_argmaxmin(volume, 30) ```
+[276] code_public_0910_0: ```dsl_fire result = xs_prodddddminimminminmin)pct_change(vlose,divdiv(sub(close, vwap), vwap), xs_mean(div(sub(close, v
+[277] code_public_0090_0: ```dsl_fire result ts_argmax(pb, 45) ```
+[278] code_public_0987_0: ```dsl_fire result = exp(minimum(pct_change(open, 2), 0.1)) ```
+[279] code_public_0077_0: ```dsl_fire result.pct_change(close, 20)) ```
+[280] code_public_0595_1: ```dsl_fire result = xs_corr(pct_change(close, 7), volume) ```
+[281] code_public_0735_0: ```dsl_fire result = minimum(maximum(div(sub(high, xs_mean(high)), xs_std(high)), -1.0), 1.0) ```
+[282] code_public_0833_1: ```dsl_fire result = power(absolutepct_change(vwap, 15)), 0.25) ```
+[283] code_public_0837_0: ```dsl_fire result = add(div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), industry)), pct_chang
+[284] code_public_0126_0: ```dsl_fire result.reg_res(pct_change(open, 30)) ```
+[285] code_public_0062_0: ```dsl_fire result = xs_corr(pct_change(close, 20), div(sub(close, vwap), vwap)) ```
+[286] code_public_0442_1: ```dsl_fire result.0) ```
+[287] code_public_0956_0: ```dsl_fire result = sqrt(absolute(pct_change(close, 60))) ```
+[288] code_public_0115_1: ```dsl_fire result = subsub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap)))) ```
+[289] code_public_0438_0: ```dsl_fire result = add(sqrt(recip(pb)), log(market_cap)) ```
+[290] code_public_0117_0: ```dsl_fire result.argmaxmin(pb, 10) ```
+[291] code_public_0798_1: ```dsl_fire result.25) ```
+[292] code_public_0170_0: ```dsl_fire result = add(log(recip(pb)), div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap)))) `
+[293] code_public_0445_1: ```dsl_fire result = log10(add(1.0, absolute(pct_change(market_cap, 2)))) ```
+[294] code_public_0540_1: ```dsl_fire result = sub(pct_change(close, 20), xs_med(pct_change(close, 20)))) ```
+[295] code_public_0350_1: ```dsl_fire result = where(ne(sign(sub(pb, xs_mean(pb))), 1.0), div(sub(pb, xs_mean(pb)), xs_std(pb)), 0.0) ```
+[296] code_public_0301_0: ```dsl_fire result ts_win_cumsum(pct_change(pb, 1), 60) ```
+[297] code_public_0751_1: ```dsl_fire result = div(sub(ts_std(pct_change(close, 1), 20), xs_mean(ts_std(pct_change(close, 1), 20))), xs_std(ts_std
+[298] code_public_0835_1: ```dsl_fire result = where(logical_not(eq(sign(pct_change(close, 1)), 1.0)), neg(pct_change(close, 10)), 0.0) ```
+[299] code_public_0812_1: ```dsl_fire result = where(eq(sign(sub(neg(log(mark.0), 1.0), 0.0)), div) ```
+[300] code_public_0454_1: ```dsl_fire result = div(sub(log1p(ts_mean(volume, 45)), group_mean(log1p(ts_mean(volume, 45)), industry)), group_std(lo
+[301] code_public_0713_0: ```dsl_fire result = maximum(pct_change(market_cap, 15), 0.0) ```
+[302] code_public_0972_1: ```dsl_fire result = div(sub(volume, ts_lastmean(volume, 20)), 20)), ts_last(shift(volume, 1), 20)) ```
+[303] code_public_0788_0: ```dsl_fire result
+[304] code_public_0359_1: ```dsl_fire result = square) ```
+[305] code_public_0616_0: ```dsl_fire result.2)) ```
+[306] code_public_0547_1: ```dsl_fire result = maskreg_res(volume, xs_mean(volume)), 0.0) ```
+[307] code_public_0136_0: ```dsl_fire result = sub(pb, ts_quantile(pb, 30, 0.7)) ```
+[308] code_public_0737_1: ```dsl_fire result = power(absolute(pct_change(pb, 20)), 0.25) ```
+[309] code_public_0848_0: ```dsl_fire result = mod(market_cap, 100000.0) ```
+[310] code_public_0185_0: ```dsl_fire result where(gt(pct_change(close, 20), group_mean(pct_change(close, 20), industry)), div(sub(pct_change(clos
+[311] code_public_0121_0: ```dsl_fire result ts_sum(pct_change(pb, 1), 90) ```
+[312] code_public_0968_1: ```dsl_fire result = subsub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap)))) ```
+[313] code_public_0650_0: ```dsl_fire result = xs_prodddddminimminminip(pb)), 0.0div(sub(close, vwap), vwap)), xs_mean(div(sub(close, vwap), vwap)
+[314] code_public_0724_0: ```dsl_fire result = sqrt(absolute(pct_change(open, 10))) ```
+[315] code_public_0002_0: ```dsl_fire result ts_reg_res(pct_change(open, 3)))) ```
+[316] code_public_0093_1: ```dsl_fire result = absolute(divdiv(sub(market_cap, xs_mean(market_cap)), xs_std(market_cap)))) ```
+[317] code_public_0658_0: ```dsl_fireireirehfire result = mod(low, xs_mean(low)), neg(div(sub(low, xs_mean(low)), xs_std(low)), 0.0) ```
+[318] code_public_0342_0: ```dsl_fire result = where(logicalical_xor(gt(recip(pb), xs_mean(recip(pb))), gt(log(market_cap), xs_mean(log(market_cap
+[319] code_public_0871_1: ```dslf(volume, 10000.0) ```
+[320] code_public_0485_1: ```dsl_fire result = sub(div(sub(close, vwap), vwap), xs_quantile(div(sub(clo 0.2))) ```
+[321] code_public_0525_1: ```dslf(ts_mean(pct_change(close, 1), 15), ts_var(pct_change(close, 1), 90)) ```
+[322] code_public_0747_0: ```dsl_fire result = pct_change(vwap, 60) ```
+[323] code_public_0509_0: ```dsl_fire result.0) ```
+[324] code_public_0034_1: ```dsl_fire result = ts_reg_res(recip(pb), log(market_cap), 15) ```
+[325] code_public_0578_1: ```dsl_fire result = square) ```
+[326] code_public_0292_0: ```dsl_fire result = pct_change(close, 30) ```
+[327] code_public_0759_0: ```dsl_fire result = mod(market_cap, 100000.0) ```
+[328] code_public_0586_0: ```dsl_fire result ts_argmax(market_cap, 20) ```
+[329] code_public_0925_0: ```dsl_fire result ts_ ts_corr(pct_change(close, 1), 20)) ```
+[330] code_public_0218_0: ```dsl_fire result
+[331] code_public_0859_1: ```dsl_fire result = sqrt(absolutepct_change(op 0.5))) ```
+[332] code_public_0716_0: ```dsl_fire result ts_argmaxmin(vwap, 20) ```
+[333] code_public_0242_1: ```dsl_fire result = neg(mul(div(ts_mean(volume, 3), ts_mean(volume, 30)), pct_change(close, 3))) ```
+[334] code_public_0679_0: ```dsl_fire result = where(eq(sign(sub(open, xs_mean(open))), 1.0), div(sub(open, xs_mean(open)), xs_std(open)), 0.0) ``
+[335] code_public_0646_0: ```dsl_fire result = ts_corr(pct_change(close, 20), log(market_cap), 45) ```
+[336] code_public_0699_1: ```dsl_fire result = sub(market_cap, xs_median(market_cap)) ```
+[337] code_public_0895_1: ```dsl_fire result = ts_reg_res(pct_change(vwap, 10), pct_change(vwap, 10)) ```
+[338] code_public_0146_1: ```dsl_fire result = cbrt(pct_change(close, 2)) ```
+[339] code_public_0264_0: ```dsl_fire result.argmaxmin(pb, 10) ```
+[340] code_public_0091_0: ```dsl_fire result(log(recip(pb)), neg(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))))) ``
+[341] code_public_0070_1: ```dsl_fire result.25) ```
+[342] code_public_0033_0: ```dsl_fire result(recip(pb), recip(pb), 15) ```
+[343] code_public_0727_1: ```dsl_fire result ts_argmaxmin(vwap, 60) ```
+[344] code_public_0099_1: ```dsl_fire result = maximum(pct_change(open, 20), 0.0) ```
+[345] code_public_0094_0: ```dsl_fire result ts_win_cumsum(pct_change(market_cap, 1), 45) ```
+[346] code_public_0195_1: ```dsl_fire result = minimum(pct_change(market_cap, 20), 0.0) ```
+[347] code_public_0079_0: ```dsl_fire result = where(le(ts_std(pct_change(close, 1), 20), xs_mean(ts_std(pct_change(close, 1), 20))), add(recip(pb
+[348] code_public_0229_1: ```dsl_fire result = mod(maximum(div(sub(pb, xs_mean(pb)), xs_std(pb)), gt(pb, xs_mean(pb)), 0.0) ```
+[349] code_public_0361_0: ```dsl_fire result = diff(close, 3) ```
+[350] code_public_0672_0: ```dsl_fire result ts_argmaxmin(volume, 5) ```
+[351] code_public_0961_0: ```dsl_fire result.reg_res(pct_change(open, 60), 0.0) ```
+[352] code_public_0412_1: ```dsl_fire result = ts_reg_res(div(volume, market_cap), pct_change(close, 5), 60) ```
+[353] code_public_0903_0: ```dsl_fire result
+[354] code_public_0037_0: ```dsl_fire result = pct_change(open, 3) ```
+[355] code_public_0397_0: ```dsl_fire result(gt(recip(pb), xs_mean(recip(pb))), neg(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log
+[356] code_public_0477_1: ```dsl_fire result = xs_corr(pct_change(close, 60), volume) ```
+[357] code_public_0683_1: ```dsl_fire result = ts_sum(pct_change(market_cap, 1), 60) ```
+[358] code_public_0085_0: ```dsl_fire result = sub
+[359] code_public_0346_0: ```dsl_fire result = minimum(pct_change(high, 3), 0.0) ```
+[360] code_public_0440_1: ```dsl_fire result = absolute(pct_change(open, 2)) ```
+[361] code_public_0007_0: ```dsl_fire result = power(absolute(pct_change(low, 5)), 0.25) ```
+[362] code_public_0375_1: ```dsl_fire result = ts_sum(pct_change(volume, 1), 30) ```
+[363] code_public_0826_0: ```dsl_fire result = ts_win_cumsum(pct_change(pb, 1), 10) ```
+[364] code_public_0548_0: ```dsl_fire result.pct_change(vwap, 20) ```
+[365] code_public_0809_0: ```dsl_fire result ts_std(pct_change(close, 1), 2), ts_std(pct_change(close, 1), 60)) ```
+[366] code_public_0724_1: ```dsl_fire result = sqrt(absolute(pct_change(open, 5))) ```
+[367] code_public_0630_0: ```dsl_fire result = where(eq(sign(sub(market_cap, xs_mean(market_cap))), 1.0), div(sub(market_cap, xs_mean(market_cap))
+[368] code_public_0718_0: ```dsl_fire result)  ```
+[369] code_public_0799_0: ```dsl_fire result = pct_change(open, 60) ```
+[370] code_public_0055_1: ```dsl_fire result.0), pct_change(close, 1), ```
+[371] code_public_0386_0: ```dsl_fire result = ts_prod(add(1.0, pct_change(volume, 1)), 90) ```
+[372] code_public_0756_1: ```dsl_fire result ts_argmaxmin(vwap, 5) ```
+[373] code_public_0411_0: ```dsl_fire result ts_win_cumsum(pct_change(close, 1), 30) ```
+[374] code_public_0261_0: ```dsl_fire result = where(logical_or(gt(neg(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))
+[375] code_public_0288_0: ```dsl_fire result
+[376] code_public_0736_1: ```dsl_fire result = minimum(pct_change(volume, 3), 0.0) ```
+[377] code_public_0823_1: ```dsl_fire result = where(gt(div(sub(close, vwap), vwap), xs_mean(div(sub(close, vwap), vwap))), add(div(sub(div(sub(cl
+[378] code_public_0428_0: ```dsl_fire result = div(pb, xs_corr(pct_change(close, 20), pct_change(close, 20)) ```
+[379] code_public_0210_1: ```dsl_fire result = neg(pct_change(close, 10)) ```
+[380] code_public_0234_0: ```dsl_fire result = mod(volume, 10000.0) ```
+[381] code_public_0642_0: ```dsl_fire result = where(logicalical_or(gt(recip(pb), xs_mean(recip(pb))), gt(neg(log(market_cap)), xs_mean(neg(log(ma
+[382] code_public_0453_0: ```dsl_fire result ts_prod(add(1.0, pct_change(low, 2))) ```
+[383] code_public_0977_1: ```dsl_fire result.pct_change(open, 45) ```
+[384] code_public_0376_0: ```dsl_fire result = power(absolute(pct_change(open, 20)), 0.25) ```
+[385] code_public_0531_1: ```dsl_fire result 0.pct_change(vwap, 60) ```
+[386] code_public_0371_1: ```dsl_fire result = log10(add(1.0, absolute(pct_change(market_cap, 7)))) ```
+[387] code_public_0801_0: ```dsl_fire result 30) ```
+[388] code_public_0716_1: ```dsl_fire result ts_argmaxmin(vwap, 20) ```
+[389] code_public_0248_1: ```dsl_fire result = log10(add(1.1.1.1.1))000.1))hhhimum(pct_change(market_cap, 20), 0.0,) ```
+[390] code_public_0871_0: ```dsl_fire result = mod(volume, 10000.0) ```
+[391] code_public_0849_1: ```dsl_fire result = div(sub(vwap, shift(vwap, 5)), shift(vwap, 10)) ```
+[392] code_public_0392_1: ```dsl_fire result = power(absolutepct_change(close, 20)), 0.5) ```
+[393] code_public_0288_1: ```dsl_fire result = div(sub(vwap, shift(vwap, 5)), shift(vwap, 15)) ```
+[394] code_public_0918_0: ```dsl_fire result ts_argmaxmin(vwap, 10) ```
+[395] code_public_0520_1: ```dsl_fire result = add(div(sub(log(recip(pb)), group_mean(log(recip(pb)), industry)), group_std(log(recip(pb)), indust
+[396] code_public_0782_0: ```dsl_fire result = absolute(pct_change(vwap, 30)) ```
+[397] code_public_0199_0: ```dsl_fire result
+[398] code_public_0333_1: ```dsl_fire result = abfreg_res(div(volume, market_cap), group_mean(div(volume, market_cap), industry)), group_std(div(v
+[399] code_public_0904_1: ```dsl_fire result = cbrt(pct_change(open, 7)) ```
+[400] code_public_0255_0: ```dsl_fire result = where(logical_or(ne(sign(pct_change(close, 1)), -1.0), ge(volume, ts_mean(volume, 20))), neg(log(ma
+[401] code_public_0275_1: ```dsl_fire result = maximum(pct_change(pb, 5), 0.0) ```
+[402] code_public_0195_0: ```dsl_fire result = minimum(pct_change(market_cap, 20), 0.0) ```
+[403] code_public_0343_1: ```dsl_fire result.0), ```
+[404] code_public_0546_1: ```dsl_fire result.0) ```
+[405] code_public_0255_1: ```dsl_fire result = where(logical_or(ne(sign(pct_change(close, 1)), -1.0), ge(volume, ts_mean(volume, 20))), neg(log(ma
+[406] code_public_0908_0: ```dsl_fire result(recip(pb), recip(pb), 30) ```
+[407] code_public_0057_1: ```dsl_fire result = ts_prod(add(1.0, pct_change(market_cap, 1)), 5) ```
+[408] code_public_0669_0: ```dsl_fire result = exp(minimum(pct_change(volume, 3), 0.1)) ```
+[409] code_public_0805_1: ```dsl_fire result ts_argmaxlow, 90) ```
+[410] code_public_0456_0: ```dsl_fire result.pct_change(vwap, 45)) ```
+[411] code_public_0162_0: ```dsl_fire result = add(log(market_cap), log1p(ts_mean(volume, 20))) ```
+[412] code_public_0137_1: ```dsl_fire result = masreg_res(market_cap, xs_mean(market_cap)), 0.0) ```
+[413] code_public_0645_0: ```dsl_fire result = power(absolute(pct_change(volume, 10)), 0.25) ```
+[414] code_public_0254_1: ```dsl_fireireirereg_res), log(market_cap), log(market_cap)) ```
+[415] code_public_0194_0: ```dsl_fire result = power(absolute(pct_change(close, 90)), 0.5) ```
+[416] code_public_0721_1: ```dsl_fire result.0) ```
+[417] code_public_0954_0: ```dsl_fire result = minimum(maximum(div(sub(v, xs_mean(volume)), xs_std(volume)), -2.0), 2.0) ```
+[418] code_public_0365_0: ```dsl_fire result ts_argmaxmin(vwap, 7) ```
+[419] code_public_0294_1: ```dsl_fire result = minimum(maximum(div(sub(low, xs_mean(low)), xs_std(low)), -3.0), 3.0) ```
+[420] code_public_0295_0: ```dsl_fire result = where(logical_xor(ne(sign(pct_change(close, 1)), -1.0), lt(close, ts_mean(close, 20))), pct_change(
+[421] code_public_0564_1: ```dsl_fire result.0) ```
+[422] code_public_0281_1: ```dsl_fire result = subsub(sqrt(recip(pb)), xs_mean(sqrt(recip(pb))) ```
+[423] code_public_0120_0: ```dsl_fire result.reciprt(pb), shift(vwap, 3)) ```
+[424] code_public_0618_1: ```dsl_fire result = div(sub(vwap, group_mean(vwap, industry)), group_std(vwap, industry)) ```
+[425] code_public_0169_1: ```dsl_fire result = power(absolute(pct_change(high, 5)), 0.5) ```
+[426] code_public_0305_1: ```dsl_fire result = sub(market_cap, xs_quantile(market_cap, 0.2)) ```
+[427] code_public_0249_1: ```dsl_fire result = maximum(pct_change(close, 7), 0.0) ```
+[428] code_public_0964_0: ```dsl_fire result.pct_change(vwap, 20)) ```
+[429] code_public_0394_0: ```dsl_fire result
+[430] code_public_0719_0: ```dsl_fire result = exp(minimum(pct_change(high, 15), 0.1)) ```
+[431] code_public_0149_1: ```dslflogical_not,le(volume, xs_median(volume)), neg(div(sub(volume, xs_mean(volume)), xs_std(volume))), 0.0) ```
+[432] code_public_0709_1: ```dsl_fire result = minimum(pct_change(open, 15), 0.0) ```
+[433] code_public_0494_0: ```dsl_fire result.reg_res(pct_change(open, 5), 0.0) ```
+[434] code_public_0025_1: ```dsl_fire result = ts_corr(log1p(volume), log(market_cap), 60) ```
+[435] code_public_0072_0: ```dsl_fire result = minimum(maximum(div(sub(vwap, group_mean(vwap, industry)), group_std(vwap, industry)), -3.0), 3.0) 
+[436] code_public_0498_0: ```dsl_fire result.pct_change(vwap, 90)) ```
+[437] code_public_0166_0: ```dsl_fireireire) ```
+[438] code_public_0111_0: ```dsl_fire result 45)) ```
+[439] code_public_0243_0: ```dsl_fire result.0) ```
+[440] code_public_0551_0: ```dsl_fire result = log) ```
+[441] code_public_0471_0: ```dsl_fire result = minimum(pct_change(volume, 20), 0.0) ```
+[442] code_public_0659_0: ```dsl_fire result = mod(volume, 10000.0) ```
+[443] code_public_0163_1: ```dsl_fire result = ab 100.ct_change(close, 20) ```
+[444] code_public_0565_1: ```dsl_fire result = exp(minimum(pct_change(vwap, 7), 0.1)) ```
+[445] code_public_0776_1: ```dsl_fire result.pct_change(close, 2), ```
+[446] code_public_0320_1: ```dsl_fire result = where(logical_and(ge(volume, ts_mean(volume, 20)), ne(sign(pct_change(close, 1)), -1.0)), pct_chang
+[447] code_public_0297_0: ```dsl_fire result = ts_reg_res(div(volume, market_cap), pct_change(close, 5), 20) ```
+[448] code_public_0692_1: ```dsl_fire result = power(absolutepct_change(vwap, 5)), 0.25) ```
+[449] code_public_0574_0: ```dsl_fire result = log10(ts_mean(volume, 30)) ```
+[450] code_public_0712_0: ```dsl_fire result.argmaxmin(volume, 15) ```
+[451] code_public_0634_1: ```dsl_fire result = neg(mul(div(sub(close, vwap), vwap)) ```
+[452] code_public_0480_1: ```dsl_fire result = add(recip(pb), neg(pct_change(close, 60))) ```
+[453] code_public_0693_0: ```dsl_fire result
+[454] code_public_0322_1: ```dsl_fire result = div(sub(open, xs_mean(open)), xs_std(open)) ```
+[455] code_public_0214_0: ```dsl_fire result = sub(v, ts_quantile(volume, 10, 0.7)) ```
+[456] code_public_0951_1: ```dsl_fire result = sub(close, ts_quantile(close, 10, 0.8)) ```
+[457] code_public_0538_0: ```dsl_fire result = where(gt(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), xs_mean(div(sub(recip(pb), xs_
+[458] code_public_0623_0: ```dsl_fire result = mod(mark000.0) ```
+[459] code_public_0999_1: ```dsl_fire result.absolute(pct_change(pb, 3)), 0.5) ```
+[460] code_public_0881_1: ```dsl_fire result = ts_win_cumsum(pct_change(volume, 1), 5) ```
+[461] code_public_0802_0: ```dsl_fire result = sub(ts_mean(pct_change(close, 1), 30), ts_var(pct_change(close, 1), 60)) ```
+[462] code_public_0975_1: ```dsl_fire result = absolute(pct_change(open, 10)) ```
+[463] code_public_0283_0: ```dsl_fire result = ts_prod(add(1.0, pct_change(volume, 1)), 45) ```
+[464] code_public_0408_1: ```dsl_fire result = mul(div(ts_mean(volume, 7), ts_mean(volume, 30)), pct_change(close, 7)) ```
+[465] code_public_0061_1: ```dsl_fire result = sub(v, ts_quantile(volume, 60, 0.7)) ```
+[466] code_public_0270_1: ```dsl_fire result = neg(pct_change(close, 3)) ```
+[467] code_public_0806_1: ```dsl_fire result = neg(mul(div(ts_mean(volume, 3), ts_mean(volume, 20)), pct_change(close, 3))) ```
+[468] code_public_0889_1: ```dsl_fire result = where(logical_or(gt(close, ts_mean(close, 20)), ge(volume, ts_mean(volume, 20))), pct_change(close,
+[469] code_public_0009_1: ```dsl_fire result.0) ```
+[470] code_public_0011_1: ```dsl_fire result ts_argmaxmin(vwap, 60) ```
+[471] code_public_0964_1: ```dsl_fire result.pct_change(vwap, 5)) ```
+[472] code_public_0045_1: ```dsl_fire result ts_stddd(whereadd(1.0, pct_change(close, 1)), 0.0), 90) ```
+[473] code_public_0550_1: ```dsl_fire result = maskreg_res(market_cap, xs_mean(market_cap)), 0.0) ```
+[474] code_public_0937_0: ```dsl_fire result = sub(market_cap, ts_quantile(market_cap, 60, 0.7)) ```
+[475] code_public_0624_1: ```dsl_fire result.0)) ```
+[476] code_public_0762_0: ```dsl_fire result ts_win_cumsum(pct_change(close, 1), 90) ```
+[477] code_public_0037_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(open, 3))) ```
+[478] code_public_0987_1: ```dsl_fire result = exp(minimum(pct_change(open, 2), 0.1)) ```
+[479] code_public_0437_0: ```dsl_fire result = sub(pb, xs_median(pb)) ```
+[480] code_public_0482_1: ```dsl_fire result.0) ```
+[481] code_public_0222_1: ```dsl_fire resultreg_res(close, 15) ```
+[482] code_public_0183_0: ```dsl_fire result = pct_change(vwap, 3) ```
+[483] code_public_0837_1: ```dsl_fire result = add(div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), industry)), pct_chang
+[484] code_public_0291_0: ```dsl_fire result = power(absolute(pct_change(market_cap, 15)), 0.25) ```
+[485] code_public_0657_0: ```dsl_fire result.reg_res(pct_change(open, 15)) ```
+[486] code_public_0492_1: ```dsl_fire result = sub(close, ts_quantile(close, 90, 0.8)) ```
+[487] code_public_0937_1: ```dsl_fire result = sub(market_cap, ts_quantile(market_cap, 60, 0.7)) ```
+[488] code_public_0058_0: ```dsl_fire result = div(market_cap, xs_sum(market_cap)), 0.sum(market_cap, xs_sum(market_cap))) ```
+[489] code_public_0202_1: ```dsl_fire result = ts_argmaxmin(volume, 30) ```
+[490] code_public_0049_0: ```dsl_fire result = sub(div(volume, market_cap), xs_median(div(volume, market_cap))) ```
+[491] code_public_0886_1: ```dsl_fire result = masreg_res(div(sub(oplose, xs_mean(open)), xs_std(open)), gt(oplose, xs_mean(close)), 0.0) ```
+[492] code_public_0723_0: ```dsl_fire result = div(sub(pct_change(close, 30), group_mean(pct_change(close, 30), industry)), group_std(pct_change(c
+[493] code_public_0943_1: ```dslf.reg_res(pct_change(open, 45)) ```
+[494] code_public_0604_1: ```dsl_fire result = where(gt(market_cap, xs_median(mmark(markap)), div(sub(market_cap, xs_mean(market_cap)), xs_std(mar
+[495] code_public_0064_1: ```dsl_fire result = sub(volume, group_mean(volume, industry)), div(sub(volume, ts_mean(volume, 20)), ts_std(volume, 20)
+[496] code_public_0696_1: ```dsl_fire result = where(gt(log(recip(pb)), xs_mean(log(recip(pb)))), log(market_cap), 0.0) ```
+[497] code_public_0733_0: ```dsl_fire result = mod(logical_or(gt(volume, xs_mean(volume)), div(sub(volume, xs_mean(volume)), xs_std(volume)), 0.0)
+[498] code_public_0888_0: ```dsl_fire result
+[499] code_public_0593_0: ```dsl_fire result = sub(ts_std(pct_change(close, 1), 20), xs_mean(ts_std(pct_change(close, 1), 20))) ```
+[500] code_public_0765_0: ```dsl_fire result = minimum(maximum(div(sub(close, group_mean(close, industry)), group_std(close, industry)), -3.0), 3.
+[501] code_public_0683_0: ```dsl_fire result ts_sum(pct_change(market_cap, 1), 60) ```
+[502] code_public_0098_0: ```dsl_fire result = sub(low, xs_median(low)) ```
+[503] code_public_0819_1: ```dsl_fire result = where(ne(sign(sub(. 1),.0),.0), 0.0), div) ```
+[504] code_public_0530_0: ```dsl_fire result ts_reg_res(pct_change(v, 10)))) ```
+[505] code_public_0942_0: ```dsl_fire result = power(absolute(pct_change(close, 7)), 0.5) ```
+[506] code_public_0229_0: ```dsl_fire result = mod(gt(pb, xs_mean(pb)), div(sub(pb, xs_mean(pb)), xs_std(pb)), 0.0) ```
+[507] code_public_0356_0: ```dsl_fire result.7)) ```
+[508] code_public_0224_0: ```dsl_fire result = add(div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), industry)), pct_chang
+[509] code_public_0238_1: ```dsl_fire result = ts_corr(log1p(volume), log(market_cap), 45) ```
+[510] code_public_0005_1: ```dsl_fire result = sub(market_cap, ts_quantile(market_cap, 0.7)) ```
+[511] code_public_0566_1: ```dsl_fireirefire result = where(gt(log(recip(pb)), xs_mean(log(recip(pb)))), neg(div(sub(log(market_cap), xs_mean(log(
+[512] code_public_0038_1: ```dslf(ts_mean(pct_change(close, 1), 15), ts_var(pct_change(close, 1), 90)) ```
+[513] code_public_0106_0: ```dsl_fire result ts_prod(add(1.0, pct_change(vwap, 1)), 10) ```
+[514] code_public_0399_0: ```dsl_fire result = power(absolute(pct_change(market_cap, 10)), 0.5) ```
+[515] code_public_0932_1: ```dsl_fire result = ts_corr(div(volume, market_cap), pct_change(close, 5), 45) ```
+[516] code_public_0898_1: ```dsl_fire result = sub(market_cap, xs_quantile(market_cap, 0.7)) ```
+[517] code_public_0940_0: ```dsl_fire result
+[518] code_public_0579_1: ```dsl_fire result = where(logical_not(ne(sign(pct_change(close, 1)), -1.0)), neg(neg(log(market_cap))), 0.0) ```
+[519] code_public_0830_1: ```dsl_fire result = xs_corr(vwap, market_cap) ```
+[520] code_public_0776_0: ```dsl_fire result
+[521] code_public_0582_0: ```dsl_fire result.pct_change(vwap, 10) ``` ```
+[522] code_public_0657_1: ```dsl_fire result.0) ```
+[523] code_public_0314_1: ```dsl_fire result ts_regre 90add(1.0, absolute(pct_change(vwap, 15)))) ```
+[524] code_public_0979_0: ```dsl_fire result = ts_win_cumsum(pct_change(pb, 1), 30) ```
+[525] code_public_0279_0: ```dsl_fireire result = where(ge(pb, xs_mean(pb)), pb, xs_mean(pb)) ```
+[526] code_public_0291_1: ```dsl_fire result = power(absolute(pct_change(market_cap, 15)), 0.25) ```
+[527] code_public_0457_1: ```dslf(vwap, 90) ```
+[528] code_public_0901_1: ```dsl_fire result = ts_reg_res(recip(pb), log(market_cap), 20) ```
+[529] code_public_0610_1: ```dsl_fire result = exp(minimum(div(sub(vwap, xs_mean(vwap)), xs_std(vwap)), 3.0)) ```
+[530] code_public_0888_1: ```dsl_fire result = neg(pct_change(close, 3)) ```
+[531] code_public_0579_0: ```dsl_fire result = where(logical_not(ne(sign(pct_change(close, 1)), -1.0)), neg(neg(log(market_cap))), 0.0) ```
+[532] code_public_0881_0: ```dsl_fire result ts_win_cumsum(pct_change(volume, 1), 5) ```
+[533] code_public_0419_1: ```dsl_fire result.pct_change(close, 60)) ```
+[534] code_public_0541_1: ```dsl_fire result = ts_argmaxmin(market_cap, 90) ```
+[535] code_public_0783_1: ```dsl_fire result.argmaxts_argmax(pb, 30) ```
+[536] code_public_0147_1: ```dsl_fire result.0) ```
+[537] code_public_0715_0: ```dsl_fire result = log10(add(1.0, ab10(pct_change(close, 20)))) ```
+[538] code_public_0331_1: ```dsl_fire result = exp(minimum(div(sub(pb, xsmean(pb)), xs_std(pb)), 1.0)) ```
+[539] code_public_0739_1: ```dsl_fire result = cbrt(pct_change(close, 90)) ```
+[540] code_public_0425_1: ```dsl_fire result = exp(minimum(div(sub(v, xs_mean(volume)), xs_std(volume)), 4.0)) ```
+[541] code_public_0490_1: ```dsl_fireire result = xs_corr(ts_std(pct_change(close, 1), 20), xs_mean(ts_std(pct_change(close, 1), 20))) ```
+[542] code_public_0851_0: ```dsl_fire result
+[543] code_public_0632_0: ```dsl_fire result = div(volume, xs_sum(volume)) ```
+[544] code_public_0391_1: ```dsl_fire result = sub(vwap, xs_mean(vwap)) ```
+[545] code_public_0981_1: ```dsl_fire result = where(logical_and(ne(sign(pct_change(close, 1)), -1.0), lt(close, ts_mean(close, 20))), pct_change(
+[546] code_public_0917_0: ```dsl_fire result = absolute(div(sub(log(recip(pb)), xs_mean(log(rec)))), xs_std(log(recip(pb))))) ```
+[547] code_public_0263_1: ```dsl_fire result = div(sub(pb, xs_median(pb)), xs_std(pb)) ```
+[548] code_public_0618_0: ```dsl_fire result = div(sub(vwap, group_mean(vwap, industry)), group_std(vwap, industry)) ```
+[549] code_public_0429_0: ```dsl_fire result = div(sub(volume, ts_lastmean(volume, 20)), ts_last(shift(volume, 1), 10)) ```
+[550] code_public_0188_0: ```dsl_fire result))
+[551] code_public_0084_0: ```dsl_fire result 30) ```
+[552] code_public_0680_0: ```dsl_fire result ts_ ```
+[553] code_public_0056_0: ```dsl_fire result = absolute(sub(low, xs_median(low))) ```
+[554] code_public_0806_0: ```dsl_fire result = neg(mul(div(ts_mean(volume, 3), ts_mean(volume, 20)), pct_change(close, 3))) ```
+[555] code_public_0013_0: ```dsl_fireireire sub(recip(pb), neg(log(market_cap))) ```
+[556] code_public_0654_1: ```dsl_fire result = div(sub(pct_change(close, 5), group_mean(pct_change(close, 5), industry)), group_std(pct_change(clo
+[557] code_public_0654_0: ```dsl_fire result = div(sub(pct_change(close, 5), group_mean(pct_change(close, 5), industry)), group_std(pct_change(clo
+[558] code_public_0899_0: ```dsl_fire result
+[559] code_public_0055_0: ```dsl_fire result.0), pct_change(close, 5), ```
+[560] code_public_0620_1: ```dsl_fire result = where(logical_and(ge(volume, ts_mean(volume, 20)), eq(sign(pct_change(close, 1)), 1.0)), pct_change
+[561] code_public_0914_0: ```dsl_fire result = where(logical_not(ge(volume, ts_mean(volume, 20))), neg(pct_change(close, 7)), 0.0) ```
+[562] code_public_0072_1: ```dsl_fire result = minimum(maximum(div(sub(vwap, group_mean(vwap, industry)), group_std(vwap, industry)), -3.0), 3.0) 
+[563] code_public_0758_1: ```dsl_fire result.pct_change(open, 2)) ```
+[564] code_public_0401_1: ```dsl_fire result = sub(div(absoluteabsolute(div(sub(clolo div(clo), vwap)), xs_sum(absolute(div(sub(close, vwap), vwap
+[565] code_public_0209_1: ```dsl_fire result = xs_corr(pb, market_cap) ```
+[566] code_public_0851_1: ```dsl_fire result = power(absolute(pct_change(vwap, 5)), 0.5) ```
+[567] code_public_0438_1: ```dsl_fire result = add(sqrt(recip(pb)), log(market_cap)) ```
+[568] code_public_0043_0: ```dsl_fire result ts_win_cumsum(pct_change(pb, 1), 45) ```
+[569] code_public_0968_0: ```dsl_fire result(log(recip(pb)), log(market_cap)) ```
+[570] code_public_0367_0: ```dsl_fire result = sqrt(absolute(pct_change(open, 10))) ```
+[571] code_public_0321_0: ```dsl_fire result = sub(close, xs_quantile(close, 0.8)) ```
+[572] code_public_0092_1: ```dsl_fire result = maximum(pct_change(low, 3), 0.0) ```
+[573] code_public_0175_1: ```dsl_fire result = ts_argmaxmin(close, 10) ```
+[574] code_public_0277_1: ```dsl_fire result.0) ```
+[575] code_public_0894_1: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), gt(neg(log(market_cap)), xs_mean(neg(log(marke
+[576] code_public_0444_0: ```dsl_fire result
+[577] code_public_0304_1: ```dslf(open, 7) ```
+[578] code_public_0848_1: ```dslffffff(market_cap, 100000.0) ```
+[579] code_public_0551_1: ```dslf(close, 30) ```
+[580] code_public_0474_0: ```dsl_fire result ts_reg_res(pct_change(open, 10), pct_change(open, 1) ```
+[581] code_public_0056_1: ```dsl_fire)) result = absolute(sub(low, xs_median(low))) ```
+[582] code_public_0280_1: ```dsl_fire result = xs_corr(pct_change(close, 10), volume) ```
+[583] code_public_0334_0: ```dsl_fire result = where(logical_xor(gt(recip(pb), xs_mean(recip(pb))), le(ts_std(pct_change(close, 1), 20), xs_mean(t
+[584] code_public_0260_0: ```dsl_fire result = power(absolute(pct_change(volume, 20)), 0.25) ```
+[585] code_public_0442_0: ```dsl_fire result.reg_res(pct_change(close, 90)), 0.0) ```
+[586] code_public_0015_1: ```dsl_fire result = ts_reg_res(div(volume, market_cap), pct_change(close, 5), 45) ```
+[587] code_public_0389_0: ```dsl_fire result ts_prod(add(1.0, pct_change(close, 1)), 60) ```
+[588] code_public_0355_1: ```dsl_fire result = div(sub(log(recip(pb)), group_mean(log(recip(pb)), industry)), group_std(log(recip(pb)), industry))
+[589] code_public_0552_1: ```dsl_fire result.0)) ```
+[590] code_public_0362_0: ```dsl_fire result ts_), 0.0) ```
+[591] code_public_0388_0: ```dsl_fire result ts_argmaxian(volume, 90) ```
+[592] code_public_0070_0: ```dsl_fire result = power(absolute(pct_change(low, 3)), 0.25) ```
+[593] code_public_0464_1: ```dsl_fire result = square) ```
+[594] code_public_0626_0: ```dsl_fire result
+[595] code_public_0463_1: ```dsl_fire result = cbrt(pct_change(close, 5)) ```
+[596] code_public_0414_0: ```dsl_fire result = sqrt(absolute(pct_change(close, 10))) ```
+[597] code_public_0431_0: ```dsl_fire result = power(absolute(pct_change(close, 15)), 0.25) ```
+[598] code_public_0074_1: ```dsl_fire result = where(logical_xor(ne(sign(pct_change(close, 1)), -1.0), lt(close, ts_mean(close, 20))), pct_change(
+[599] code_public_0267_1: ```dsl_fire result = where(logical_xor(gt(div(volume, market_cap), xs_mean(div(volume, market_cap))), gt(recip(pb), xs_m
+[600] code_public_0108_1: ```dsl_fire result = maximum(pct_change(high, 15), 0.0) ```
+[601] code_public_0879_0: ```dsl_fire result = power(absolute(pct_change(vwap, 3)), 0.5) ```
+[602] code_public_0316_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(low, 10))) ```
+[603] code_public_0568_0: ```dsl_fire result ts_), 0.0) ```
+[604] code_public_0953_1: ```dsl_fire result ts_argmaxvolume, 20) ```
+[605] code_public_0823_0: ```dsl_fire result = where(gt(div(sub(close, vwap), vwap), xs_mean(div(sub(close, vwap), vwap))), div(sub(div(sub(close,
+[606] code_public_0803_0: ```dsl_fire result.pct_change(vwap, 60)) ```
+[607] code_public_0994_1: ```dsl_fire result = neg(mul(div(ts_mean(volume, 3), ts_mean(volume, 90)), pct_change(close, 3)))) ```
+[608] code_public_0861_1: ```dslf(ts_mean(pct_change(close, 1), 15), ts_var(pct_change(close, 1), 60)) ```
+[609] code_public_0723_1: ```dsl_fire result = div(sub(pct_change(close, 30), group_mean(pct_change(close, 60), industry)), group_std(pct_change(c
+[610] code_public_0488_0: ```dsl_fire result ts_argmaxts_argmax(close, 30) ```
+[611] code_public_0378_1: ```dsl_fire result.0)) ```
+[612] code_public_0983_1: ```dslfximumf 100000.0) ```
+[613] code_public_0002_1: ```dsl_fire result.0)) ```
+[614] code_public_0011_0: ```dsl_fire result ts_argmaxmin(vwap, 60) ```
+[615] code_public_0076_1: ```dsl_fire result = div(sub(market_cap, group_mean(market_cap, industry)), group_std(market_cap, industry)) ```
+[616] code_public_0034_0: ```dsl_fire result(recip(pb), log(market_cap), 15) ```
+[617] code_public_0373_0: ```dsl_fire result = sub(low, xs_quantile(low, 0.7)) ```
+[618] code_public_0936_0: ```dsl_fire result = minimum(maximum(div(sub(open, group_mean(oplose, industry)), group_std(close, industry)), -2.0), 3.
+[619] code_public_0187_1: ```dsl_fire result = where(logical_and(gt(sqrt(recip(pb)), xs_mean(sqrt(recip(pb)))), gt(pct_change(close, 20), xs_mean(
+[620] code_public_0406_0: ```dsl_fire result = minimum(maximum(div(sub(pb, group_mean(pb, industry)), group_std(pb, industry)), -2.0), 2.0) ```
+[621] code_public_0251_0: ```dsl_fire result = where(logical_and(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap))))), gt(log1p(ts_mean(volume
+[622] code_public_0131_0: ```dsl_fireire result.2)) ```
+[623] code_public_0211_1: ```dsl_fire result = sub(volume, xs_quantile(volume, 0.5)) ```
+[624] code_public_0100_0: ```dsl_fire result = diff(close, 10) ```
+[625] code_public_0707_0: ```dsl_fire result = minimum(pct_change(low, 15), 0.0) ```
+[626] code_public_0857_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(open, 15))) ```
+[627] code_public_0803_1: ```dsl_fire result.0)) ```
+[628] code_public_0444_1: ```dsl_fire result = power(absolute(pct_change(market_cap, 15)), 0.5) ```
+[629] code_public_0405_0: ```dsl_fire result = where(logical_and(gt(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), xs_mean(div(sub(re
+[630] code_public_0409_0: ```dsl_fire result = sub(volume, xs_quantile(volume, 0.8)) ```
+[631] code_public_0297_1: ```dsl_fire result = ts_reg_res(div(volume, market_cap), pct_change(close, 5), 20) ```
+[632] code_public_0028_0: ```dsl_fire result = sub(div(absoluteabsolute(ts_st)), xs_sum(absolute(ts_std(pct_change(close, 1), 20))), xs_sum(absolu
+[633] code_public_0415_1: ```dsl_fire result = div(sub(log1p(ts_mean(volume, 20)), group_mean(log1p(ts_mean(volume, 20)), industry)), group_std(lo
+[634] code_public_0887_1: ```dsl_fire result = subsub(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), neg(log(market_cap))) ```
+[635] code_public_0159_0: ```dsl_fire result = power(absolute(pct_change(volume, 5)), 0.25) ```
+[636] code_public_0010_1: ```dsl_fire result = div(sub(close, ts_min(low, 15)), ts_min(low, 15)) ```
+[637] code_public_0044_1: ```dsl_fire result = power(absolutepct_change(close, 5)), 0.5) ```
+[638] code_public_0199_1: ```dsl_fire result = power(absolute(pct_change(open, 2)), 0.5) ```
+[639] code_public_0017_0: ```dsl_fire result ts_prod(add(1.0, pct_change(low, 45))) ```
+[640] code_public_0491_1: ```dsl_fire result.pct_change(close, 90)) ```
+[641] code_public_0746_0: ```dsl_fire result.pct_change(volume, 45) ```
+[642] code_public_0396_0: ```dsl_fire result
+[643] code_public_0307_1: ```dsl_fire result.0)) ```
+[644] code_public_0880_1: ```dsl_fire result = cbrt(pct_change(close, 30)) ```
+[645] code_public_0730_0: ```dsl_fire result ts_reg_res(pct_change(open, 10)))) ```
+[646] code_public_0148_1: ```dsl_fire result.pct_change(open, 10) ```
+[647] code_public_0184_1: ```dsl_fire resultresult.0) ```
+[648] code_public_0900_1: ```dsl_fire result = power(absolute(pct_change(open, 10)), 0.5) ```
+[649] code_public_0500_1: ```dsl_fire result = power(absolute(pct_change(low, 7)), 0.5) ```
+[650] code_public_0512_1: ```dsl_fire result = add(log(market_cap), div(sub(close, vwap), vwap)) ```
+[651] code_public_0547_0: ```dsl_fire result = mod(logical_and(gt(volume, xs_mean(volume)), div(sub(volume, xs_mean(volume)), xs_std(volume)), 0.0
+[652] code_public_0220_1: ```dsl_fire result = where(logical_or(gt(pct_change(close, 20), xs_mean(pct_change(close, 20))), gt(div(sub(recip(pb), g
+[653] code_public_0267_0: ```dsl_fire result = where(logical_xor(gt(div(volume, market_cap), xs_mean(div(volume, market_cap))), gt(recip(pb), xs_m
+[654] code_public_0451_1: ```dsl_fire result = minimum(maximum(div(sub(market_cap, xs_mean(market_cap)), xs_std(market_cap)), -2.0), 2.0) ```
+[655] code_public_0080_0: ```dsl_fire result
+[656] code_public_0310_1: ```dsl_fire result = mas ts_mean(volume, 20)), pct_change(close, 5), 0.0) ```
+[657] code_public_0798_0: ```dsl_fire result = power(absolute(pct_change(high, 7)), 0.25) ```
+[658] code_public_0420_1: ```dsl_fire result = power(absolute(pct_change(volume, 3)), 0.5) ```
+[659] code_public_0652_1: ```dsl_fire result = sub(v, ts_quantile(volume, 15, 0.7)) ```
+[660] code_public_0922_1: ```dsl_fire result = ts_), 0.0) ```
+[661] code_public_0077_1: ```dsl_fire result.pct_change(close, 20)) ```
+[662] code_public_0649_1: ```dsl_fire result = sub(high, xs_quantile(high, 0.8)) ```
+[663] code_public_0153_0: ```dsl_fire result ts_argmaxmin(volume, 30) ```
+[664] code_public_0684_0: ```dsl_fire result = ts_prod(add(1.0, pct_change(volume, 1)), 60) ```
+[665] code_public_0203_0: ```dsl_fire result = ts_argmin(close, 10) ```
+[666] code_public_0548_1: ```dsl_fire result = neg(pct_change(vwap, 20)) ```
+[667] code_public_0050_1: ```dsl_fire result = neg(div(sub(close, ts_min(low, 20)), sub(ts_max(high, 20), ts_min(low, 20)))) ```
+[668] code_public_0064_0: ```dsl_fire result = sub(volume, group_mean(volume, industry)) ```
+[669] code_public_0163_0: ```dsl_fire result = abfreg_res(pct_change(close, 20), pct_change(close, 20)), 0.0) ```
+[670] code_public_0082_1: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), le(ts_std(pct_change(close, 1), 20), xs_mean(t
+[671] code_public_0397_1: ```dsl_fire result = add(recip(pb), neg(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))))) `
+[672] code_public_0246_0: ```dsl_fireire result = sub(log1p(ts_mean(volume, 20)), xs_quantile(log1p(ts_mean(volume, 20)), 0.8)) ```
+[673] code_public_0042_0: ```dsl_fire result.2)) ```
+[674] code_public_0742_1: ```dsl_fire result = x
+[675] code_public_0714_0: ```dsl_fire result = ts_argmaxmin(close, 45) ```
+[676] code_public_0824_0: ```dsl_fire result = sub(close, ts_quantile(close, 15, 0.2)) ```
+[677] code_public_0114_0: ```dsl_fire result 30) ```
+[678] code_public_0660_0: ```dsl_fire result = where(le(low, xs_median(low)), neg(div(sub(low, xs_mean(low)), xs_std(low))), 0.0) ```
+[679] code_public_0469_0: ```dsl_fire result = absolutediv(sub(open, xs_median(open))) ```
+[680] code_public_0641_1: ```dsl_fire result = minimum(pct_change(market_cap, 10), 0.0) ```
+[681] code_public_0496_1: ```dsl_fire result = exp(minimum(pct_change(vwap, 20), 0.1)) ```
+[682] code_public_0282_0: ```dsl_fireire result.0000.ge(low, xs_mean(low)), pct_change(low, 20 ```
+[683] code_public_0401_0: ```dsl_fire result = sub(div(absoluteabsolute(div(sub(close, vwap), vwap)), xs_sum(absolute(div(sub(close, vwap), vwap))
+[684] code_public_0549_1: ```dsl_fire result = square) ```
+[685] code_public_0276_0: ```dsl_fire result.) ```
+[686] code_public_0137_0: ```dsl_fire result = mod(gt(market_cap, xs_mean(market_cap)), div(sub(market_cap, xs_mean(market_cap)), xs_std(mark_cap)
+[687] code_public_0215_1: ```dsl_fire result = power(absolutepct_change(vwap, 20)), 0.25) ```
+[688] code_public_0101_1: ```dsl_fire result = minimum(pct_change(volume, 20), 0.0) ```
+[689] code_public_0609_0: ```dsl_fire result = where(logical_not(lt(close, ts_mean(close, 20))), neg(pct_change(close, 3)), 0.0) ```
+[690] code_public_0639_1: ```dsl_fire result.0)) ```
+[691] code_public_0982_0: ```dsl_fire result = absolute(sub(pb, xs_median(pb))) ```
+[692] code_public_0259_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(open, 15)), 0.) ```
+[693] code_public_0268_1: ```dsl_fire result = div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), industry)) ```
+[694] code_public_0230_1: ```dsl_fire result = power(absolute(pct_change(market_cap, 3)), 0.5) ```
+[695] code_public_0695_0: ```dsl_fire result.not(le(vwap, xs_median(vwap)), neg(div(sub(vwap, xs_mean(vwap)), xs_std(vwap))), 0.0) ```
+[696] code_public_0080_1: ```dsl_fire result = sqrt(absolutepct_change(close, 2))) ```
+[697] code_public_0662_0: ```dsl_fire result.reg_res(pct_change(close, 3), 0.0) ```
+[698] code_public_0038_0: ```dsl_fire result 45)) ```
+[699] code_public_0644_1: ```dsl_fire result = ts_), 0.0) ```
+[700] code_public_0869_0: ```dsl_fire result = minimum(maximum(div(sub(open, group_mean(oplose, industry)), group_std(close, industry)), -3.0), 3.
+[701] code_public_0165_1: ```dsl_fire result.0)) ```
+[702] code_public_0285_0: ```dsl_fire result.0)) ```
+[703] code_public_0089_0: ```dsl_fire result.
+[704] code_public_0363_1: ```dslf(open, 30) ```
+[705] code_public_0726_1: ```dsl_fire result = log10(add(1.0, absolute(pct_change(close, 60)))) ```
+[706] code_public_0846_0: ```dslffff 10000.0) ```
+[707] code_public_0309_0: ```dsl_fire result = pct_change(open, 90) ```
+[708] code_public_0116_0: ```dsl_fire result = mod(pb, 10000.0) ```
+[709] code_public_0105_1: ```dsl_fire result = subsub(sqrt(recip(pb)), log(market_cap)) ```
+[710] code_public_0459_0: ```dsl_fire result ts_argmaxmin(vwap, 60) ```
+[711] code_public_0201_1: ```dsl_fire result = where(logical_or(ne(sign(pct_change(close, 1)), -1.0), lt(close, ts_mean(close, 20))), pct_change(c
+[712] code_public_0250_0: ```dsl_fire result = diff(close, 20) ```
+[713] code_public_0877_0: ```dsl_fire result.pct_change(close, 60) ```
+[714] code_public_0775_1: ```dsl_fire result ts_), 0.0) ```
+[715] code_public_0501_0: ```dsl_fire result = add(div(sub(sqrt(recip(pb)), group_mean(sqrt(recip(pb)), industry)), group_std(sqrt(recip(pb)), ind
+[716] code_public_0200_1: ```dsl_fire result = minimum(maximum(div(sub(pb, xs_mean(pb)), xs_std(pb)), -2.0), 2.0) ```
+[717] code_public_0461_0: ```dsl_fire result 30) ```
+[718] code_public_0843_1: ```dsl_fire result.0) ```
+[719] code_public_0127_0: ```dsl_fire result = sub(close, ts_quantile(close, 90, 0.7)) ```
+[720] code_public_0975_0: ```dsl_fire result absolute(pct_change(op 0.5)) ```
+[721] code_public_0198_1: ```dsl_fire result.0)) ```
+[722] code_public_0947_1: ```dsl_fire result = div(sub(vwap, ts_last), closel_l_l_l_l_l_l_l_fire result = div(sub(vwap, ts_last(shift(vwap, 1), 10
+[723] code_public_0787_0: ```dsl_fire result = power(absolute(pct_change(high, 15)), 0.25) ```
+[724] code_public_0048_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(high, 20))) ```
+[725] code_public_0742_0: ```dsl_fire result = sub(ts_std(pct_change(close, 1), 20), xs_mean(ts_std(pct_change(close, 1), 20))) ```
+[726] code_public_0853_1: ```dslf(close, 45) ```
+[727] code_public_0529_0: ```dsl_fire result = sub(low, xs_quantile(low, 0.2)) ```
+[728] code_public_0718_1: ```dsl_fire result = where(logical_and(gt(pct_change(close, 20), xs_mean(pct_change(close, 20))), gt(div(sub(recip(pb), 
+[729] code_public_0868_0: ```dsl_fire result = power(absolute(pct_change(high, 2)), 0.25) ```
+[730] code_public_0935_1: ```dsl_fire result = ts_win_cumsum(pct_change(pb, 1), 20) ```
+[731] code_public_0103_0: ```dsl_fire result = minimum(maximum(div(sub(pb, group_mean(pb, industry)), group_std(pb, industry)), -1.0), 1.0) ```
+[732] code_public_0670_1: ```dsl_fire result = minimum(maximum(div(sub(close, xs_mean(clo)), xs_std(close)), -1.0), 1.0) ```
+[733] code_public_0404_0: ```dsl_fire result = sub
+[734] code_public_0350_0: ```dsl_fire result = where(ne(sign(sub(pb, xs_mean(pb))), -1.0), div(sub(pb, xs_mean(pb)), xs_std(pb)), 0.0) ```
+[735] code_public_0231_1: ```dsl_fire result = exp(minimum(pct_change(volume, 7), 0.1)) ```
+[736] code_public_0365_1: ```dsl_fire result ts_argmaxmin(vwap, 5) ```
+[737] code_public_0036_0: ```dsl_fire result 0.absolutepct_change(close, 30))) ```
+[738] code_public_0353_0: ```dsl_fire result = ts_prod(add(1.0, pct_change(v, 1)), 10) ```
+[739] code_public_0366_1: ```dslf(close, 90) ```
+[740] code_public_0485_0: ```dsl_fire result = sub(div(sub(close, vwap), vwap), xs_quantile(div(sub(clo), vwap))) ```
+[741] code_public_0432_0: ```dsl_fire result = power(absolute(pct_change(volume, 15)), 0.25) ```
+[742] code_public_0631_1: ```dsl_fire result = sub(close, ts_quantile(close, 10, 0.7)) ```
+[743] code_public_0813_1: ```dslfffff 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+[744] code_public_0418_1: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), le(ts_std(pct_change(close, 1), 20), xs_mean(t
+[745] code_public_0528_0: ```dsl_fire result = sub(market_cap, ts_quantile(market_cap, 0.7)) ```
+[746] code_public_0327_1: ```dsl_fire result = add(log(recip(pb)), log(market_cap)) ```
+[747] code_public_0051_1: ```dslical_fire result = where(logical_not,ical_not minimle(ts_std(pct_change(close, 1), 20), xs_mean(ts_std(pct_change(
+[748] code_public_0075_0: ```dsl_fire result.0) ```
+[749] code_public_0836_1: ```dsl_fire result = sqrt(absolutepct_change(close, 90))) ```
+[750] code_public_0489_0: ```dsl_fire result = diff(vwap, 15) ```
+[751] code_public_0513_0: ```dsl_fire result = sub(log(market_cap), log1p(ts_mean(volume, 20))) ```
+[752] code_public_0608_1: ```dsl_fire result = where(eq(sign(sub(volume, xs_mean(volume))), 1.0), div(sub(volume, xs_mean(volume)), xs_std(volume)
+[753] code_public_0892_0: ```dsl_fire result(pb, 100000.0) ```
+[754] code_public_0041_1: ```dsl_fire resultresult.0) ```
+[755] code_public_0443_0: ```dsl_fire result = absolute(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap)))) ```
+[756] code_public_0755_1: ```dsl_fire result = ts_stddd(where(lt(pct, 1), 0.0), pct_change(close, 1), 0.0), 10) ```
+[757] code_public_0581_1: ```dsl_fire result = pct_change(open, 7) ```
+[758] code_public_0257_0: ```dsl_fire result = add(log(recip(pb)), pct_change(close, 20)) ```
+[759] code_public_0681_0: ```dsl_fire result ts_ ```
+[760] code_public_0075_1: ```dsl_fire result.0) ```
+[761] code_public_0601_1: ```dsl_fire result = square) ```
+[762] code_public_0828_1: ```dsl_fire result = where(logical_or(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap)))), gt(div(sub(volume, ts_mea
+[763] code_public_0705_1: ```dsl_fire result = ts_win_cumsum(pct_change(close, 1), 30) ```
+[764] code_public_0766_1: ```dsl_fire result = sub(open, xs_quantile(oplolo 0.7)) ```
+[765] code_public_0117_1: ```dsl_fire result.argmaxmin(pb, 10) ```
+[766] code_public_0222_0: ```dsl_fire result
+[767] code_public_0237_0: ```dsl_fire result.0) ```
+[768] code_public_0303_0: ```dsl_fire result ts_win_cumsum(pct_change(mark pct_change(mark pct_change(market_cap, 1), 60) ```
+[769] code_public_0503_0: ```dsl_fire result ts_), 0.pct_change(vwap, 20), 0.0) ```
+[770] code_public_0553_1: ```dsl_fire result = where(logical_not(gt(close, ts_mean(close, 20))), neg(pct_change(close, 3)), 0.0) ```
+[771] code_public_0691_1: ```dsl_fire result = exp(minimum(div(sub(vwap, xs_mean(vwap)), xs_std(vwap)), 4.0)) ```
+[772] code_public_0091_1: ```dsl_fireirefg(log(recip(pb)), div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap)))) ```
+[773] code_public_0165_0: ```dsl_fire result ts_reg_res(pct_change(high, 10), 0.0) ```
+[774] code_public_0186_0: ```dsl_fire result = absolute(div(sub(market_cap, xs_mean(market_cap)), xs_std(market_cap)) ```
+[775] code_public_0236_1: ```dsl_fire result = neg(pct_change(close, 15)) ```
+[776] code_public_0704_0: ```dsl_fire result ts_sum(pct_change(close, 1), 30) ```
+[777] code_public_0703_0: ```dsl_fire result = absolute(pct_change(vwap, 2))) ```
+[778] code_public_0341_1: ```dsl_fire result = where(logical_xor(gt(recip(pb), xs_mean(recip(pb))), gt(log1p(ts_mean(volume, 20)), xs_mean(log1p(t
+[779] code_public_0106_1: ```dsl_fire result = ts_prod(add(1.0, pct_change(vwap, 1)), 10) ```
+[780] code_public_0358_0: ```dsl_fire result  </think>  ```
+[781] code_public_0356_1: ```dsl_fire result = sub(pb, ts_quantile(pb, 9, 0.7)) ```
+[782] code_public_0774_0: ```dsl_fire result = cbrt(pct_change(vwap, 60)) ```
+[783] code_public_0761_1: ```dsl_fire result = where(gt(log1p(ts_mean(volume, 20)), group_mean), industry)), div(sub(log1p(ts_mean(volume, 20)), g
+[784] code_public_0206_1: ```dsl_fire result = ts_), 0.0) ```
+[785] code_public_0570_1: ```dsl_fire result = maskreg_res(high, xs_mean(high)), neg(hical(high, xs_mean(high)), 0.0) ```
+[786] code_public_0974_1: ```dslical_ result = where(logical_not,ical_not logical_not logical_not logical_not logical_not(le(ts_std(pct_change(clo
+[787] code_public_0232_0: ```dsl_fire result = subs_ sub(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), div(sub(log(market_cap), xs_m
+[788] code_public_0260_1: ```dsl_fire result = power(absolute(pct_change(volume, 20)), 0.25) ```
+[789] code_public_0390_0: ```dsl_fire result = sub(close, xs_quantile(close, 0.2)) ```
+[790] code_public_0238_0: ```dsl_fire result = ts_corr(log1p(volume), log(market_cap), 45) ```
+[791] code_public_0533_1: ```dsl_fire result = ts_win_cumsum(pct_change(vwap, 1), 15) ```
+[792] code_public_0563_1: ```dsl_fire result = where(logical_xor(gt(close, ts_mean(close, 20)), ge(volume, ts_mean(volume, 20))), pct_change(close
+[793] code_public_0118_1: ```dsl_fire result = maximum(pct_change(open, 15), 0.0) ```
+[794] code_public_0345_1: ```dsl_fire result = sqrt(absolute(pct_change(vwap, 5))) ```
+[795] code_public_0473_0: ```dsl_fire result.2)) ```
+[796] code_public_0012_1: ```dsl_fire result = neg(pct_change(vwap, 2)) ```
+[797] code_public_0812_0: ```dsl_fireire result = where(ne(sign(sub(log(market_cap), xs_mean(log(market_cap))), -1.0), add(recip(pb), neg(log(mark
+[798] code_public_0567_1: ```dsl_fire result = ts_argmin(close, 45) ```
+[799] code_public_0859_0: ```dsl_fire result = sqrt(absolute(pct_change(open, 2))) ```
+[800] code_public_0629_1: ```dsl_fire result = where(logical_and(gt(log(recip(pb)), xs_mean(log(recip(pb)))), gt(pct_change(close, 20), xs_mean(pc
+[801] code_public_0573_0: ```dsl_fire result = minimum(maximum(div(sub(pb, group_mean(pb, industry)), group_std(pb, industry)), -4.0), 3.0) ```
+[802] code_public_0447_0: ```dsl_fire result
+[803] code_public_0274_0: ```dsl_fire result = div(sub(ts_std(pct_change(close, 1), 20), group_mean(ts_std(pct_change(close, 1), 20), industry)), 
+[804] code_public_0810_0: ```dsl_fire result = where(le(div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), industry)), 0.0)
+[805] code_public_0010_0: ```dsl_fire result = div(sub(close, ts_min(low, 15)), ts_min(low, 15)) ```
+[806] code_public_0184_0: ```dsl_fire result.reg_res(pct_change(open, 10), 0.0) ```
+[807] code_public_0452_1: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), gt(pct_change(close, 60), xs_mean(pct_change(c
+[808] code_public_0704_1: ```dslf(pct_change(close, 1), 30) ```
+[809] code_public_0948_1: ```dsl_fire result = power(absolute(pct_change(vwap, 2)), 0.5) ```
+[810] code_public_0276_1: ```dsl_fire result = ts_prod(add(1.0, pct_change(pb, 1)), 5) ```
+[811] code_public_0430_1: ```dsl_fire result = power(absolute(pct_change(volume, 5)), 0.5) ```
+[812] code_public_0330_1: ```dsl_fire result = sub(market_cap, ts_quantile(market_cap, 90, 0.7)) ```
+[813] code_public_0867_0: ```dsl_fire result.0) ```
+[814] code_public_0455_0: ```dsl_fire result = sub(div(absoluteabsolute(pct_change(clololose, 20)), xs_sum(absolute(pct_change(close, 20))))), div
+[815] code_public_0679_1: ```dsl_fire result = where(eq(sign(sub(oplose, xs_me(open))), 1.0), div(sub(open, xs_mean(open)), xs_std(open)), 0.0) ``
+[816] code_public_0057_0: ```dsl_fire result = ts_prod(add(1.0, pct_change(mark pct_change(market_cap, 1)), 30) ```
+[817] code_public_0341_0: ```dsl_fire result = where(logical_xor(gt(recip(pb), xs_mean(recip(pb))), gt(log1p(ts_mean(volume, 20)), xs_mean(log1p(t
+[818] code_public_0347_1: ```dsl_fire result = minimum(maximum(div(sub(oplose, xs_mean(open)), xs_std(open)), -3.0), 3.0) ```
+[819] code_public_0847_0: ```dsl_fire result
+[820] code_public_0219_0: ```dsl_fire result absolute(pct_change(close, 90)) ```
+[821] code_public_0334_1: ```dsl_fire result = where(logical_xor(gt(recip(pb), xs_mean(recip(pb))), le(ts_std(pct_change(close, 1), 20), xs_mean(t
+[822] code_public_0606_1: ```dsl_fire result = minimum(pct_change(high, 2), 0.0) ```
+[823] code_public_0855_0: ```dsl_fire result ts_reg_res(pct_change(high, 10), 0.0) ```
+[824] code_public_0666_1: ```dsl_fire result = where(logical_and(gt(log1p(ts_mean(volume, 20)), xs_mean(log1p(ts_mean(volume, 20)))), gt(pct_chang
+[825] code_public_0023_1: ```dsl_fire result = ts_corr(pct_change(close, 20), log(market_cap), 90) ```
+[826] code_public_0940_1: ```dsl_fire result = ts_stdd(where), xs_std(pct)), 0.0), 45), 45), 45) ```
+[827] code_public_0941_0: ```dsl_fire result = div(sub(close, ts_min(low, 60)), sub(ts_max(high, 60), ts_min(low, 60))) ```
+[828] code_public_0298_0: ```dsl_fire result = absolute(sub(market_cap, xs_median(market_cap))) ```
+[829] code_public_0523_1: ```dsl_fire result = ts_prod(add(1.0, pct_change(v, 1)), 30) ```
+[830] code_public_0138_0: ```dsl_fire result = where(logical_xor(gt(close, ts_mean(close, 20)), ge(volume, ts_mean(volume, 20))), pct_change(close
+[831] code_public_0302_0: ```dsl_fire result = where(logical_or(gt(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))), x
+[832] code_public_0996_0: ```dsl_fire result ts_corr(pct_change(close, 60), 60) ```
+[833] code_public_0370_0: ```dsl_fireireiref 20 result = div(sub(pb, group_mean(pb, industry)), group_std(pb, industry)) ```
+[834] code_public_0643_1: ```dsl_fire result = ts_corr(recip(pb), log(market_cap), 60) ```
+[835] code_public_0828_0: ```dsl_fire result = where(logical_or(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap)))), gt(div(sub(volume, ts_mea
+[836] code_public_0754_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(vwap, 7))) ```
+[837] code_public_0573_1: ```dsl_fire result = minimum(maximum(div(sub(pb, group_mean(pb, industry)), group_std(pb, industry)), -1.0), 3.0) ```
+[838] code_public_0644_0: ```dsl_fire result ts_), 0.0) ```
+[839] code_public_0482_0: ```dsl_fire result.0) ```
+[840] code_public_0514_0: ```dsl_fire result.argmaxmin(pb, 90) ```
+[841] code_public_0361_1: ```dslf(close, 7) ```
+[842] code_public_0313_0: ```dsl_fire result = where(gt(ts_std(pct_change(close, 1), 20), group_mean(ts_std(pct_change(close, 1), 20), industry)),
+[843] code_public_0767_1: ```dsl_fire result ts_win_cumsum(pct_change(market_cap, 1), 5) ```
+[844] code_public_0015_0: ```dsl_fire result = ts_reg_res(div(volume, market_cap), pct_change(close, 45)), 45) ```
+[845] code_public_0614_1: ```dsl_fire result = ts_prod(add(1.0, pct_change(market_cap, 1)), 30) ```
+[846] code_public_0770_0: ```dsl_fire result.reg_res(pct_change(close, 7), 0.0) ```
+[847] code_public_0884_0: ```dsl_fire result ts_sum(pct_change(market_cap, 1), 15) ```
+[848] code_public_0955_0: ```dsl_fire result = div(ts_mean(pct_change(close, 1), 2), ts_std(pct_change(close, 1), 20)) ```
+[849] code_public_0128_0: ```dsl_fire result = div(sub(volume, ts_lastmean(volume, ts_last(shift(volume, 1), 10)), ts_last(shift(volume, 1), 10)) 
+[850] code_public_0500_0: ```dsl_fire result 30) ```
+[851] code_public_0836_0: ```dsl_fire result = sqrt(absolutepct_change(close, 90))) ```
+[852] code_public_0101_0: ```dsl_fire result = minimum(pct_change(volume, 20), 0.0) ```
+[853] code_public_0090_1: ```dsl_fire result ts_argmax logcpb) ```
+[854] code_public_0997_1: ```dsl_fire result = sub(close, ts_quantile(close, 20, 0.2)) ```
+[855] code_public_0359_0: ```dsl_fire result ts_reg_res(pct_change(close, 45)) ```
+[856] code_public_0248_0: ```dsl_fire result = exp(minimum(pct_change(market_cap, 20), 0.1)) ```
+[857] code_public_0235_0: ```dsl_fire result = log10(ts_mean(volume, 100.0)) ```
+[858] code_public_0748_0: ```dsl_fire result = neg(mul(div(ts_mean(volume, 2), ts_mean(volume, 90)), pct_change(close, 2)))) ```
+[859] code_public_0804_1: ```dsl_fire result = ts_argmaxmin(close, 20) ```
+[860] code_public_0247_1: ```dslf(vwap, 7) ```
+[861] code_public_0380_1: ```dslf(pct_change(close, 1), 20) ```
+[862] code_public_0922_0: ```dsl_fire result = minimum(pct_change(low, 2), 0.0) ```
+[863] code_public_0120_1: ```dsl_fire result = div(sub(vwap, shift(vwap, 3)), shift(vwap, 90)) ```
+[864] code_public_0808_1: ```dslfximumsum(volume, 5000.0) ```
+[865] code_public_0769_0: ```dsl_fire result = div(sub(volume, ts_lastmean(volume, 30)), 30)), ts_last(sh ```
+[866] code_public_0457_0: ```dsl_fire result ts_reg_res(pct_change(vwap, 90), 0.0) ```
+[867] code_public_0121_1: ```dsl_fire result ts_sum(pct_change(pb, 1), 90) ```
+[868] code_public_0372_1: ```dsl_fire result = neg(ts_argmax(volume, 45)) ```
+[869] code_public_0992_1: ```dsl_fire result = maximum(pct_change(volume, 20), 0.0) ```
+[870] code_public_0719_1: ```dsl_fire result = log10(add(1.1.1.1.1))000.1))volume,recip(pb), neb) ```
+[871] code_public_0424_1: ```dsl_fire result = where(gt(sqrt(recip(pb)), xs_mean(sqrt(recip(pb)))), log(market_cap), 0.0) ```
+[872] code_public_0252_1: ```dsl_fire result = absolute(div(sub(neg(log(market_cap)), xs_mean(neg(log(market_cap))))), xs_std(neg(log(market_cap))
+[873] code_public_0466_1: ```dsl_fire result = ts_corr(div(volume, market_cap), pct_change(close, 20), 90) ```
+[874] code_public_0204_1: ```dsl_fire result ts_argmaxmin(vwap, 45) ```
+[875] code_public_0472_0: ```dsl_fire result ts_ ```
+[876] code_public_0107_1: ```dsl_fireire result = sub(div(absoluteabsolute(log1p(ts_mean(volume, 20))), xs_sum(absolute(div(sub(close, vwap), vwap
+[877] code_public_0158_1: ```dsl_fire result = log(recip(pb)) ```
+[878] code_public_0522_1: ```dsl_fire result = maximum(pct_change(close, 15), 0.0) ```
+[879] code_public_0454_0: ```dsl_fire result = div(sub(log1p(ts_mean(volume, 45)), group_mean(log1p(ts_mean(volume, 45)), industry)), group_std(lo
+[880] code_public_0292_1: ```dsl_fire result = neg(pct_change(close, 30)) ```
+[881] code_public_0857_0: ```dsl_fire result ts_prod(addadd(1.0, pct_change(open, 15)), 60) ```
+[882] code_public_0486_0: ```dsl_fire result = minimum(maximum(div(sub(low, group_mean(low, industry)), group_std(low, industry)), -1.0), 1.0) ```
+[883] code_public_0467_1: ```dsl_fire result.pct_change(close, 30)) ```
+[884] code_public_0182_0: ```dsl_fire result.recip(pb)) ```
+[885] code_public_0685_1: ```dsl_fire result = ts_prod(add(1.0, pct_change(vwap, 1)), 20) ```
+[886] code_public_0872_1: ```dsl_fire result.25) ```
+[887] code_public_0894_0: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), gt(neg(pct_change(close, 10)), xs_mean(neg(pct
+[888] code_public_0588_1: ```dsl_fire result = sub(v, ts_quantile(volume, 45, 0.7)) ```
+[889] code_public_0516_0: ```dsl_fire result.1 20) ```
+[890] code_public_0272_1: ```dsl_fire result = ts_reg_res(pct_change(close, 20), log(market_cap), 45) ```
+[891] code_public_0904_0: ```dsl_fire result = cbrt(pct_change(open, 7)) ```
+[892] code_public_0617_0: ```dsl_fire result = where(le(pct_change(close, 60), group_mean(pct_change(close, 60), industry)), neg(div(sub(pct_chang
+[893] code_public_0850_1: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), gt(div(pct_change(close, 20), ts_std(pct_chang
+[894] code_public_0066_1: ```dsl_fire result = log10(add(1.1.1.1.1000.1)) ab 100000000.1000.1 10000 ab 10000hh1mints_mememean000.0)000.000.0low)00
+[895] code_public_0469_1: ```dsl_fire result = absolute(sub(open, xs_median(open))) ```
+[896] code_public_0622_1: ```dsl_fire result = minimum(pct_change(open, 20), 0.0) ```
+[897] code_public_0464_0: ```dsl_fire result
+[898] code_public_0651_1: ```dsl_fire result.1.1.0) ```
+[899] code_public_0616_1: ```dsl_fire result = div(pct_change(clo, 2), absolute(div(sub(clolo)), xs_mean(close)) ```
+[900] code_public_0784_1: ```dsl_fire result = ts_prod(add(1.0, pct_change(high, 5))) ```
+[901] code_public_0320_0: ```dsl_fire result = where(logical_and(le(volume, ts_mean(volume, 20)), ne(sign(pct_change(close, 1)), -1.0)), pct_chang
+[902] code_public_0087_0: ```dsl_fire result = sub(div(close, xs_sum(close)), div(market_cap, xs_sum(market_cap))) ```
+[903] code_public_0035_1: ```dsl_fire result = log10(add(1.1.1.1.1)) 100) ```
+[904] code_public_0605_0: ```dsl_fire result.absolute(pct_change(close, 20))) ```
+[905] code_public_0840_0: ```dsl_fire result = div(sub(ts_std(pct_change(close, 1), 45), group_mean(ts_std(pct_change(close, 1), 45), industry)), 
+[906] code_public_0472_1: ```dsl_fire result ts_), 0.0) ```
+[907] code_public_0148_0: ```dsl_fire result
+[908] code_public_0913_0: ```dsl_fire result = minimum(maximum(div(sub(close, xs_mean(close)), xs_std(close)), -3.0), 3.0) ```
+[909] code_public_0336_1: ```dsl_fire result ts_ct_change(close, 30), 0.0) ```
+[910] code_public_0694_0: ```dsl_fire result ts_argmaxmin(market_cap, 10) ```
+[911] code_public_0271_0: ```dsl_fire result = sub(market_cap, xs_quantile(market_cap, 0.8)) ```
+[912] code_public_0250_1: ```dslf(close, 20) ```
+[913] code_public_0309_1: ```dsl_fire result.p(open, 90) ```
+[914] code_public_0950_0: ```dsl_fire result = exp(minimum(pct_change(pb, 7), 0.1)) ```
+[915] code_public_0319_0: ```dsl_fire result ts_reg_resd(pct_change(close, 1), 0.0) ```
+[916] code_public_0481_1: ```dsl_fire result = square) ```
+[917] code_public_0748_1: ```dsl_fire result = neg(mul(div(ts_mean(volume, 2), ts_mean(volume, 90)), pct_change(close, 2)))) ```
+[918] code_public_0362_1: ```dsl_fire result = maximum(pct_change(high, 10), 0.0) ```
+[919] code_public_0834_0: ```dsl_fire result ts_win_cumsum(pct_change(market_cap, 1), 15) ```
+[920] code_public_0838_0: ```dsl_fire result 0.absolutepct_change(open, 30)) ```
+[921] code_public_0640_0: ```dsl_fire result ts_prod(add(1.0, pct_change(low, 30)), 0.) ```
+[922] code_public_0374_0: ```dsl_fire result
+[923] code_public_0882_0: ```dsl_fire result = pct_change(open, 10) ``` ```
+[924] code_public_0381_0: ```dsl_fire result ts_stdddd(ltadd(1.0, pct_change(close, 1)), 0.0), 30) ```
+[925] code_public_0993_1: ```dsl_fire result = power(absolute(pct_change(pb, 10)), 0.5) ```
+[926] code_public_0911_1: ```dslffffff(market_cap, 10000.0) ```
+[927] code_public_0383_1: ```dsl_fire result.1.1.1.1.1.1000.1000.)() ```
+[928] code_public_0240_0: ```dsl_fire result = div(sub(vwap, xs_median(vwap)), xs_std(vwap)) ```
+[929] code_public_0063_0: ```dsl_fire result = exp(minimum(div(sub(vwap, xs_mean(vwap)), xs_std(vwap)), 1.0)) ```
+[930] code_public_0404_1: ```dsl_fire result = xs_corr(log(market_cap), div(volume, market_cap)) ```
+[931] code_public_0402_0: ```dsl_fire result = ts_corr(div(volume, market_cap), pct_change(close, 5), 30) ```
+[932] code_public_0263_0: ```dsl_fireire result.
+[933] code_public_0303_1: ```dsl_fire result ts_win_cumsum(pct_change(market_cap, 1), 60) ```
+[934] code_public_0753_1: ```dsl_fire result = cbrt(pct_change(vwap, 7)) ```
+[935] code_public_0068_1: ```dsl_fire result = sub(close, ts_quantile(close, 30, 0.8)) ```
+[936] code_public_0434_0: ```dsl_fire result = absolute(pct_change(vwap, 60))) ```
+[937] code_public_0717_1: ```dsl_fire result = add(sqrt(recip(pb)), div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap)))) 
+[938] code_public_0594_0: ```dsl_fire result = sub(market_cap, xs_mean(market_cap)),)) ```
+[939] code_public_0045_0: ```dsl_fire result ts_stdddddimminimminppct_change(close, 1), 0.0), 90) ```
+[940] code_public_0245_1: ```dsl_fire result = neg(div(sub(close, ts_min(low, 30)), sub(ts_max(high, 30), ts_min(low, 30)))) ```
+[941] code_public_0449_0: ```dsl_fire result ts_sum(pct_change(pb, 1), 10) ```
+[942] code_public_0971_0: ```dsl_fire result = pct_change(open, 2) ```
+[943] code_public_0620_0: ```dsl_fire result = where(logical_and(ge(volume, ts_mean(volume, 20)), eq(sign(pct_change(close, 1)), 1.0)), pct_change
+[944] code_public_0587_0: ```dsl_fire result
+[945] code_public_0949_0: ```dsl_fire result ts_win_cumsum(pct_change(market_cap, 1), 10) ```
+[946] code_public_0329_1: ```dsl_fire result = where(logical_or(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap)))), eq(sign(pct_change(close,
+[947] code_public_0697_1: ```dsl_fire result = absolute(pct_change(close, 7)))) ```
+[948] code_public_0834_1: ```dsl_fire result ts_win_cumsum(pct_change(market_cap, 1), 15) ```
+[949] code_public_0398_1: ```dsl_fire result = where(gt(recip(pb), xs_mean(recip(pb))), neg(div(sub(log(market_cap), xs_mean(log(market_cap))), xs
+[950] code_public_0110_0: ```dsl_fire result = div(sub(close, ts_min(low, 10)), ts_min(low, 10)) ```
+[951] code_public_0957_0: ```dsl_fire result
+[952] code_public_0978_1: ```dsl_fire result = where(logical_or(gt(div(sub(clo), xs_mean(clo)), xs_std(close)), gt(close, vwap), xs_mean(div(sub(c
+[953] code_public_0427_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(open, 5))) ```
+[954] code_public_0772_1: ```dsl_fire result = where(logical_or(gt(log1p(ts_mean(volume, 20)), xs_mean(log1p(ts_mean(volume, 20)))), gt(pct_change
+[955] code_public_0651_0: ```dsl_fire result.1.0) ```
+[956] code_public_0185_1: ```dsl_fire result = where(gt(log(market_cap), group_mean(log(market_cap), industry)), div(sub(log(market_cap), group_me
+[957] code_public_0647_0: ```dsl_fire result ts_reg_resd(pct_change(vwap, 1),add(vwap, shift(vwap, 1)), 0.0)) ```
+[958] code_public_0685_0: ```dsl_fire result ts_prod(add(1.0, pct_change(vwap, 1)), 20) ```
+[959] code_public_0927_0: ```dsl_fire result ts_argmaxts_argmax(close, 75) ```
+[960] code_public_0597_1: ```dsl_fire result = sqrt(absolute(pct_change(vwap, 7))) ```
+[961] code_public_0709_0: ```dsl_fire result = minimum(pct_change(open, 15), 0.0) ```
+[962] code_public_0729_1: ```dsl_fire result.25) ```
+[963] code_public_0807_0: ```dsl_fire result.0)) ```
+[964] code_public_0269_1: ```dsl_fire result = pct_change(open, 20) ```
+[965] code_public_0762_1: ```dsl_fire result ts_win_cumsum(pct_change(close, 1), 90) ```
+[966] code_public_0950_1: ```dsl_fire result = log10(add(1.1.1.1.1)) 100) ```
+[967] code_public_0864_0: ```dsl_fire result ts_reg_res(pct_change(open, 10)))) ```
+[968] code_public_0001_1: ```dsl_fire result = absolute(pct_change(open, 60)) ```
+[969] code_public_0191_1: ```dsl_fire result = ts_reg_res(recip(pb), log(market_cap), 30) ```
+[970] code_public_0155_1: ```dsl_fire result = power(absolute(pct_change(low, 20)), 0.25) ```
+[971] code_public_0875_1: ```dsl_fire result.0)) ```
+[972] code_public_0559_1: ```dsl_fire result = ts_stdd(where(lt pct_change(close, 1), 0.0), pct_change(close, 1), 0.0), 45) ```
+[973] code_public_0030_0: ```dsl_fire result = diff(vwap, 3) ```
+[974] code_public_0197_0: ```dsl_fire result = minimum(pct_change(market_cap,pct_change(market_cap, 3), 0.0) ```
+[975] code_public_0887_0: ```dsl_fire result = sub(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), neg(log(market_cap))) ```
+[976] code_public_0275_0: ```dsl_fire result ts_), 0.pct_change(pb, 60), logq) ```
+[977] code_public_0333_0: ```dsl_fire result = abreg(div(sub(div(volume, market_cap), group_mean(div(volume, market_cap), industry)), group_std(di
+[978] code_public_0189_1: ```dsl_fire result = where(gt(sqrt(recip(pb)), xs_mean(sqrt(recip(pb)))), neg(log(market_cap)), 0.0) ```
+[979] code_public_0792_1: ```dsl_fire result = ts_corr(recip(pb), log(market_cap), 60) ```
+[980] code_public_0831_0: ```dsl_fire result = power(absolute(pct_change(market_cap, 20)), 0.5) ```
+[981] code_public_0782_1: ```dsl_fire result = absolute(pct_change(vwap, 30))rt(pct_change(vwap, 30)))) ```
+[982] code_public_0125_1: ```dslf(open, 45) ```
+[983] code_public_0591_1: ```dsl_fire result = where(eq(sign(sub(recip(pb), xs_mean(recip(pb)))), 1.0), add(recip(pb), neg(log(market_cap))), 0.0)
+[984] code_public_0099_0: ```dsl_fire result ts_), 0.0) ```
+[985] code_public_0033_1: ```dsl_fire result = ts_reg_res(pct_change(close, 20), recip(pb), 15) ```
+[986] code_public_0044_0: ```dsl_fire result = power(absolute(pct_change(close, 5)), 0.5) ```
+[987] code_public_0132_1: ```dsl_fire result = neg(mul(div(ts_mean(volume, 5), ts_mean(volume, 30)), pct_change(close, 5))) ```
+[988] code_public_0537_0: ```dsl_fire result = where(gt(sqrt(recip(pb)), xs_mean(sqrt(recip(pb)))), neg(div(sub(log(market_cap), xs_mean(log(marke
+[989] code_public_0193_1: ```dsl_fire result = ts_corr(pct_change(close, 20), log(market_cap), 20) ```
+[990] code_public_0584_0: ```dsl_fire result = minimum(maximum(div(sub(market_cap, group_mean(market_cap, indust 100.0), industry)), group_std(mar
+[991] code_public_0300_1: ```dsl_fire result = ts_corr(recip(pb), log(market_cap), 90) ```
+[992] code_public_0511_1: ```dslf(volume, 1000000.0) ```
+[993] code_public_0521_1: ```dsl_fire result = neg(ts_argmax(close, 45)) ```
+[994] code_public_0873_1: ```dsl_fire result = minimum(maximum(div(sub(vwap, xs_mean(vwap)), xs_std(vwap)), -4.0), 4.0) ```
+[995] code_public_0959_1: ```dsl_fire result = xs_prod(addadd(1.0, pct_change(v, 30))) ```
+[996] code_public_0345_0: ```dsl_fire result = sqrt(absolute(pct_change(vwap, 10))) ```
+[997] code_public_0421_1: ```dsl_fire result = exp(minimum(div(sub(market_cap, xs_mean(market_cap)), xs_std(market_cap)), 2.0)) ```
+[998] code_public_0433_1: ```dsl_fire result.0)) ```
+[999] code_public_0029_1: ```dsl_fire result = where(logical_xor(gt(log1p(ts_mememean(meolume, 20)), 20), xs_std(log1p(ts_mean(volume, 20))),pct_c
+[1000] code_public_0592_1: ```dsl_fire result = where(logicalical_xor(gt(div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), 
+[1001] code_public_0702_0: ```dsl_fire result
+[1002] code_public_0446_0: ```dsl_fire result = sqrt(absolute(pct_change(vwap, 3))) ```
+[1003] code_public_0554_1: ```dslf(mximumf 10000.0) ```
+[1004] code_public_0460_1: ```dsl_fire result = absolute(pct_change(open, 20)) ```
+[1005] code_public_0909_1: ```dsl_fire resultts_reg_res(pct_change(close, 60), 0 60) ```
+[1006] code_public_0234_1: ```dslf(volume, 50000.0) ```
+[1007] code_public_0687_0: ```dsl_fire result.0) ```
+[1008] code_public_0780_0: ```dsl_fire result ts_absolute(pct_change(vwap, 7)))) ```
+[1009] code_public_0854_0: ```dsl_fire result = exp(minimum(div(sub(low, xs_mean(low)), xs_std(low)), 2.0)) ```
+[1010] code_public_0891_0: ```dsl_fire result = div(sub(market_cap, ts_last), shift(market_cap, 1), 30)), ts_last(shift(market_cap, 1), 30)) ```
+[1011] code_public_0539_1: ```dsl_fire result.0)) ```
+[1012] code_public_0982_1: ```dsl_fire result = absolute(sub(pb, xs_median(pb))) ```
+[1013] code_public_0410_1: ```dsl_fire result = xs_corr(ts_std(pct_change(close, 1), 20), ts_std(pct_change(close, 1), 1 xs_mean(ts_std(pct_change(
+[1014] code_public_0154_0: ```dsl_fire result
+[1015] code_public_0817_0: ```dsl_fire result = ts_argmaxmin(close, 15) ```
+[1016] code_public_0785_1: ```dslf(pct_change(close, 1), 0.0) ```
+[1017] code_public_0677_1: ```dsl_fire result = power(absolute(pct_change(low, 5)), 0.5) ```
+[1018] code_public_0845_1: ```dsl_fire result = where(logical_xor(gt(div(volume, market_cap), xs_mean(div(volume, market_cap))), gt(neg(log(market_
+[1019] code_public_0767_0: ```dsl_fire result ts_win_cumsum(pct_change(market_cap, 1), 5) ```
+[1020] code_public_0985_0: ```dsl_fire result ts_reg_res(pct_change(open, 7)))) ```
+[1021] code_public_0109_1: ```dsl_fire result.0ical_l_l_l_l_l_fire result = where(lt(close, ts_min(low, 20)), 0.0) ```
+[1022] code_public_0938_0: ```dsl_fire result
+[1023] code_public_0138_1: ```dsl_fire result = where(logical_xor(gt(close, ts_mean(close, 20)), ge(volume, ts_mean(volume, 20))), pct_change(close
+[1024] code_public_0946_0: ```dsl_fire result group_mean(ts_mean(pct_change(close, 1), 10), ts_var(pct_change(close, 1), 30)) ```
+[1025] code_public_0619_0: ```dsl_fire result = sqrt(absolute 45)) ```
+[1026] code_public_0990_1: ```dsl_fire result = where(logical_xor(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap)))), gt(pct_change(close, 20)
+[1027] code_public_0258_0: ```dsl_fire result = where(ne(sign(sub(close, xs_mean(close))), -1.0), div(sub(close, xs_mean(close)), xs_std(close)), 0
+[1028] code_public_0071_0: ```dsl_fire result.0)) ```
+[1029] code_public_0326_0: ```dsl_fire result ts_prod(add(1.0, pct_change(low, 20))) ```
+[1030] code_public_0190_0: ```dsl_fire result = div(sub(pct_change(close, 20), group_mean(pct_change(close, 20), industry)), group_std(pct_change(c
+[1031] code_public_0636_1: ```dsl_fire result = where(gt(low, xs_median(low)), div(sub(low, xs_mean(low)), xs_std(low)), 0.0) ```
+[1032] code_public_0947_0: ```dsl_fire result = div(sub(vwap, ts_lastshll_l_l_l_l_l_l_fire result = div(sub(vwap, ts_last(shift(vwap, 1), 10)), ts_
+[1033] code_public_0640_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(low, 15))) ```
+[1034] code_public_0667_1: ```dsl_fire result = recip(pb) ```
+[1035] code_public_0633_1: ```dsl_fire result = absolute(pct_change(close, 15)), 0.5)) ```
+[1036] code_public_0688_0: ```dslf(open, 90) ```
+[1037] code_public_0479_0: ```dsl_fireire result = sub(recip(pb), xs_quantile(recip, 0.2))) ```
+[1038] code_public_0203_1: ```dsl_fire result = ts_argmin(close, 10) ```
+[1039] code_public_0928_1: ```dsl_fire result = ts_sum(pct_change(volume, 1), 20) ```
+[1040] code_public_0477_0: ```dsl_fire result = sub(pct_change(close, 60), volume) ```
+[1041] code_public_0816_1: ```dsl_fire result = exp(minimum(pct_change(vwap, 5), 0.1)) ```
+[1042] code_public_0864_1: ```dsl_fire result.0)) ```
+[1043] code_public_0018_1: ```dsl_fire result = absolute(pct_change(vwap, 60))rt(pct_change(vwap, 60), 0.0) ```
+[1044] code_public_0167_1: ```dsl_fire result = power(absolute(pct_change(open, 20)), 0.5) ```
+[1045] code_public_0240_1: ```dsl_fire result = div(sub(vwap, xs_median(vwap)), xs_std(vwap)) ```
+[1046] code_public_0621_0: ```dsl_fire result = minimum(pct_change(volume, 10), 0.0) ```
+[1047] code_public_0183_1: ```dsl_fire result = ts_reg_res(vwap,pct_change(vwap, 3)), 0.recippb), log.repppct_change(vwap, 3logpppct_change(vwap), 
+[1048] code_public_0544_0: ```dsl_fire result = div(sub(volume, xs_median(volume)), xs_std(volume)) ```
+[1049] code_public_0499_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(open, 30))) ```
+[1050] code_public_0493_1: ```dslf(ts_prod(add(1.0, pct_change(close, 1)), 5), 1.0) ```
+[1051] code_public_0237_1: ```dsl_fire result.0) ```
+[1052] code_public_0278_0: ```dsl_fire result = minimum(pct_change(high, 20), 0.0) ```
+[1053] code_public_0839_1: ```dsl_fire result = ts_corr(div(volume, market_cap), pct_change(close, 5), 60) ```
+[1054] code_public_0483_0: ```dsl_fire result = neg(mul(div(ts_mean(volume, 2), ts_mean(volume, 30)), pct_change(close, 2))) ```
+[1055] code_public_0768_1: ```dsl_fire result = div(sub(vwap, shift(vwap, 15)), shift(vwap, 15)) ```
+[1056] code_public_0804_0: ```dsl_fire result = ts_argmaxmin(close, 20) ```
+[1057] code_public_0124_1: ```dsl_fire result = div(sub(ts_std(pct_change(close, 1), 10), group_mean(ts_std(pct_change(close, 1), 10), industry)), 
+[1058] code_public_0172_1: ```dslf(ts_mean(pct_change(close, 1), 5)) ```
+[1059] code_public_0673_0: ```dsl_fire result
+[1060] code_public_0773_0: ```dsl_fire result(div(volume, market_cap), pct_change(close, 20), 90) ```
+[1061] code_public_0738_1: ```dsl_fire result = minimum(maximum(div(sub(v, xsmean(volume)), xs_std(volume)), -4.0), 4.0) ```
+[1062] code_public_0867_1: ```dsl_fire result.0) ```
+[1063] code_public_0795_1: ```dsl_fire result = div(sub(close, ts_min(low, 45)), ts_min(low, 45)) ```
+[1064] code_public_0538_1: ```dsl_fireireire result = where(gtdiv(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), xs_mean(div(sub(recip(pb)
+[1065] code_public_0737_0: ```dsl_fire result = power(absolute(pct_change(pb, 20)), 0.25) ```
+[1066] code_public_0522_0: ```dsl_fire result ts_), 0.pct_change(close, 15), 0.0) ```
+[1067] code_public_0026_0: ```dsl_fire result = mod(volume, 100000.0) ```
+[1068] code_public_0930_1: ```dsl_fire result = where(logical_xor(logical_xor(gt(div(sub(close, vwap), vwap), xs_mean(div(sub(close, vwap), vwap)))
+[1069] code_public_0552_0: ```dsl_fire result ts_reg_res(pct_change(low, 7)))) ```
+[1070] code_public_0177_0: ```dsl_fire result = minimum(maximum(div(sub(oplose, xs_mean(open)), xs_std(open)), -2.0), 2.0) ```
+[1071] code_public_0518_0: ```dsl_fire result ts_reg_res(pct_change(volume, 20)))) ```
+[1072] code_public_0142_1: ```dsl_fire result = where(logical_and(gt(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), xs_mean(div(sub(re
+[1073] code_public_0277_0: ```dsl_fire result.0) ```
+[1074] code_public_0504_1: ```dsl_fire result = ts_win_cumsum(pct_change(close, 1), 2) ```
+[1075] code_public_0300_0: ```dsl_fire result. 9reg_res(recip(pb), log(market_cap), 90) ```
+[1076] code_public_0256_1: ```dsl_fire result = where(logical_xor(gt(div(sub(recip(pb), xsmean(rerecip(pb))), xs_std(recip(pb))), xs_mean(div(sub(r
+[1077] code_public_0600_0: ```dsl_fire result = cbrt(pct_change(open, 10)) ```
+[1078] code_public_0712_1: ```dsl_fire result = neg(ts_argmax(volume, 5)) ```
+[1079] code_public_0684_1: ```dsl_fire result = ts_prod(add(1.0, pct_change(v, 1)), 60) ```
+[1080] code_public_0135_1: ```dsl_fire result = where(logical_or(ge(volume, ts_mean(volume, 20)), ne(sign(pct_change(close, 1)), -1.0)), pct_change
+[1081] code_public_0839_0: ```dsl_fire result = ts_corr(div(volume, market_cap), pct_change(close, 5), 15) ```
+[1082] code_public_0403_0: ```dsl_fire result = power(absolutepct_change(market_cap, 10)), 0.25) ```
+[1083] code_public_0021_0: ```dsl_fire result =log1p(ts_melog1p(ts_mean(volume, 20)), 20), log(market_cap))) ```
+[1084] code_public_0000_0: ```dsl_fire result.0) ```
+[1085] code_public_0022_0: ```dsl_fire result 45)) ```
+[1086] code_public_0843_0: ```dsl_fire result.0) ```
+[1087] code_public_0648_0: ```dslf(open, 3) ```
+[1088] code_public_0733_1: ```dsl_fire result = mask),maximum(div(sub(v, xs_mean(volume)), xs_std(volume)), le(volume, xs_mean(volume)), 0.0) ```
+[1089] code_public_0367_1: ```dsl_fire result = sqrt(absolutepct_change(op 0.5))) ```
+[1090] code_public_0262_1: ```dsl_fire result = log10(add(1.1.1.1.1)) 100) ```
+[1091] code_public_0073_0: ```dsl_fireire) resultcorr(pct_change(close, 1), gt(close, ts_mean(close, 20)), 0.0) ```
+[1092] code_public_0981_0: ```dsl_fire result = where(logical_and(ne(sign(pct_change(close, 1)), -1.0), lt(close, ts_mean(close, 20))), pct_change(
+[1093] code_public_0363_0: ```dslf(open, 30) ```
+[1094] code_public_0675_0: ```dsl_fire result ts_prod(add(1.0, pct_change(low, 30)), 0.) ```
+[1095] code_public_0036_1: ```dsl_fire result = squarebrt(pct_change(close, 30)) ```
+[1096] code_public_0164_1: ```dsl_fire result = ts_prod(add(1.0, pct_change(market_cap, 1)), 10) ```
+[1097] code_public_0584_1: ```dsl_fire result = minimum(maximum(div(sub(market_cap, group_mean(market_cap, indust 100, industry)), group_std(market
+[1098] code_public_0273_0: ```dsl_fire result ts_prod(addadd(1.0, pct_change(open, 30))) ```
+[1099] code_public_0693_1: ```dsl_fire result = power(absolute(pct_change(open, 15)), 0.5) ```
+[1100] code_public_0414_1: ```dsl_fire result = sqrt(absolutepct_change(close, 5))) ```
+[1101] code_public_0842_1: ```dsl_fire result = ts_prod(add(1.0, pct_change(pb, 1)), 60) ```
+[1102] code_public_0181_0: ```dsl_fire result = sqrt(absolute(pct_change(close, 3))) ```
+[1103] code_public_0553_0: ```dsl_fire result = where(logical_not(gt(close, ts_mean(close, 20))), neg(pct_change(close, 3)), 0.0) ```
+[1104] code_public_0473_1: ```dsl_fire result = div(pct_change(close, 2), absolute(div(sub(close, ts_min(low, 20)), sub(ts_max(high, 20), ts_min(lo
+[1105] code_public_0593_1: ```dsl_fire result = x
+[1106] code_public_0123_0: ```dsl_fire result ts_argmax log(pb) ```
+[1107] code_public_0435_0: ```dsl_fire result absolute(pct_change(close, 10)) ```
+[1108] code_public_0207_0: ```dsl_fire result ts_sum(pct_change(close, 1), 60) ```
+[1109] code_public_0678_0: ```dsl_fire result ts_reg_res(pct_change(v, 7)))) ```
+[1110] code_public_0531_0: ```dsl_fire result.pct_change(vwap, 60) ```
+[1111] code_public_0934_0: ```dsl_fire result ts_reg_res(pct_change(open, 90)) ```
+[1112] code_public_0673_1: ```dsl_fire resultreg_res(close,div(sub(close, ts_min(low, 60)), sub(ts_max(high, 60), ts_min(low, 60))) ```
+[1113] code_public_0858_0: ```dsl_fire result ts_argmaxmin(volume, 9) ```
+[1114] code_public_0172_0: ```dsl_fire result 45)) ```
+[1115] code_public_0019_0: ```dsl_fire result = maximum(pct_change(market_cap, 60), 0.0) ```
+[1116] code_public_0818_1: ```dsl_fire result = minimum(maximum(div(sub(oplo, xs_mean(open)), xs_std(open)), -4.0), 4.0) ```
+[1117] code_public_0337_1: ```dsl_fire result = add(log(market_cap), div(sub(close, vwap), vwap)) ```
+[1118] code_public_0410_0: ```dsl_fire result = sub(ts_std(pct_change(close, 1), 20), ts_std(pct_change(close, 1), 1 xs_mean(ts_std(pct_change(clos
+[1119] code_public_0905_1: ```dsl_fire result = maximum(pct_change(high, 20), 0.0) ```
+[1120] code_public_0830_0: ```dsl_fire result = div(sub(vwap, vwap, xs_mean(vwap)), xs_std(vwap)) ```
+[1121] code_public_0797_1: ```dsl_fire result.0) ```
+[1122] code_public_0025_0: ```dsl_fire result = ts_corr(log1p(volume), log(market_cap), 60) ```
+[1123] code_public_0952_1: ```dsl_fire result = add(sqrt(recip(pb)), pct_change(close, 20)) ```
+[1124] code_public_0393_1: ```dsl_fire result = sqrt(absolute(pct_change(vwap, 20))) ```
+[1125] code_public_0308_0: ```dsl_fireireire
+[1126] code_public_0097_0: ```dsl_fire result = sqrt(absolute(pct_change(vwap, 30))) ```
+[1127] code_public_0112_1: ```dsl_fire result = cbrt(pct_change(open, 2)) ```
+[1128] code_public_0966_0: ```dsl_fire result = sub(pct_change(close, 2), pct_change(close, 20)) ```
+[1129] code_public_0962_0: ```dsl_fire result = minimum(maximum(div(sub(close, group_mean(close, industry)), group_std(close, industry)), -2.0), 3.
+[1130] code_public_0989_0: ```dsl_fire result = div(sub(ts_std(pct_change(close, 1), 20), group_mean(ts_std(pct_change(close, 1), 20), industry)), 
+[1131] code_public_0344_0: ```dsl_fire result ts_), 0.0) ```
+[1132] code_public_0241_0: ```dsl_fire result = absolute(sub(close, xs_median(close))) ```
+[1133] code_public_0754_0: ```dsl_fire result = xs_prodddddminimminminip(pb)), 0.0div(sub(close, vwap), vwap)), xs_mean(div(sub(close, vwap), vwap)
+[1134] code_public_0908_1: ```dsl_fire result = ts_reg_res(pct_change(close, 20), recip(pb), 30) ```
+[1135] code_public_0368_1: ```dsl_fire result ts_argmaxmin(volume, 45) ```
+[1136] code_public_0425_0: ```dsl_fire result = exp(minimum(div(sub(v, xs_mean(volume)), xs_std(volume)), 4.0)) ```
+[1137] code_public_0819_0: ```dsl_fire result = where(ne(sign(sub(high, xs_mean(high))), -1.0), div(sub(high, xs_mean(high)), xs_std(high)), 0.0) `
+[1138] code_public_0321_1: ```dsl_fire result = sub(close, xs_quantile(clololo 0.8)) ```
+[1139] code_public_0372_0: ```dsl_fire result ts_argmax(volume, 45) ```
+[1140] code_public_0758_0: ```dsl_fire result ts_pct_change(open, 2)) ```
+[1141] code_public_0638_0: ```dsl_fire result = absolute(pct_change(close, 5))rt) ```
+[1142] code_public_0081_0: ```dsl_fire result(recip(pb), recip(pb), 45) ```
+[1143] code_public_0598_0: ```dsl_fire result = add(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))), div(volume, marke
+[1144] code_public_0801_1: ```dsl_fire result = power(absolute(pct_change(high, 10)), 0.5) ```
+[1145] code_public_0902_0: ```dsl_fire result = absolute(pct_change(vwap, 5)) ```
+[1146] code_public_0897_1: ```dsl_fire result = neg(div(sub(close, ts_min(low, 15)), sub(ts_max(high, 15), ts_min(low, 15)))) ```
+[1147] code_public_0481_0: ```dsl_fire result ts_corr(pct_change(close, 90), div(volume, market_cap)), ts_std(pct_change(close, 1), 90)) ```
+[1148] code_public_0312_1: ```dsl_fire result = square) ```
+[1149] code_public_0939_0: ```dsl_fire result = sub(div(absolute(recip(pb)), xs_sum(absolute(recip(pb)))), div(absolute(pct_change(close, 20)), xs_
+[1150] code_public_0338_1: ```dslf(ts_mean(pct_change(close, 1), 20)) ```
+[1151] code_public_0423_0: ```dsl_fire result =```
+[1152] code_public_0891_1: ```dsl_fire result = div(sub(market_cap, ts_last), shift(market_cap, 1), 30)), ts_last(shift(market_cap, 1), 30)) ```
+[1153] code_public_0266_0: ```dsl_fireireire)  ```
+[1154] code_public_0495_0: ```dsl_fire result
+[1155] code_public_0524_0: ```dsl_fire result = sub(ts_mean(pct_change(close, 1), 7), ts_var(pct_change(close, 1), 30)) ```
+[1156] code_public_0863_1: ```dsl_fire t(ne(sub(st(log... 1), pct_change(close, 1),),),.0), 0.0) ```
+[1157] code_public_0566_0: ```dsl_fireirefgical(log(recip(pb)), div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))), 0.0) 
+[1158] code_public_0017_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(low, 3))) ```
+[1159] code_public_0826_1: ```dsl_fire result = ts_win_cumsum(pct_change(pb, 1), 10) ```
+[1160] code_public_0386_1: ```dsl_fire result = ts_prod(add(1.0, pct_change(v, 1)), 90) ```
+[1161] code_public_0765_1: ```dsl_fire result = minimum(maximum(div(sub(close, group_mean(close, industry)), group_std(close, industry)), -3.0), 3.
+[1162] code_public_0127_1: ```dsl_fire result = sub(close, ts_quantile(close, 90, 0.7)) ```
+[1163] code_public_0415_0: ```dsl_fire result = div(sub(log1p(ts_mean(volume, 20)), group_mean(log1p(ts_mean(volume, 20)), industry)), group_std(lo
+[1164] code_public_0221_0: ```dsl_fire result.1.0) ```
+[1165] code_public_0450_1: ```dsl_fire result = sub(hhigh, group_mean(high, industry)) ```
+[1166] code_public_0004_1: ```dsl_fire result = mas t```
+[1167] code_public_0087_1: ```dsl_fire result = sub(div(close, xs_sum(close)), div(market_cap, xs_sum(market_cap))) ```
+[1168] code_public_0150_0: ```dsl_fire result
+[1169] code_public_0023_0: ```dsl_fire result = ts_corr(pct_change(close, 20), log(market_cap), 90) ```
+[1170] code_public_0774_1: ```dsl_fire result = cbrt(pct_change(vwap, 60)) ```
+[1171] code_public_0487_1: ```dsl_fire result = div(sub(pb, ts_last), clo(shift(pb, 1), 30)), ts_last(sh```
+[1172] code_public_0575_0: ```dsl_fire result ts_sum(pct_change(pb, 1), 15) ```
+[1173] code_public_0907_0: ```dsl_fire result ts_sum(pct_change(vwap, 1), 90) ```
+[1174] code_public_0088_0: ```dsl_fire result
+[1175] code_public_0602_1: ```dsl_fire result = ts_argmin(close, 7) ```
+[1176] code_public_0369_0: ```dsl_fire result = log10(ts_mean(volume, 20)) ```
+[1177] code_public_0854_1: ```dsl_fire result = exp(minimum(div(sub(low, xs_mean(low)), xs_std(low)), 2.0)) ```
+[1178] code_public_0556_1: ```dsl_fireireire result = sub(log(recip(pb)), div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap
+[1179] code_public_0958_0: ```dsl_fire result = pct_change(open, 30) ``` ```
+[1180] code_public_0470_0: ```dsl_fire result = sub(vwap, ts_quantile(vwap, 90, 0.7)) ```
+[1181] code_public_0613_0: ```dsl_fire result ts_prod(add(1.0, pct_change(close, 1)), 7) ```
+[1182] code_public_0648_1: ```dslf(open, 10000.0) ```
+[1183] code_public_0495_1: ```dsl_fire result = absolute(div(ts_std(pct_change(close, 1), 2), ts_std(pct_change(close, 1), 90)) ```
+[1184] code_public_0171_0: ```dsl_fire result = exp(minimum(pct_change(high, 2), 0.1)) ```
+[1185] code_public_0984_1: ```dsl_fire result = log10(add(1.1.1.1.1000.1)) mod(low,(h)) minimrecip(pb), 0.0) ```
+[1186] code_public_0514_1: ```dsl_fire result.arararararmaxmin(pb,pb, 90) ```
+[1187] code_public_0580_0: ```dsl_fire result = power(absolutepct_change(close, 10)), 0.25) ```
+[1188] code_public_0295_1: ```dsl_fire result = where(logical_xor(ne(sign(pct_change(close, 1)), -1.0), lt(close, ts_mean(close, 20))), pct_change(
+[1189] code_public_0208_0: ```dsl_fire result = div(sub(vwap, ts_lastshll_l_l_l_l_l_l_fire result = div(sub(vwap, ts_last(shift(vwap, 1), 30)), ts_
+[1190] code_public_0714_1: ```dsl_fire result = ts_argmaxmin(close, 45) ```
+[1191] code_public_0140_1: ```dsl_fire result.pct_change(vwap, 3)) ```
+[1192] code_public_0424_0: ```dsl_fire result = where(gt(sqrt(recip(pb)), xs_mean(sqrt(recip(pb)))), log(market_cap), 0.0) ```
+[1193] code_public_0470_1: ```dsl_fire result = sub(vwap, ts_quantile(vwap, 90, 0.7)) ```
+[1194] code_public_0476_1: ```dsl_fire result = div(sub(volume, xs_mean(volume)), xs_std(volume)) ```
+[1195] code_public_0945_0: ```dsl_fireire result.0), ll_l_fire result
+[1196] code_public_0030_1: ```dslf(vwap, 90) ```
+[1197] code_public_0599_1: ```dsl_fire result = div(pct_change(clo, 2), ab) ```
+[1198] code_public_0907_1: ```dsl_fire result ts_sum(pct_change(vwap, 1), 90) ```
+[1199] code_public_0516_1: ```dsl_fire result.1 20) ```
+[1200] code_public_0110_1: ```dsl_fire result = div(sub(close, ts_min(low, 10)), ts_min(low, 10)) ```
+[1201] code_public_0484_1: ```dsl_fire result.0)) ```
+[1202] code_public_0577_1: ```dsl_fire result = ts_argmin(close, 7) ```
+[1203] code_public_0395_0: ```dsl_fire result = dif 45) ```
+[1204] code_public_0700_0: ```dsl_fire result = ts_reg_res(pct_change(close, 20), log(market_cap), 90) ```
+[1205] code_public_0095_0: ```dsl_fire result ts_win_cumsum(pct_change(close, 1), 45) ```
+[1206] code_public_0713_1: ```dsm
+[1207] code_public_0141_1: ```dsl_fire result ts_win_cumsum(pct_change(close, 1), 3) ```
+[1208] code_public_0006_0: ```dsl_fire result = sub(ts_mean(pct_change(close, 1), 2), ts_var(pct_change(close, 1), 60)) ```
+[1209] code_public_0416_1: ```dsl_fire result = minimum(pct_change(high, 10), 0.0) ```
+[1210] code_public_0973_1: ```dsl_fire result = sub(close, ts_quantile(close, 15, 0.8)) ```
+[1211] code_public_0807_1: ```dsl_fire result.0)) ```
+[1212] code_public_0352_1: ```dsl_fire result = minimum(pct_change(open, 3), 0.0) ```
+[1213] code_public_0604_0: ```dsl_fire result = where(gt(market_cap, xs_median(market_cap)), div(sub(market_cap, xs_mean(market_cap)), xs_std(marke
+[1214] code_public_0728_1: ```dsl_fire result ts_regadd(1.0, absolute(pct_change(vwap, 2)))) ```
+[1215] code_public_0388_1: ```dsl_fire result = neg(ts_argmax(volume, 90)) ```
+[1216] code_public_0455_1: ```dsl_fire result = sub(div(absolute(pct_change(close, 20)), xs_sum(absolute(pct_change(close, 20)))), div(absolute(pct
+[1217] code_public_0642_1: ```dsl_fire result = where(logicalical_or(gt(recip(pb), xs_mean(recip(pb))), gt(neg(log(market_cap)), xs_mean(neg(log(ma
+[1218] code_public_0046_0: ```dsl_fire result = where(eq(sign(sub(high, xs_mean(high))), 1.0), div(sub(high, xs_mean(high)), xs_std(high)), 0.0) ``
+[1219] code_public_0507_1: ```dsl_fire result ts_argmax) ```
+[1220] code_public_0671_1: ```dsl_fire result = div(high, group_mean(high, industry), group_std(high, industry)) ```
+[1221] code_public_0951_0: ```dsl_fire result = sub(close, ts_quantile(close, 10, 0.8)) ```
+[1222] code_public_0335_1: ```dsl_fire result = ts_argmin(close, 5) ```
+[1223] code_public_0870_1: ```dslfff(ts_std(pct_change(close, 1), 15), ts_vor(pct_change(close, 1), 15)) ```
+[1224] code_public_0326_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(low, 20))) ```
+[1225] code_public_0822_0: ```dsl_fireireirefire(gt(recip(pb), xs_mean(recip(pb))), div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(
+[1226] code_public_0879_1: ```dsl_fire result = power(absolute(pct_change(vwap, 3)), 0.5) ```
+[1227] code_public_0258_1: ```dsl_fire result = where(ne(sign(sub(close, xs_mean(close))), 1.0), div(sub(close, xs_mean(close)), xs_std(close)), 0.
+[1228] code_public_0497_1: ```dsl_fire result = sub(v, ts_quantile(volume, 30, 0.7)) ```
+[1229] code_public_0745_0: ```dsl_fire result = sub(vwap, xs_quantile(vwap, 0.5)) ```
+[1230] code_public_0903_1: ```dsl_fire result.pct_change(close, 20)) ```
+[1231] code_public_0738_0: ```dsl_fire result = minimum(maximum(div(sub(v, xs_mean(volume)), xs_std(volume)), -4.0), 4.0) ```
+[1232] code_public_0665_1: ```dsl_fire result = ts_reg_res(pct_change(vwap, 2),pct_change(vwap, 1), 0.0) ```
+[1233] code_public_0051_0: ```dslical_fire result = where(logical_not(le(ts_std(pct_change(close, 1), 20), xs_mean(ts_std(pct_change(close, 1), 20)
+[1234] code_public_0104_1: ```dsl_fire result = div(sub(neg(log(market_cap)), group_mean(neg(log(market_cap)), industry)), group_std(neg(log(market
+[1235] code_public_0717_0: ```dsl_fire result = add(sqrt(recip(pb)), div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap)))) 
+[1236] code_public_0778_1: ```dsl_fire result = sub(pb, ts_quantile(pb, 20, 0.7)) ```
+[1237] code_public_0886_0: ```dsl_fire result = mod(gt(open, xs_mean(open)), div(sub(open, xs_mean(open)), xs_std(open)), 0.0) ```
+[1238] code_public_0478_1: ```dsl_fireire result = xs_corr(log1p(ts_mean(vwap)),) ```
+[1239] code_public_0105_0: ```dsl_fire result = subsub(sqrt(recip(pb)), log(market_cap)) ```
+[1240] code_public_0328_0: ```dsl_fire result 30) ```
+[1241] code_public_0967_0: ```dsl_fire result ts_argmax
+[1242] code_public_0877_1: ```dsl_fire result.pct_change(close, 60) ```
+[1243] code_public_0741_0: ```dsl_fire result = sub(div(absoluteabsolute(div(sub(close, vwap), vwap)), xs_sum(absolute(div(sub(close, vwap), vwap))
+[1244] code_public_0050_0: ```dsl_fire result =
+[1245] code_public_0498_1: ```dsl_fire result.pct_change(vwap, 60)) ```
+[1246] code_public_0089_1: ```dsl_fire result.5
+[1247] code_public_0893_1: ```dsl_fire result ts_win_cumsum(pct_change(vwap, 1), 90) ```
+[1248] code_public_0257_1: ```dsl_fire result = add(log(recip(pb)), pct_change(close, 20)) ```
+[1249] code_public_0213_0: ```dsl_fire result = ts_argmaxmin(close, 7) ```
+[1250] code_public_0786_0: ```dsl_fire result = div(sub(close, group_mean(close, industry)), group_std(close, industry)) ```
+[1251] code_public_0097_1: ```dsl_fire result = sqrt(absolute(pct_change(vwap, 30))) ```
+[1252] code_public_0607_1: ```dsl_fire result = where(logical_or(gt(close, ts_mean(close, 20)), ge(volume, ts_mean(volume, 20))), pct_change(close,
+[1253] code_public_0113_0: ```dsl_fire result = div(sub(close, ts_min(low, 90)), ts_min(low, 90)) ```
+[1254] code_public_0528_1: ```dsl_fire result = sub(market_cap, ts_quantile(market_cap, 20, 0.7)) ```
+[1255] code_public_0264_1: ```dsl_fire result.arararararmaxmin(pb,pb, 10) ```
+[1256] code_public_0991_0: ```dsl_fire result = absolute(pct_change(vwap, 15))) ```
+[1257] code_public_0152_1: ```dsl_fire result.25) ```
+[1258] code_public_0998_1: ```dsl_fire result = exp(minimum(div(sub(oplose, xs_mean(open)), xs_std(open)), 1.0)) ```
+[1259] code_public_0543_1: ```dsl_fire result = sub(ts_st minim 20), xs_median(ts_std(pct_change(close, 1), 20))) ```
+[1260] code_public_0815_0: ```dsl_fire result
+[1261] code_public_0658_1: ```dsl_fire result = maskreg_res(low, xs_mean(low)), le(low, xs_mean(low)), 0.0) ```
+[1262] code_public_0827_0: ```dsl_fire result = where(logical_xor(ne(sign(pct_change(close, 1)), -1.0), gt(neg(log(market_cap)), xs_mean(neg(log(ma
+[1263] code_public_0385_1: ```dsl_fire result = add(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), div(sub(log(market_cap), xs_mean(lo
+[1264] code_public_0235_1: ```dslfff(ts_std(pct_change(close, 1), 20), ts_std(pct_change(close, 1), 1, 1), 0.0) ```
+[1265] code_public_0325_0: ```dsl_fire result = div(sub(volume, group_mean(volume, industry)), group_std(volume, industry)) ```
+[1266] code_public_0878_0: ```dsl_fire result
+[1267] code_public_0760_0: ```dsl_fire result = neg(mul(div(ts_mean(volume, 7), ts_mean(volume, 30)), pct_change(close, 7))) ```
+[1268] code_public_0874_1: ```dsl_fire result = absolute(pct_change(vwap, 7))rt(pct_change(vwap, 7)))) ```
+[1269] code_public_0705_0: ```dsl_fire result ts_win_cumsum(pct_change(close, 1), 30) ```
+[1270] code_public_0699_0: ```dsl_fire result = sub(market_cap, xs_median(market_cap)) ```
+[1271] code_public_0395_1: ```dslf(vwap, 45) ```
+[1272] code_public_0413_0: ```dsl_fire result = where(ne(sign(sub(low, xs_mean(low))), -1.0), div(sub(low, xs_mean(low)), xs_std(low)), 0.0) ```
+[1273] code_public_0375_0: ```dsl_fire result ts_sum(pct_change(volume, 1), 30) ```
+[1274] code_public_0178_1: ```dsl_fire result = where(eq(sign(sub(vwap, xs_mean(vwap))), 1.0), div(sub(vwap, xs_mean(vwap)), xs_std(vwap)), 0.0) ``
+[1275] code_public_0247_0: ```dsl_fire result = diff(vwap, 7) ```
+[1276] code_public_0725_1: ```dsl_fire result = div(sub(div(sub(close, vwap), vwap), group_mean(div(sub(close, vwap), vwap), industry)), group_std(
+[1277] code_public_0763_0: ```dsl_fire result = minimum(maximum(div(sub(pb, xs_mean(pb)), xs_std(pb)), -3.0), 3.0) ```
+[1278] code_public_0999_0: ```dsl_fire result 30) ```
+[1279] code_public_0525_0: ```dsl_fire result 45)) ```
+[1280] code_public_0901_0: ```dsl_fire result(recip(pb), log(market_cap), 20) ```
+[1281] code_public_0466_0: ```dsl_fire result = ts_corr(div(volume, market_cap), pct_change(close, 20), 90) ```
+[1282] code_public_0102_0: ```dsl_fire result = where(gt(sqrt(recip(pb)), xs_mean(sqrt(recip(pb)))), div(sub(log(market_cap), xs_mean(log(market_ca
+[1283] code_public_0210_0: ```dsl_fire result = pct_change(close, 30) ```
+[1284] code_public_0726_0: ```dsl_fire result = log10(add(1.0, ab absolute(pct_change(close, 60)))) ```
+[1285] code_public_0125_0: ```dslf(open, 45) ```
+[1286] code_public_0700_1: ```dsl_fire result = ts_reg_res(pct_change(close, 20), log(market_cap), 90) ```
+[1287] code_public_0583_0: ```dsl_fire result = div(low, group_mean(low, industry)) ```
+[1288] code_public_0066_0: ```dsl_fire result = exp(minimum(pct_change(low, 5), 0.1)) ```
+[1289] code_public_0910_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(vwap, 30))) ```
+[1290] code_public_0808_0: ```dsl_fire result = mod(volume, 100000.0) ```
+[1291] code_public_0777_0: ```dsl_fire result = minimum(pct_change(open, 10), 0.0) ```
+[1292] code_public_0452_0: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), gt(pct_change(close, 60), xs_mean(pct_change(c
+[1293] code_public_0103_1: ```dsl_fire result = minimum(maximum(div(sub(pb, group_mean(pb, industry)), group_std(pb, industry)), -1.0), 1.0) ```
+[1294] code_public_0589_0: ```dsl_fire result ts_win_cumsum(pct_change(vwap, 1), 20) ```
+[1295] code_public_0619_1: ```dsl_fire result = sqrt(absolute(pct_change(open, 45))) ```
+[1296] code_public_0664_0: ```dsl_fire result = ts_corr(log1p(volume), log(market_cap), 15) ```
+[1297] code_public_0111_1: ```dslf(ts_mean(pct_change(close, 1), 15), ts_var(pct_change(close, 1), 60)) ```
+[1298] code_public_0701_1: ```dsm
+[1299] code_public_0349_1: ```dsl_fire result = power(absolute(pct_change(pb, 15)), 0.25) ```
+[1300] code_public_0924_0: ```dsl_fire result
+[1301] code_public_0601_0: ```dsl_fire result ts_corr(pct_change(open, 60), 60) ```
+[1302] code_public_0731_0: ```dsl_fire result ts_), 0.0) ```
+[1303] code_public_0689_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(high, 30))) ```
+[1304] code_public_0775_0: ```dsl_fire result ts_ ```
+[1305] code_public_0766_0: ```dsl_fire result = sub(open, xs_quantile(oplolo 0.7)) ```
+[1306] code_public_0054_0: ```dsl_fire result = sub(volume, xs_quantile(volume, 0.7)) ```
+[1307] code_public_0921_0: ```dsl_fire result = absolute(pct_change(close, 45)) ```
+[1308] code_public_0368_0: ```dsl_fire result ts_argmaxmin(volume, 45) ```
+[1309] code_public_0929_1: ```dsl_fire result = neg(ts_argmax(close, 10)) ```
+[1310] code_public_0408_0: ```dsl_fire result = exp(minimum(pct_change(close, 7), 0.0) ```
+[1311] code_public_0540_0: ```dsl_fire result = sub(pct_change(close, 20), xs_median(pct_change(close, 20))) ```
+[1312] code_public_0625_1: ```dsl_fire result = where(logical_or(gt(div(volume, market_cap), xs_mean(div(volume, market_cap))), add(div(sub(log(mar
+[1313] code_public_0583_1: ```dsl_fire result = div(low, group_mean(low, industry)) ```
+[1314] code_public_0387_0: ```dsl_fire result
+[1315] code_public_0523_0: ```dsl_fire result = ts_prod(add(1.0, pct_change(volume, 1)), 30) ```
+[1316] code_public_0885_0: ```dsl_fireire result = sub(ts_std(pct_change(close, 1), 20), xs_qupppct_change(close, 1 30))) ```
+[1317] code_public_0364_1: ```dsl_fire result = where(logical_xor(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap)))), gt(log1p(ts_mean(volume,
+[1318] code_public_0223_0: ```dsl_fire result = log) ```
+[1319] code_public_0880_0: ```dsl_fire result = cbrt(pct_change(close, 30)) ```
+[1320] code_public_0976_1: ```dsl_fire result = sub(vwap, group_mean(vwap, industry)) ```
+[1321] code_public_0322_0: ```dsl_fireire result = div(sub(open, xs_mean(open)), xs_std(open)) ```
+[1322] code_public_0989_1: ```dsl_fire result = div(sub(ts_std(pct_change(close, 1), 5), group_mean(ts_std(pct_change(close, 1), 5), industry)), gr
+[1323] code_public_0502_1: ```dsl_fireire resultreg_qulow minimabsolute(pct_change(clolo, 0.3)) ```
+[1324] code_public_0083_0: ```dsl_firehr(div(absoluteabsolute(div(sub(close, vwap), vwap)), xs_sum(absolute(div(sub(close, vwap), vwap))))) ```
+[1325] code_public_0170_1: ```dsl_fireirereg_res(log(recip(pb)), div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap)))) ```
+[1326] code_public_0927_1: ```dsl_fire result = neg(ts_argmax(close, 75)) ```
+[1327] code_public_0391_0: ```dsl_fire result = sub(vwap, xs_mean(vwap)) ```
+[1328] code_public_0259_0: ```dsl_fire result = pct_change(open, 15) ``` ```
+[1329] code_public_0988_0: ```dsl_fire result = mod(market_cap, 100000.0) ```
+[1330] code_public_0599_0: ```dsl_fire result.2)) ```
+[1331] code_public_0637_1: ```dsl_fire result = sub(market_cap, group_mean(market_cap, industry)) ```
+[1332] code_public_0656_1: ```dsl_fire result = ts_reg_res(div(volume, market_cap), pct_change(close, 5), 90) ```
+[1333] code_public_0914_1: ```dsl_fire result = where(logical_not(ge(volume, ts_mean(volume, 20))), neg(pct_change(close, 7)), 0.0) ```
+[1334] code_public_0780_1: ```dsl_fire result = log10(add(1.0, absolute(pct_change(vwap, 7)))) ```
+[1335] code_public_0201_0: ```dsl_fire result = where(logical_or(ne(sign(pct_change(close, 1)), -1.0), gt(close, ts_mean(close, 20))), pct_change(c
+[1336] code_public_0342_1: ```dslicalicalicalicalical_ical_xlical_ical_ical_xor(logical_xor(gt(recip(pb), xs_mean(recip(pb))), gt(log(market_cap), 
+[1337] code_public_0760_1: ```dsl_fire result = neg(mul(div(ts_mean(volume, 7), ts_mean(volume, 30)), pct_change(close, 7))) ```
+[1338] code_public_0611_1: ```dslf(vwap, 2) ```
+[1339] code_public_0079_1: ```dsl_fire result = where(le(ts_std(pct_change(close, 1), 20), xs_mean(ts_std(pct_change(close, 1), 20))), add(recip(pb
+[1340] code_public_0382_0: ```dsl_fire result
+[1341] code_public_0296_1: ```dsl_fire result = power(absolute(pct_change(open, 7)), 0.5) ```
+[1342] code_public_0958_1: ```dsl_fire result = pct_change(open, 30) ```
+[1343] code_public_0969_0: ```dsl_fire result = exp(minimum(pct_change(high, 10), 0.1)) ```
+[1344] code_public_0176_1: ```dslf(ts_mean(pct_change(close, 1), 20), ts_var(pct_change(close, 1), 60)) ```
+[1345] code_public_0154_1: ```dsl_fire result.0) ```
+[1346] code_public_0732_0: ```dsl_fire result = exp(minimum(div(sub(v, xs_mean(volume)), xs_std(volume)), 1.0)) ```
+[1347] code_public_0113_1: ```dsl_fire result = div(sub(close, ts_min(low, 90)), ts_min(low, 90)) ```
+[1348] code_public_0789_0: ```dsl_fireireire result = where(gt(close, xs_median(close)), div(sub(close, xs_mean(close)), xs_std(close)), 0.0) ```
+[1349] code_public_0954_1: ```dsl_fire result = minimum(maximum(div(sub(v, xsmean(volume)), xs_std(volume)), -2.0), 2.0) ```
+[1350] code_public_0805_0: ```dsl_fire result ts_argmaxmin(volume, 9) ```
+[1351] code_public_0270_0: ```dsl_fire result = pct_change(close, 3) ```
+[1352] code_public_0923_1: ```dsl_fire result.0)) ```
+[1353] code_public_0902_1: ```dsl_fire result = absolute(pct_change(vwap, 5)) ```
+[1354] code_public_0369_1: ```dslfff(ts_std(pct_change(close, 1), 20), ts_vor(pct_change(close, 1), 20)) ```
+[1355] code_public_0517_1: ```dsl_fire result = ts_win_cumsum(pct_change(volume, 1), 30) ```
+[1356] code_public_0781_0: ```dsl_fire result 30))
+[1357] code_public_0661_0: ```dsl_fire result = sub(div(absoluteabsolute(div(volume, market_cap)), xs_sum(absolute(div(volume, market_cap)))), div(
+[1358] code_public_0898_0: ```dsl_fire result = sub(market_cap, xs_quantile(market_cap, 0.7)) ```
+[1359] code_public_0825_1: ```dsl_fire result = ts_prod(add(1.0, pct_change(markpctchange(market_cap, 1)), 60) ```
+[1360] code_public_0906_0: ```dsl_fire result = neg(log(market_cap)) ```
+[1361] code_public_0339_0: ```dsl_fire result = minimum(maximum(div(sub(market_cap, xs_mean(market_cap)), xs_std(market_cap)), -4.0), 4.0) ```
+[1362] code_public_0519_0: ```dsl_fire result = power(absolute(pct_change(pb, 10)), 0.25) ```
+[1363] code_public_0615_1: ```dsl_fire result = neg(ts_argmax(volume, 20)) ```
+[1364] code_public_0290_0: ```dslical_fire result = where(le(div(volume, market_cap), group_mean(div(volume, market_cap), industry)), neg(div(sub(d
+[1365] code_public_0293_1: ```dsl_fire result = power(absolute(pct_change(close, 15)), 0.5) ```
+[1366] code_public_0944_1: ```dslf(pct_change(pb, 1), 0.0) ```
+[1367] code_public_0058_1: ```dsl_fire result = div(market_cap, xs_sum(market_cap)) ```
+[1368] code_public_0992_0: ```dsl_fire result ts_), 0.0) ```
+[1369] code_public_0731_1: ```dsl_fire result = maximum(pct_change(open, 7), 0.0) ```
+[1370] code_public_0534_1: ```dsl_fire result = add(div(sub(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), neg(pct_change(close, 10)))
+[1371] code_public_0706_1: ```dsl_fire result ts_), 0.0) ```
+[1372] code_public_0697_0: ```dsl_fire result absolute(pct_change(close, 7)) ```
+[1373] code_public_0122_0: ```dsl_fire result = power(absolute(pct_change(low, 15)), 0.25) ```
+[1374] code_public_0527_0: ```dsl_fire result 30) ```
+[1375] code_public_0078_1: ```dsl_fire result = div(pct_change(clo, 2), ab 10)) ```
+[1376] code_public_0040_0: ```dsl_fire result = where(logical_xor(gt(div(sub(close, vwap), vwap), xs_mean(div(sub(close, vwap), vwap))), gt(neg(log
+[1377] code_public_0865_1: ```dsl_fire result = div(sub(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))), group_mean(di
+[1378] code_public_0833_0: ```dsl_fire result
+[1379] code_public_0287_0: ```dsl_fire result ts_sum(pct_change(close, 1), 90) ```
+[1380] code_public_0567_0: ```dsl_fire result = ts_argmin(close, 45) ```
+[1381] code_public_0698_0: ```dsl_fire result
+[1382] code_public_0160_1: ```dslical), neg(div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), industry))), 0.0) ```
+[1383] code_public_0067_1: ```dsl_fire result = ts_), 0.0) ```
+[1384] code_public_0364_0: ```dsl_fire result = where(logical_xor(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap)))), gt(log1p(ts_mean(volume,
+[1385] code_public_0193_0: ```dsl_fire result = ts_corr(pct_change(close, 20), log(market_cap), 20) ```
+[1386] code_public_0829_0: ```dsl_fire result = neg(div(sub(close, vwap), vwap)) ```
+[1387] code_public_0379_1: ```dsl_fire result = maximum(pct_change(volume, 15), 0.0) ```
+[1388] code_public_0955_1: ```dsl_fire result =absolute(pct_change(close, 1))ts_std(pct_change(close, 1), 20), ts_std(pct_change(close, 1), 1))) ``
+[1389] code_public_0943_0: ```dsl_fire result.reg_res(pct_change(open, 45)) ```
+[1390] code_public_0750_1: ```dsl_fire result ts_), 0.0) ```
+[1391] code_public_0708_1: ```dsl_fire result = neg(mul(div(ts_mean(volume, 5), ts_mean(volume, 90)), pct_change(close, 5)))) ```
+[1392] code_public_0909_0: ```dsl_fire result ts_reg_res(pct_change(close, 60),pct_change(close, 60), 0.0) ```
+[1393] code_public_0556_0: ```dsl_fireiref(log(recip(pb)), div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap)))) ```
+[1394] code_public_0180_0: ```dsl_fire result ts_), 0.pct_change(vwap, 20), 0.0) ```
+[1395] code_public_0815_1: ```dsl_fire result.0)) ```
+[1396] code_public_0319_1: ```dsl_fire resultts_reg_volume,pct_change(close, 100000), 0.0) ```
+[1397] code_public_0109_0: ```dsl_fire result.0ical_l_l_l_l_l_fire result = add(pct_change(close, 5), pct_change(close, 1), 0.0) ```
+[1398] code_public_0346_1: ```dsl_fire result = minimum(pct_change(high, 3), 0.0) ```
+[1399] code_public_0873_0: ```dsl_fire result = minimum(maximum(div(sub(vwap, xs_mean(vwap)), xs_std(vwap)), -4.0), 4.0) ```
+[1400] code_public_0043_1: ```dsl_fire result = ts_win_cumsum(pct_change(pb, 1), 45) ```
+[1401] code_public_0253_0: ```dsl_fireire result = sub(div(volume, market_cap), xs_quantile(div(volume, market_cap), 0.8)) ```
+[1402] code_public_0856_0: ```dsl_fire result))
+[1403] code_public_0053_1: ```dsl_fire result = absolute(pct_change(vwap, 15))rt(pct_change(vwap, 15)))) ```
+[1404] code_public_0790_1: ```dsl_fire result = xs_corr(log(market_cap), ts_std(pct_change(close, 1), 20)) ```
+[1405] code_public_0348_1: ```dsl_fire resultreg_res(close, 90), div(sub(close, ts_min(low, 90)), sub(ts_max(high, 90), ts_min(low, 90))) ```
+[1406] code_public_0757_1: ```dsl_fire result = absolute(div(sub(sqrt(recip(pb)), xs_mean(sqrt(recip(pb)))), xs_std(sqrt(recip(pb))))) ```
+[1407] code_public_0576_1: ```dsl_fire result.0) ```
+[1408] code_public_0271_1: ```dsl_fire result = sub(market_cap, xs_quantile(market_cap, 0.8)) ```
+[1409] code_public_0946_1: ```dslf(ts_mean(pct_change(close, 1), 2), ts_var(pct_change(close, 1), 20)) ```
+[1410] code_public_0153_1: ```dsl_fire result = ts_argmin(volume, 30) ```
+[1411] code_public_0997_0: ```dsl_fire result.2)) ```
+[1412] code_public_0527_1: ```dsl_fire result = power(absolute(pct_change(high, 20)), 0.5) ```
+[1413] code_public_0312_0: ```dsl_fire result 0.absolute(pct_change(open, 10)))) ```
+[1414] code_public_0565_0: ```dsl_fire result
+[1415] code_public_0488_1: ```dsl_fire result = neg(ts_argmax(close, 5)) ```
+[1416] code_public_0773_1: ```dsl_fire result = ts_corr(pct_change(close, 20), recip(pb), 90) ```
+[1417] code_public_0696_0: ```dsl_fire result = where(gt(log(recip(pb)), xs_mean(log(recip(pb)))), log(market_cap), 0.0) ```
+[1418] code_public_0285_1: ```dsl_fire result.0)) ```
+[1419] code_public_0554_0: ```dsl_fire result = mod(market_cap, 10000.0) ```
+[1420] code_public_0588_0: ```dsl_fire result = sub(v, ts_quantile(volume, 45, 0.7)) ```
+[1421] code_public_0167_0: ```dsl_fire result
+[1422] code_public_0646_1: ```dsl_fire result = ts_corr(pct_change(close, 20), log(market_cap), 45) ```
+[1423] code_public_0919_1: ```dsl_fire result = maximum(pct_change(open, 5), 0.0) ```
+[1424] code_public_0135_0: ```dsl_fire result = where(logical_or(le(volume, ts_mean(volume, 20)), ne(sign(pct_change(close, 1)), -1.0)), pct_change
+[1425] code_public_0339_1: ```dsl_fire result = minimum(maximum(div(sub(market_cap, xs_mean(market_cap)), xs_std(market_cap)), -4.0), 4.0) ```
+[1426] code_public_0035_0: ```dsl_fire result = exp(minimum(pct_change(pb, 15), 0.1)) ```
+[1427] code_public_0274_1: ```dsl_fire result = div(sub(ts_std(pct_change(close, 1), 20), group_mean(ts_std(pct_change(close, 1), 20), industry)), 
+[1428] code_public_0542_1: ```dsl_fire result.5
+[1429] code_public_0224_1: ```dsl_fire result = add(div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), industry)), pct_chang
+[1430] code_public_0916_1: ```dsl_fire result = log10(add(1.1.1.1.1))000.1))) ```
+[1431] code_public_0555_1: ```dsl_fire result = where(logical_and(ne(sign(pct_change(close, 1)), -1.0), lt(close, ts_mean(close, 20))), pct_change(
+[1432] code_public_0268_0: ```dsl_fire result = div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), industry)) ```
+[1433] code_public_0390_1: ```dsl_fire result = sub(close, xs_quantile(clololo 0.2)) ```
+[1434] code_public_0440_0: ```dsl_fire result absolute(pct_change(op 0.5)) ```
+[1435] code_public_0740_1: ```dsl_fire result = ts_argmin(close, 15) ```
+[1436] code_public_0181_1: ```dsl_fire result = sqrt(absolutepct_change(close, 3))) ```
+[1437] code_public_0892_1: ```dslf(pb, 100000.0) ```
+[1438] code_public_0151_1: ```dsl_fire result = power(absolute(pct_change(open, 3)), 0.5) ```
+[1439] code_public_0962_1: ```dsl_fire result = minimum(maximum(div(sub(close, group_mean(close, industry)), group_std(close, industry)), -2.0), 2.
+[1440] code_public_0176_0: ```dsl_fire result = sub(ts_mean(pct_change(close, 1), 20), ts_var(pct_change(close, 1), 30)) ```
+[1441] code_public_0858_1: ```dsl_fire result ts_argmaxvolume, 5) ```
+[1442] code_public_0352_0: ```dsl_fire result = minimum(pct_change(open, 3), 0.0) ```
+[1443] code_public_0722_1: ```dsl_fire result.0) ```
+[1444] code_public_0480_0: ```dsl_fire result = add(recip(pb), neg(pct_change(close, 60))) ```
+[1445] code_public_0381_1: ```dsl_fire result = ts_stddd(where(lt(pct, 1), 0.0), pct_change(close, 1), 0.0), 60) ```
+[1446] code_public_0031_0: ```dsl_fire result = exp(minimminimum(div(sub(low, xs_mean(low)), xs_std(low)), 4.0)) ```
+[1447] code_public_0874_0: ```dsl_fire result = absolute(pct_change(vwap, 7))rt(pct_change(vwap, 7)))) ```
+[1448] code_public_0935_0: ```dsl_fire result = ts_win_cumsum(pct_change(pb, 1), 20) ```
+[1449] code_public_0590_1: ```dsl_fire result.0)) ```
+[1450] code_public_0883_0: ```dsl_fire result = div(sub(log1p(ts_mean(volume, 5)), group_mean(log1p(ts_mean(volume, 20)), industry)), group_std(log
+[1451] code_public_0781_1: ```dsl_fire result.0) ```
+[1452] code_public_0855_1: ```dsl_fire result.0)) ```
+[1453] code_public_0872_0: ```dsl_fire result
+[1454] code_public_0246_1: ```dsl_fire result = sub(log1p(ts_mean(volume, 20)), xs_quantile(log1p(ts_mean(volume, 20)), 0.8)) ```
+[1455] code_public_0507_0: ```dsl_fire result ts_argmax(pb, 30) ```
+[1456] code_public_0510_1: ```dsl_fire result = absolute(pct_change(close, 30))rt(ts_std(pct_change(close, 1), 30)), 0.5) ```
+[1457] code_public_0614_0: ```dsl_fire result.0) ```
+[1458] code_public_0348_0: ```dsl_fire result
+[1459] code_public_0682_0: ```dsl_fire result = mod(market_cap, 1000000.0) ```
+[1460] code_public_0706_0: ```dsl_fire result ts_), 0.pct_change(vwap, 60), 0.0) ```
+[1461] code_public_0789_1: ```dsl_fire result = where(gt(close, xs_median(close)), div(sub(clopb, xs_mean(close)), xs_std(close)), 0.0) ```
+[1462] code_public_0092_0: ```dsl_fire result ts_), 0.0) ```
+[1463] code_public_0972_0: ```dsl_fire result(minimum(pct_change(volume, 20), 0.), ts_last(sh), 20) ```
+[1464] code_public_0402_1: ```dsl_fire result = ts_corr(div(volume, market_cap), pct_change(close, 5), 60) ```
+[1465] code_public_0647_1: ```dsl_fire result ts_reg_res(pct_change(vwap, 5)))) ```
+[1466] code_public_0420_0: ```dsl_fire result
+[1467] code_public_0379_0: ```dsl_fire result ts_), 0.0) ```
+[1468] code_public_0273_1: ```dsl_fire result.0) ```
+[1469] code_public_0166_1: ```dslfffffff(pim.0), l ts_mean(close, 20)), pct_change(close, 5), ```
+[1470] code_public_0192_1: ```dsl_fire result = xs_corr(pct_change(close, 15), volume) ```
+[1471] code_public_0407_1: ```dsl_fire result = sub(div(pb, xs_sum(pb)), div(market_cap, xs_sum(market_cap))), xs_sum(ab(mark(pct_change(market_cap
+[1472] code_public_0032_1: ```dsl_fire result = where(logical_and(ge(volume, ts_mean(volume, 20)), ne(sign(pct_change(close, 1)), -1.0)), pct_chang
+[1473] code_public_0340_0: ```dsl_fire result = exp(minimum(pct_change(market_cap, 15), 0.1)) ```
+[1474] code_public_0942_1: ```dsl_fire result = power(absolutepct_change(close, 7)), 0.5) ```
+[1475] code_public_0476_0: ```dsl_fire result = div(sub(volume, xs_mean(volume)), xs_std(volume)) ```
+[1476] code_public_0459_1: ```dsl_fire result ts_argmaxmin(vwap, 60) ```
+[1477] code_public_0421_0: ```dsl_fire result = exp(minimum(div(sub(market_cap, xs_mean(market_cap)), xs_std(market_cap)), 2.0)) ```
+[1478] code_public_0921_1: ```dsl_fire result = abreabsolute(pct_change(close, 45)) ```
+[1479] code_public_0107_0: ```dsl_fire result = sub(div(absoluteabsolute(div(sub(close, vwap), vwap)), xs_sum(absolute(div(sub(close, vwap), vwap))
+[1480] code_public_0426_1: ```dsl_fire result = div(sub(market_cap, ts_last), shift(market_cap, 1), 45)), ts_last(shift(market_cap, 1), 45)) ```
+[1481] code_public_0317_1: ```dsl_fire result = ts_corr(log1p(volume), log(market_cap), 90) ```
+[1482] code_public_0265_1: ```dsl_fire result = ts_reg_res(pct_change(close, 20), log(market_cap), 15) ```
+[1483] code_public_0230_0: ```dsl_fire result = power(absolute(pct_change(market_cap, 3)), 0.5) ```
+[1484] code_public_0409_1: ```dsl_fire result = sub(volume, xs_quantile(volume, 0.8)) ```
+[1485] code_public_0592_0: ```dsl_fire result = where(logical_xor(gt(div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), indu
+[1486] code_public_0013_1: ```dsl_fireireire)) result subreg log(market_cap) ```
+[1487] code_public_0510_0: ```dsl_fire result.absolute(pct_change(close, 30))) ```
+[1488] code_public_0323_1: ```dsl_fire result = xs_corr(pct_change(close, 20), volume) ```
+[1489] code_public_0578_0: ```dsl_fire result = square) ```
+[1490] code_public_0694_1: ```dsl_fire result ts_argmax```
+[1491] code_public_0757_0: ```dsl_fire result = absolutediv(sub(sqrt(recip(pb)), xs_mean(sqrt(recip(pb)))), xs_std(sqrt(recip(pb))))) ```
+[1492] code_public_0405_1: ```dsl_fire result = where(logical_and(gt(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), xs_mean(div(sub(re
+[1493] code_public_0385_0: ```dsl_fire result = add(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), div(sub(log(market_cap), xs_mean(lo
+[1494] code_public_0471_1: ```dsl_fire result = minimum(pct_change(volume, 2), 0.0) ```
+[1495] code_public_0428_1: ```dsl_fire result = xs_corr(pct_change(close, 20), pct_change(close, 20)) ```
+[1496] code_public_0785_0: ```dsl_fire result ts_sum(pct_change(close, 1), 2) ```
+[1497] code_public_0411_1: ```dsl_fire result = ts_win_cumsum(pct_change(close, 1), 5) ```
+[1498] code_public_0557_1: ```dsl_fire result = where(logical_xor(gt(pct_change(close, 20), xs_mean(pct_change(close, 20))), gt(div(sub(recip(pb), 
+[1499] code_public_0463_0: ```dsl_fire result = cbrt(pct_change(close, 5)) ```
+[1500] code_public_0217_1: ```dsl_fire result ts_), 0.0) ```
+[1501] code_public_0676_1: ```dsl_fire result = add(log(recip(pb)), div(pct_change(close, 20), ts_std(pct_change(close, 1), 20))) ```
+[1502] code_public_0308_1: ```dsl_fire result = where), xs_median(high) ```
+[1503] code_public_0245_0: ```dsl_fire result =
+[1504] code_public_0427_0: ```dsl_fire result ts_prod(addadd(1.0, pct_change(open, 30))) ```
+[1505] code_public_0360_0: ```dsl_fire result = where(logical_not(gt(close, ts_mean(close, 20))), neg(pct_change(close, 2)), 0.0) ```
+[1506] code_public_0124_0: ```dsl_fire result = div(sub(ts_std(pct_change(close, 1), 20), group_mean(ts_std(pct_change(close, 1), 20), industry)), 
+[1507] code_public_0913_1: ```dsl_fire result = minimum(maximum(div(sub(close, xs_mean(close)), xs_std(close)), -3.0), 3.0) ```
+[1508] code_public_0791_0: ```dsl_fire result ts_win_cumsum(pct_change(volume, 1), 60) ```
+[1509] code_public_0494_1: ```dsl_fire result.reg_res(pct_change(open, 5), 0.0) ```
+[1510] code_public_0852_0: ```dsl_fire result = sub(vwap, xs_quantile(vwap, 0.2)) ```
+[1511] code_public_0282_1: ```dsl_fire result = where(ge(low, xs_mean(low)), low, xs_mean(low)) ```
+[1512] code_public_0664_1: ```dsl_fire result = ts_corr(log1p(volume), log(market_cap), 15) ```
+[1513] code_public_0841_1: ```dsl_fire result = div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))) ```
+[1514] code_public_0778_0: ```dsl_fire result = sub(pb, ts_quantile(pb, 30, 0.7)) ```
+[1515] code_public_0916_0: ```dsl_fire result
+[1516] code_public_0865_0: ```dsl_fire result = div(sub(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))), group_mean(di
+[1517] code_public_0668_0: ```dsl_fire result = power(absolute(pct_change(pb, 3)), 0.25) ```
+[1518] code_public_0627_0: ```dsl_fire result.arararargmax(pb, 10) ```
+[1519] code_public_0624_0: ```dsl_fire result ts_reg_res(pct_change(low, 20)))) ```
+[1520] code_public_0610_0: ```dsl_fire result = exp(minimum(div(sub(vwap, xs_mean(vwap)), xs_std(vwap)), 3.0)) ```
+[1521] code_public_0357_0: ```dsl_fire result.reg_res(pct_change(close, 30), 0.0) ```
+[1522] code_public_0299_1: ```dslf(open, 2) ```
+[1523] code_public_0845_0: ```dsl_fire result = where(logical_xor(logical_xor(gt(div(sub(close, vwap), vwap), xs_mean(div(sub(close, vwap), vwap)))
+[1524] code_public_0020_0: ```dsl_fire result = pct_change(vwap, 30) ```
+[1525] code_public_0984_0: ```dsl_fire result = exp(minimum(pct_change(low, 3), 0.1)) ```
+[1526] code_public_0191_0: ```dsl_fire result(recip(pb), log(market_cap), 60) ```
+[1527] code_public_0721_0: ```dsl_fire result.0) ```
+[1528] code_public_0228_1: ```dsl_fire result = exp(minimum(pct_change(open, 15), 0.1)) ```
+[1529] code_public_0426_0: ```dsl_fire result = div(sub(market_cap, ts_last), shift(market_cap, 1), 10)), ts_last(shift(market_cap, 1), 10)) ```
+[1530] code_public_0645_1: ```dsl_fire result = power(absolute(pct_change(volume, 10)), 0.25) ```
+[1531] code_public_0305_0: ```dsl_fire result = sub(market_cap, xs_quantile(market_cap, 0.2)) ```
+[1532] code_public_0534_0: ```dsl_fire result = add(div(sub(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), neg(pct_change(close, 10)))
+[1533] code_public_0162_1: ```dsl_fire result = add(log(market_cap), log1p(ts_mean(volume, 20))) ```
+[1534] code_public_0497_0: ```dsl_fire result = sub(v, ts_quantile(volume, 30, 0.7)) ```
+[1535] code_public_0239_0: ```dsl_fire result.pct_change(vwap, 60)) ```
+[1536] code_public_0652_0: ```dsl_fire result = sub(v, ts_quantile(volume, 15, 0.7)) ```
+[1537] code_public_0730_1: ```dsl_fire result.0)) ```
+[1538] code_public_0617_1: ```dslflogical_not,le(pct_change(close, 60), group_mean(pct_change(close, 60), industry)), neg(div(sub(pct_change(close,
+[1539] code_public_0559_0: ```dsl_fire result ts_stdddd(ltadd(1.0, pct_change(close, 1)), 0.0), pct_change(close, 1) ```
+[1540] code_public_0561_0: ```dsl_fire result
+[1541] code_public_0746_1: ```dsl_fire result ts_prod(addadd(1.0, pct_change(v, 3))) ```
+[1542] code_public_0157_1: ```dsl_fire result = where(logical_xor(lt(close, ts_mean(close, 20)), le(volume, ts_mean(volume, 20))), pct_change(close
+[1543] code_public_0743_1: ```dsl_fire result = maskum),meanre pct_change(close, 1), 0.0), ```
+[1544] code_public_0678_1: ```dsl_fire result = log10(add(1.0, absolute(pct_change(v, 7)))) ```
+[1545] code_public_0811_1: ```dsl_fire result = add(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))), div(sub(close, vw
+[1546] code_public_0242_0: ```dsl_fire result = neg(mul(div(ts_mean(volume, 3), ts_mean(volume, 30)), pct_change(close, 3))) ```
+[1547] code_public_0638_1: ```dsl_fire result = absolute(pct_change(close, 5))rt(ts_std(pct_change(close, 1), 20), ts_std(pct_change(close, 1), 1ma
+[1548] code_public_0243_1: ```dsl_fire result.0) ```
+[1549] code_public_0178_0: ```dsl_fire result = where(eq(sign(sub(vwap, xs_mean(vwap))), 1.0), div(sub(vwap, xs_mean(vwap)), xs_std(vwap)), 0.0) ``
+[1550] code_public_0289_1: ```dsl_fire result = where(logical_and(gt(div(sub(recip(pb), xsmean(recip(pb))), xs_std(recip(pb))), xs_mean(div(sub(rec
+[1551] code_public_0228_0: ```dsl_fire result
+[1552] code_public_0597_0: ```dsl_fire result = sqrt(absolute(pct_change(vwap, 7))) ```
+[1553] code_public_0743_0: ```dsl_fire result.0), logical_reg_res(volume,ts_mean(volume, 20)), 0.0) ```
+[1554] code_public_0747_1: ```dsl_fire result = ts_reg_res(vwap, 60) ```
+[1555] code_public_0569_1: ```dsl_fire result = power(absoluteabsolute(pct_change(vwap, 10)), 0.5) ```
+[1556] code_public_0607_0: ```dsl_fire result = where(logical_or(gt(close, ts_mean(close, 20)), ge(volume, ts_mean(volume, 20))), pct_change(close,
+[1557] code_public_0251_1: ```dsl_fire result = where(logical_and(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap))))), gt(log1p(ts_mean(volume
+[1558] code_public_0933_1: ```dsl_fire result = maximum(pct_change(volume, 5), 0.0) ```
+[1559] code_public_0659_1: ```dslf(volume, 100000000.0) ```
+[1560] code_public_0702_1: ```dsl_fire result = exp(minimum(pct_change(open, 5), 0.1)) ```
+[1561] code_public_0966_1: ```dsl_fire result = log(market_cap)) ```
+[1562] code_public_0376_1: ```dsl_fire result = power(absolute(pct_change(open, 20)), 0.25) ```
+[1563] code_public_0546_0: ```dsl_fire result.reg_res(pct_change(open, 90)), 0.0) ```
+[1564] code_public_0518_1: ```dsl_fire result = log10(add(1.0, absolute(pct_change(v, 20)))) ```
+[1565] code_public_0545_1: ```dsl_fire result = where(logical_or(gt(div(volume, market_cap), xs_mean(div(volume, market_cap))), add(log(market_cap)
+[1566] code_public_0487_0: ```dsl_fire result(minimum(pb, 1), 0.), ts_last(shift(pb, 1), 30)), ts_last(shift(pb, 1), 30)) ```
+[1567] code_public_0489_1: ```dslf(vwap, 15) ```
+[1568] code_public_0595_0: ```dsl_fire result
+[1569] code_public_0585_1: ```dslfle(h))    ```
+[1570] code_public_0448_1: ```dslf(mry.0) ```
+[1571] code_public_0939_1: ```dsl_fire result = sub(div(absolute(recip(pb)), xs_sum(absolute(recip(pb)))), div(absolute(pct_change(close, 20)), xs_
+[1572] code_public_0814_1: ```dsl_fire result = ts_), 0.0) ```
+[1573] code_public_0920_0: ```dsl_fire result = xs_proddddddminminminadd(1.0, 10)) ```
+[1574] code_public_0543_0: ```dsl_fire result = sub(ts_std(pct_change(close, 1), 20), xs_median(ts_std(pct_change(close, 1), 20))) ```
+[1575] code_public_0978_0: ```dsl_fire result = where(logical_or(gt(div(sub(close, vwap), vwap), xs_mean(div(sub(close, vwap), vwap))), xs_std(div(
+[1576] code_public_0911_0: ```dsl_fire result = mod(market_cap, 10000.0) ```
+[1577] code_public_0018_0: ```dsl_fire result = absolute(pct_change(vwap, 60)) ```
+[1578] code_public_0370_1: ```dsl_fire result = div(sub(pb, group_mean(pb, industry)), group_std(pb, industry)) ```
+[1579] code_public_0777_1: ```dsl_fire result = minimum(pct_change(open, 10), 0.0) ```
+[1580] code_public_0226_0: ```dsl_fire result ts_reg_res(pct_change(market_cap, 7))pct_change(market_cap, 3)) ```
+[1581] code_public_0502_0: ```dsl_fire result = sub(close, xs_quantile(close, 0.3)) ```
+[1582] code_public_0976_0: ```dsl_fire result = sub(vwap, group_mean(vwap, industry)) ```
+[1583] code_public_0496_0: ```dsl_fire result = exp(minimum(pct_change(vwap, 20), 0.1)) ```
+[1584] code_public_0796_1: ```dsl_fire result = minimum(maximum(div(sub(low, xs_mean(low)), xs_std(low)), -2.0), 2.0) ```
+[1585] code_public_0475_0: ```dsl_fire result = pct_change(open, 5) ``` ```
+[1586] code_public_0095_1: ```dsl_fire result ts_win_cumsum(pct_change(close, 1), 45) ```
+[1587] code_public_0060_0: ```dsl_fire result = pct_change(close, 90) ```
+[1588] code_public_0052_1: ```dsl_fire result = add(sqrt(recip(pb)), neg(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap)
+[1589] code_public_0265_0: ```dsl_fire result = ts_reg_res(pct_change(close, 20), log(market_cap), 15) ```
+[1590] code_public_0870_0: ```dsl_fire result ts_ ```
+[1591] code_public_0027_0: ```dsl_fire result = power(absolute(pct_change(close, 45)), 0.5) ```
+[1592] code_public_0042_1: ```dsl_fire result = div(pct_change(clo, 2), ab) ```
+[1593] code_public_0296_0: ```dsl_fire result
+[1594] code_public_0512_0: ```dsl_fire result = add(log(market_cap), div(sub(close, vwap), vwap)) ```
+[1595] code_public_0236_0: ```dsl_fire result = pct_change(close, 15) ```
+[1596] code_public_0612_1: ```dsl_fire result = sub(vwap, xs_median(vwap)) ```
+[1597] code_public_0820_1: ```dslf(pb, 100.0) ```
+[1598] code_public_0231_0: ```dsl_fire result = exp(minimum(pct_change(volume, 7), 0.1)) ```
+[1599] code_public_0314_0: ```dsl_fire result ts_absolute(pct_change(vwap, 15)))) ```
+[1600] code_public_0298_1: ```dsl_fire result = absolute(sub(market_cap, xs_med(market_cap))) ```
+[1601] code_public_0905_0: ```dsl_fire result ts_), 0.pct_change(high, 20), logr(h ```
+[1602] code_public_0041_0: ```dsl_fire result.reg_res(pct_change(open, 30)) ```
+[1603] code_public_0933_0: ```dsl_fire result ts_), 0.0) ```
+[1604] code_public_0366_0: ```dslf(close, 90) ```
+[1605] code_public_0316_0: ```dsl_fire result ts_prod(add(1.0, pct_change(low, 10))) ```
+[1606] code_public_0720_0: ```dsl_fire result = abfreg_res(ts_std(pct_change(close, 1), 20), group_mean(ts_std(pct_change(close, 1), 20), industry)
+[1607] code_public_0853_0: ```dslf(close, 45) ```
+[1608] code_public_0131_1: ```dsl_fire result = sub(pct_change(close, 20), xs_quantile(pct_change(clo 0.2))) ```
+[1609] code_public_0600_1: ```dsl_fire result = cbrt(pct_change(open, 10)) ```
+[1610] code_public_0735_1: ```dsl_fire result = minimum(maximum(div(sub(high, xs_mean(high)), xs_std(high)), -1.0), 1.0) ```
+[1611] code_public_0745_1: ```dsl_fire result = sub(vwap, xs_quantile(vwap, 0.5)) ```
+[1612] code_public_0216_1: ```dsl_fire result = mod(eq(sign(sub(low, xs_me(low))), 1.0), div(sub(low, xs_mean(low)), xs_std(low))), 0.0) ```
+[1613] code_public_0186_1: ```dsl_fireireirehigh,ge(high, xs_mean(high)), high, xs_mean(market_cap)) ```
+[1614] code_public_0661_1: ```dsl_fire result = sub(div(absoluteabsolute(div(volume, market_cap)), xs_sum(absolute(div(volume, market_cap)))), div(
+[1615] code_public_0005_0: ```dsl_fire result = sub(market_cap, ts_quantile(market_cap, 15, 0.7)) ```
+[1616] code_public_0791_1: ```dsl_fire result = ts_win_cumsum(pct_change(volume, 1), 60) ```
+[1617] code_public_0021_1: ```dsl_fire result = ts_reg_res(log1p(volume), log(market_cap), 20) ```
+[1618] code_public_0711_1: ```dsl_fire result.25) ```
+[1619] code_public_0938_1: ```dsl_fire result = div(sub(ts_max(high, 15), close), ts_max(high, 15)) ```
+[1620] code_public_0232_1: ```dsl_fire result = subs_), div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))) ```
+[1621] code_public_0129_1: ```dsl_fire result = cbrt(pct_change(close, 20)) ```
+[1622] code_public_0686_1: ```dsl_fire result.0) ```
+[1623] code_public_0779_0: ```dsl_fire result = ts_argmaxmin(vwap, 10) ```
+[1624] code_public_0188_1: ```dsl_fire result.0) ```
+[1625] code_public_0478_0: ```dsl_fire result = neg(div(sub(close, vwap), vwap)) ```
+[1626] code_public_0059_1: ```dsl_fire result = div(sub(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))), group_mean(di
+[1627] code_public_0150_1: ```dsl_fire resultl_fire result = div(sub(close, ts_min(low, 20)), sub(ts_max(high, 20), ts_min(low, 20))) ```
+[1628] code_public_0561_1: ```dsl_fire result = power(absolute(pct_change(high, 7)), 0.5) ```
+[1629] code_public_0220_0: ```dsl_fire result = where(logical_or(gt(pct_change(close, 20), xs_mean(pct_change(close, 20))), gt(div(sub(recip(pb), g
+[1630] code_public_0739_0: ```dsl_fire result = cbrt(pct_change(close, 90)) ```
+[1631] code_public_0197_1: ```dsl_fire result = minimum(pct_change(market_cap,pct_change(market_cap, 3), 0.0) ```
+[1632] code_public_0842_0: ```dsl_fire result.0) ```
+[1633] code_public_0710_0: ```dsl_fire result = sub(volume, xs_quantile(volume, 0.2)) ```
+[1634] code_public_0570_0: ```dsl_fireireirehfire result
+[1635] code_public_0541_0: ```dsl_fire result ts_argmaxmin(market_cap, 90) ```
+[1636] code_public_0311_1: ```dsl_fire result.arararararmaxmin(pb,pb, 60) ```
+[1637] code_public_0061_0: ```dsl_fire result = sub(v, ts_quantile(volume, 60, 0.7)) ```
+[1638] code_public_0205_1: ```dsl_fire result = where(logical_xor(ge(volume, ts_mean(volume, 20)), eq(sign(pct_change(close, 1)), 1.0)), pct_change
+[1639] code_public_0374_1: ```dsl_fire result = neg(pct_change(vwap, 15)) ```
+[1640] code_public_0378_0: ```dsl_fire result 30))  ```
+[1641] code_public_0967_1: ```dsl_fire result = neg(ts_argmax(volume, 30)) ```
+[1642] code_public_0703_1: ```dsl_fire result = square) ```
+[1643] code_public_0656_0: ```dsl_fire result = ts_reg_res(div(volume, market_cap), pct_change(close, 5), 90) ```
+[1644] code_public_0631_0: ```dsl_fire result = sub(close, ts_quantile(close, 10, 0.7)) ```
+[1645] code_public_0241_1: ```dsl_fire result = absolute(sub(close, xs_median(close))) ```
+[1646] code_public_0832_1: ```dsl_fire result.
+[1647] code_public_0140_0: ```dsl_fire result.pct_change(vwap, 3)) ```
+[1648] code_public_0816_0: ```dsl_fire result
+[1649] code_public_0878_1: ```dslfff(ts_std(pct_change(close, 1), 7)) ```
+[1650] code_public_0630_1: ```dsl_fire result = where(eq(sign(sub(market_cap, xs_mean(market_cap))), 1.0), div(sub(market_cap, xs_mean(market_cap))
+[1651] code_public_0207_1: ```dslf(pct_change(close, 1), 60) ```
+[1652] code_public_0772_0: ```dsl_fire result = where(logical_or(gt(log1p(ts_mean(volume, 20)), xs_mean(log1p(ts_mean(volume, 20)))), gt(pct_change
+[1653] code_public_0349_0: ```dsl_fire result = power(absolute(pct_change(pb, 15)), 0.25) ```
+[1654] code_public_0016_0: ```dsl_fire result = sub(close, ts_quantile(close, 60, 0.8)) ```
+[1655] code_public_0995_1: ```dsl_fire result = sub(log(market_cap), xs_quantile(log(market_cap), 0.2)) ```
+[1656] code_public_0355_0: ```dsl_fire result = div(sub(log(recip(pb)), group_mean(log(recip(pb)), industry)), group_std(log(recip(pb)), industry))
+[1657] code_public_0575_1: ```dslf(pct_change(pb, 1), 0.0) ```
+[1658] code_public_0838_1: ```dsl_fire result = square) ```
+[1659] code_public_0377_1: ```dsl_fire result = where(gt(pct_change(close, 20), group_mean(pct_change(close, 20), industry)), div(sub(pct_change(cl
+[1660] code_public_0524_1: ```dsl_fire result = sub(ts_mean(pct_change(close, 1), 7), ts_var(pct_change(close, 1), 60)) ```
+[1661] code_public_0081_1: ```dsl_fire result = ts_reg_res(pct_change(close, 20), recip(pb), 45) ```
+[1662] code_public_0897_0: ```dsl_fire result =
+[1663] code_public_0670_0: ```dsl_fire result = minimum(maximum(div(sub(close, xs_mean(close)), xs_std(close)), -1.0), 1.0) ```
+[1664] code_public_0026_1: ```dslfximumsum(volume, 100000.0) ```
+[1665] code_public_0580_1: ```dsl_fire result.25) ```
+[1666] code_public_0934_1: ```dsl_fire result.0) ```
+[1667] code_public_0318_1: ```dsl_fire result = sqrt(absolute(pct_change(vwap, 10))) ```
+[1668] code_public_0387_1: ```dsl_fire result ts_), 0.0) ```
+[1669] code_public_0499_0: ```dsl_fire result ts_prod(addadd(1.0, pct_change(open, 30))) ```
+[1670] code_public_0953_0: ```dsl_fire result ts_argmaxmin(volume, 20) ```
+[1671] code_public_0213_1: ```dsl_fire result = ts_argmaxmin(close, 7) ```
+[1672] code_public_0254_0: ```dsl_fire result = log(market_cap)) ```
+[1673] code_public_0794_0: ```dsl_fire result = where(logical_xor(gt(recip(pb), xs_mean(recip(pb))), le(ts_std(pct_change(close, 1), 20), xs_mean(t
+[1674] code_public_0126_1: ```dsl_fire result.0)) ```
+[1675] code_public_0932_0: ```dsl_fire result = ts_corr(div(volume, market_cap), pct_change(close, 5), 45) ```
+[1676] code_public_0650_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(vwap, 10))) ```
+[1677] code_public_0936_1: ```dsl_fire result = minimum(maximum(div(sub(open, group_mean(oplose, industry)), group_std(oplose, industry)), -2.0), 2
+[1678] code_public_0609_1: ```dsl_fire result = where(logical_not(lt(close, ts_mean(close, 20))), neg(pct_change(close, 3)), 0.0) ```
+[1679] code_public_0177_1: ```dsl_fire result = minimum(maximum(div(sub(oplose, xs_mean(open)), xs_std(open)), -2.0), 2.0) ```
+[1680] code_public_0603_1: ```dsl_fire result = div(absolute(pct_change(close, 5)), xs_sum(absolute(pct_change(close, 20)))) ```
+[1681] code_public_0956_1: ```dsl_fire result = sqrt(absolutepct_change(close, 60))) ```
+[1682] code_public_0628_1: ```dsl_fire result = sub(volume, xs_corr(volume, market_cap)), div(sub(volume, ts_mean(volume, 20)), ts_std(volume, 20))
+[1683] code_public_0763_1: ```dsl_fire result = minimum(maximum(div(sub(pb, xs_mean(pb)), xs_std(pb)), -3.0), 3.0) ```
+[1684] code_public_0829_1: ```dsl_fire result = xs_corr(log(market_cap), div(sub(close, vwap), vwap)) ```
+[1685] code_public_0756_0: ```dsl_fire result
+[1686] code_public_0687_1: ```dsl_fire result = minimum(pct_change(pb, 5), 0.0) ```
+[1687] code_public_0980_1: ```dsl_fire result = where(gt(pct_change(close, 10), group_mean(pct_change(close, 10), industry)), div(sub(pct_change(cl
+[1688] code_public_0691_0: ```dsl_fire result = exp(minimum(div(sub(vwap, xs_mean(vwap)), xs_std(vwap)), 4.0)) ```
+[1689] code_public_0676_0: ```dsl_fire result = add(log(recip(pb)), div(pct_change(close, 20), ts_std(pct_change(close, 1), 20))) ```
+[1690] code_public_0164_0: ```dsl_fire result = ts_prod(add(1.0, pct_change(mark pct_change(market_cap, 1)), 10) ```
+[1691] code_public_0970_1: ```dsl_fire result = sub(ts_mean(pct_change(close, 1), 2), ts_var(pct_change(close, 1), 90)) ```
+[1692] code_public_0560_1: ```dslf(pct_change(close, 1), 5) ```
+[1693] code_public_0771_0: ```dsl_fire result = neg(mul(div(ts_mean(volume, 5), ts_mean(volume, 20)), pct_change(close, 5))) ```
+[1694] code_public_0399_1: ```dsl_fire result = power(absolute(pct_change(market_cap, 10)), 0.5) ```
+[1695] code_public_0289_0: ```dsl_fire result = where(logical_and(gt(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), xs_mean(div(sub(re
+[1696] code_public_0417_0: ```dsl_fire result = where(logical_and(gt(close, ts_mean(close, 20)), ge(volume, ts_mean(volume, 20))), pct_change(close
+[1697] code_public_0014_0: ```dsl_fire result = exp(minimum(div(sub(pb, xs_mean(pb)), xs_std(pb)), 2.0)) ```
+[1698] code_public_0060_1: ```dsl_fire result.p(pct_change(close, 90)) ```
+[1699] code_public_0557_0: ```dsl_fire result = where(logical_xor(gt(pct_change(close, 20), xs_mean(pct_change(close, 20))), gt(div(sub(recip(pb), 
+[1700] code_public_0447_1: ```dsl_fire result ts_max(hadd((close, 90, pct_change(close, 90))) ```
+[1701] code_public_0844_0: ```dsl_fire result = exp(minimum(pct_change(open, 10), 0.1)) ```
+[1702] code_public_0850_0: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), gt(div(pct_change(close, 20), ts_std(pct_chang
+[1703] code_public_0690_0: ```dsl_fire result = minimum(maximum(div(sub(high, group_mean(high, industry)), group_std(high, industry)), -1.0), 1.0) 
+[1704] code_public_0078_0: ```dsl_fire result.2)) ```
+[1705] code_public_0764_0: ```dslfffff 45) ```
+[1706] code_public_0284_0: ```dsl_fire result
+[1707] code_public_0882_1: ```dsl_fire result = pct_change(open, 10) ```
+[1708] code_public_0006_1: ```dslf(ts_mean(pct_change(close, 1), 2), ts_var(pct_change(close, 1), 60)) ```
+[1709] code_public_0744_1: ```dsl_fire result.pct_change(open, 30)) ```
+[1710] code_public_0549_0: ```dsl_fire result = absolutepct_change(vwap, 10)) ```
+[1711] code_public_0563_0: ```dsl_fire result = where(logical_xor(gt(close, ts_mean(close, 20)), ge(volume, ts_mean(volume, 20))), pct_change(close
+[1712] code_public_0980_0: ```dsl_fire result = where(gt(neg(log(market_cap)), group_mean(neg(log(market_cap)), industry)), div(sub(neg(log(market_
+[1713] code_public_0672_1: ```dsl_fire result = neg(ts_argmax(volume, 5)) ```
+[1714] code_public_0734_0: ```dsl_fire result = power(absolute(pct_change(market_cap, 100.25)), 0.25) ```
+[1715] code_public_0508_0: ```dsl_fire result = mod(logical_and(gt(open, xs_mean(open)), div(sub(open, xs_mean(open)), xs_std(open)), 0.0) ```
+[1716] code_public_0465_0: ```dsl_fire result
+[1717] code_public_0622_0: ```dsl_fire result = minimum(pct_change(open, 20), 0.0) ```
+[1718] code_public_0019_1: ```dsl_fire result = maximum(pct_change(market_cap, 5), 0.0) ```
+[1719] code_public_0293_0: ```dsl_fire result = power(absolute(pct_change(close, 15)), 0.5) ```
+[1720] code_public_0944_0: ```dsl_fire result ts_sum(pct_change(pb, 1), 10) ```
+[1721] code_public_0194_1: ```dsl_fire result = power(absolute(pct_change(close, 90)), 0.5) ```
+[1722] code_public_0392_0: ```dsl_fire result = power(absolute(pct_change(close, 20)), 0.5) ```
+[1723] code_public_0119_1: ```dsl_fire result = minimum(maximum(div(sub(v, group_mean(v, industry)), group_std(volume, industry)), -2.0), 2.0) ```
+[1724] code_public_0509_1: ```dsl_fire result.0) ```
+[1725] code_public_0799_1: ```dsl_fire result = pct_change(open, 60) ```
+[1726] code_public_0715_1: ```dsl_fire result = log10(add(1.0, absolute(pct_change(close, 20)))) ```
+[1727] code_public_0205_0: ```dsl_fire result = where(logical_xor(ge(volume, ts_mean(volume, 20)), eq(sign(pct_change(close, 1)), 1.0)), pct_change
+[1728] code_public_0143_1: ```dsl_fire result.pct_change(close, 30)) ```
+[1729] code_public_0215_0: ```dsl_fire result = power(absolute(pct_change(vwap, 20)), 0.25) ```
+[1730] code_public_0098_1: ```dsl_fire result = sub(low, xs_median(low)) ```
+[1731] code_public_0133_1: ```dsl_fire resultresult.0) ```
+[1732] code_public_0960_0: ```dsl_fire result 30) ```
+[1733] code_public_0014_1: ```dsl_fire result = exp(minimum(div(sub(pb, xs_mean(pb)), xs_std(pb)), 2.0)) ```
+[1734] code_public_0354_0: ```dsl_fire result ts_reg_resd(pct_change(vwap, 1),add(vwap, shift(vwap, 1)), 0.0)) ```
+[1735] code_public_0024_1: ```dsl_fire result = square) ```
+[1736] code_public_0893_0: ```dsl_fire result ts_win_cumsum(pct_change(vwap, 1), 90) ```
+[1737] code_public_0384_0: ```dsl_fire result = where(logical_or(gt(div(sub(close, vwap), vwap), xs_mean(div(sub(close, vwap), vwap))), xs_std(div(
+[1738] code_public_0568_1: ```dsl_fire result = maximum(pct_change(volume, 2), 0.0) ```
+[1739] code_public_0380_0: ```dsl_fire result ts_sum(pct_change(close, 1), 20) ```
+[1740] code_public_0301_1: ```dsl_fire result = ts_win_cumsum(pct_change(pb, 1), 60) ```
+[1741] code_public_0393_0: ```dsl_fire result = sqrt(absolute(pct_change(vwap, 20))) ```
+[1742] code_public_0493_0: ```dsl_fire resultct_change(close, log1p(ts_mean(volume, 30)),), 1.0) ```
+[1743] code_public_0513_1: ```dsl_fire result = add(log(market_cap), log1p(ts_mean(volume, 20))) ```
+[1744] code_public_0682_1: ```dslffffff(market_cap, 5000000.0) ```
+[1745] code_public_0394_1: ```dsl_fire result = power(absolutepct_change(vwap, 2)), 0.25) ```
+[1746] code_public_0221_1: ```dsl_fire result.1.1.0) ```
+[1747] code_public_0073_1: ```dslf)), l logicalb), ```
+[1748] code_public_0998_0: ```dsl_fire result = exp(minimminimum(div(sub(oplose, xs_mean(open)), xs_std(open)), 1.0)) ```
+[1749] code_public_0174_1: ```dsl_fire result = ts_win_cumsum(pct_change(vwap, 1), 45) ```
+[1750] code_public_0145_0: ```dsl_fire result = sub(pct_change(close, 2), pct_change(close, 30)) ```
+[1751] code_public_0116_1: ```dslf(pb, 10000.0) ```
+[1752] code_public_0004_0: ```dsl_fire result.0), log10(add(1.0, pct_change(close, 1)), 0.0) ```
+[1753] code_public_0832_0: ```dsl_fire result = pct_change(open, 45) ```
+[1754] code_public_0054_1: ```dsl_fire result = sub(volume, xs_quantile(volume, 0.7)) ```
+[1755] code_public_0988_1: ```dslffffff(market_cap, 10000000.0) ```
+[1756] code_public_0151_0: ```dsl_fire result
+[1757] code_public_0637_0: ```dsl_fire result = group_mean(mark group_cap, industry)), industrydivsum(mark group_cap, industry)) ```
+[1758] code_public_0949_1: ```dsl_fire result ts_win_cumsum(pct_change(market_cap, 1), 10) ```
+[1759] code_public_0569_0: ```dsl_fire result
+[1760] code_public_0577_0: ```dsl_fire result = ts_argmin(close, 7) ```
+[1761] code_public_0490_0: ```dsl_fire result = neg(div(sub(close, vwap), vwap)) ```
+[1762] code_public_0844_1: ```dsl_fire result = exp(minimum(pct_change(open, 10), 0.1)) ```
+[1763] code_public_0835_0: ```dsl_fire result = where(logical_not(eq(sign(pct_change(close, 1)), 1.0)), neg(pct_change(close, 10)), 0.0) ```
+[1764] code_public_0686_0: ```dsl_fire result.0) ```
+[1765] code_public_0287_1: ```dslf(pct_change(close, 1), 90) ```
+[1766] code_public_0340_1: ```dsl_fire result = log10(add(1.1.1.1.1000.1)) mod(mvolume, ts_qu mod(pct_change(market_cap, 10)), 0.0) ```
+[1767] code_public_0143_0: ```dsl_fire result.pct_change(close, 30)) ```
+[1768] code_public_0591_0: ```dsl_fire result = where(eq(sign(sub(recip(pb), xs_mean(recip(pb)))), 1.0), add(recip(pb), neg(log(market_cap))), 0.0)
+[1769] code_public_0841_0: ```dsl_fire result = div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))) ```
+[1770] code_public_0688_1: ```dslf(open, 90) ```
+[1771] code_public_0740_0: ```dsl_fire result ts_argmax(close, 15) ```
+[1772] code_public_0168_0: ```dsl_fire result
+[1773] code_public_0020_1: ```dsl_fire result = ts_reg_res(vwap, 30) ```
+[1774] code_public_0639_0: ```dsl_fire result.reg_res(pct_change(close, 15)) ```
+[1775] code_public_0311_0: ```dsl_fire result.argmaxmin(pb, 60) ```
+[1776] code_public_0769_1: ```dsl_fire result = div(sub(volume, ts_lastmean(volume, 30)), 30)), ts_last(shift(volume, 1), 30)) ```
+[1777] code_public_0926_1: ```dsl_fire result = ts_reg_res(recip(pb), log(market_cap), 60) ```
+[1778] code_public_0129_0: ```dsl_fire result = cbrt(pct_change(close, 20)) ```
+[1779] code_public_0400_1: ```dsl_fire result = where(logical_not(lt(close, ts_mean(close, 20))), neg(pct_change(close, 5)), 0.0) ```
+[1780] code_public_0086_1: ```dsl_fire result = div(sub(low, group_mean(low, industry)), group_std(low, industry)) ```
+[1781] code_public_0555_0: ```dsl_fire result = where(logical_and(ne(sign(pct_change(close, 1)), -1.0), lt(close, ts_mean(close, 20))), pct_change(
+[1782] code_public_0770_1: ```dsl_fire result.0)) ```
+[1783] code_public_0180_1: ```dsl_fire result ts_), 0.0) ```
+[1784] code_public_0825_0: ```dsl_fire result = ts_prod(add(1.0, pct_change(mark pct_change(market_cap, 1)), 90) ```
+[1785] code_public_0227_1: ```dsl_fire result.25) ```
+[1786] code_public_0358_1: ```dslf(ts_mean(pct_change(close, 1), 5), ts_var(pct_change(close, 1), 60)) ```
+[1787] code_public_0419_0: ```dsl_fire result.pct_change(close, 60)) ```
+[1788] code_public_0223_1: ```dslf(close, 2) ```
+[1789] code_public_0261_1: ```dsl_fire result = where(logical_or(gt(neg(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))
+[1790] code_public_0161_1: ```dsl_fire result = ts_argmaxmin(close, 30) ```
+[1791] code_public_0635_1: ```dsl_fire result = neg(mul(div(ts_mean(volume, 5), ts_mean(volume, 60)), pct_change(close, 5))) ```
+[1792] code_public_0625_0: ```dsl_fire result = where(logical_or(gt(div(volume, market_cap), xs_mean(div(volume, market_cap))), gt(div(volume, mark
+[1793] code_public_0779_1: ```dsl_fire result ts_argmaxmin(vwap, 10) ```
+[1794] code_public_0212_1: ```dsl_fire result = sub(close, ts_quantile(close, 45, 0.2)) ```
+[1795] code_public_0443_1: ```dsl_fire result = absolute(div(sub(neg(log(market_cap)), xs_mean(neg(log(market_cap))))), xs_std(log(market_cap))))) 
+[1796] code_public_0373_1: ```dsl_fire result = sub(low, xs_quantile(low, 0.7)) ```
+[1797] code_public_0329_0: ```dsl_fire result = where(logical_or(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap)))), gt(neg(log(market_cap)), 
+[1798] code_public_0467_0: ```dsl_fire result.pct_change(close, 15)) ```
+[1799] code_public_0521_0: ```dsl_fire result ts_argmaxts_std(pct_change(close, 1), 30) ```
+[1800] code_public_0868_1: ```dsl_fire result.25) ```
+[1801] code_public_0252_0: ```dsl_fire result = absolute(div(sub(neg(log(market_cap)), xs_mean(neg(log(market_cap))))), xs_std(neg(log(market_cap))
+[1802] code_public_0084_1: ```dsl_fire result = power(absolute(pct_change(high, 3)), 0.5) ```
+[1803] code_public_0544_1: ```dsl_fire result = div(sub(volume, xs_median(volume)), xs_std(volume)) ```
+[1804] code_public_0690_1: ```dsl_fire result = minimum(maximum(div(sub(high, group_mean(high, industry)), group_std(high, industry)), -1.0), 1.0) 
+[1805] code_public_0479_1: ```dsl_fire result = sub(recip(pb), xs_quantile(recip, 0.2)) 0.2)) ```
+[1806] code_public_0732_1: ```dsl_fire result = exp(minimum(div(sub(v, xsmean(volume)), xs_std(volume)), 1.0)) ```
+[1807] code_public_0458_1: ```dsl_fire result = cbrt(pct_change(vwap, 2)) ```
+[1808] code_public_0701_0: ```dsl_fire result = maximum(pct_change(market_cap, 7), 0.0) ```
+[1809] code_public_0991_1: ```dsl_fire result = square) ```
+[1810] code_public_0986_1: ```dsl_fire resultreg_res(close,div(sub(close, ts_min(low, 30)), sub(ts_max(high, 30), ts_min(low, 30))) ```
+[1811] code_public_0675_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(low, 5))) ```
+[1812] code_public_0692_0: ```dsl_fire result = power(absolute(pct_change(vwap, 5)), 0.25) ```
+[1813] code_public_0677_0: ```dsl_fire result 30) ```
+[1814] code_public_0520_0: ```dsl_fire result = add(div(sub(log(recip(pb)), group_mean(log(recip(pb)), industry)), group_std(log(recip(pb)), indust
+[1815] code_public_0209_0: ```dsl_fire result = div(subb, xs_corr(pb, market_cap)), xs_std(pb)) ```
+[1816] code_public_0093_0: ```dsl_fire result = absolute(divdiv(sub(market_cap, xs_mean(market_cap)), xs_std(market_cap)))) ```
+[1817] code_public_0983_0: ```dsl_fire result = mod(mark000.0) ```
+[1818] code_public_0849_0: ```dsl_fire result
+[1819] code_public_0598_1: ```dsl_fire result = add(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))), div(volume, marke
+[1820] code_public_0515_1: ```dsl_fire result = where(logical_or(gt(neg(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))
+[1821] code_public_0179_0: ```dsl_fire result = sub(close, ts_quantile(close, 15, 0.7)) ```
+[1822] code_public_0653_0: ```dsl_fire result ts_reg_res(pct_change(high, 3)))) ```
+[1823] code_public_0539_0: ```dsl_fire result ts_reg_res(pct_change(low, 15), 15) ```
+[1824] code_public_0212_0: ```dsl_fire result.2)) ```
+[1825] code_public_0503_1: ```dsl_fire result ts_), 0.0) ```
+[1826] code_public_0800_0: ```dsl_fire result ts_prod(add(1.0, pct_change(close, 1)), 10) ```
+[1827] code_public_0206_0: ```dsl_fire result = minimum(pct_change(low, 5), 0.0) ```
+[1828] code_public_0632_1: ```dsl_fire result = div(volume, xs_sum(volume)) ```
+[1829] code_public_0417_1: ```dsl_fire result = where(logical_and(gt(close, ts_mean(close, 20)), ge(volume, ts_mean(volume, 20))), pct_change(close
+[1830] code_public_0003_0: ```dsl_fire result = pct_change(close, 7) ```
+[1831] code_public_0665_0: ```dsl_fire result = pct_change(vwap, 2) ```
+[1832] code_public_0764_1: ```dslf(pct_change(close, 1), 45) ```
+[1833] code_public_0860_0: ```dsl_fire result = minimum(pct_change(low, 20), 0.0) ```
+[1834] code_public_0065_0: ```dsl_fire result = power(absolute(pct_change(close, 3)), 0.25) ```
+[1835] code_public_0413_1: ```dsl_fire result = where(eq(s, xs_mean(low))), -1.0), div(sub(low, xs_mean(low)), xs_std(low))), 0.0) ```
+[1836] code_public_0809_1: ```dsl_fire result =absolute(pct_change(close, 1))ts_std(pct_change(close, 1), 20), ts_std(pct_change(close, 1), 1))) ``
+[1837] code_public_0226_1: ```dsl_fire result = log10(add(1.0, absolute(pct_change(market_cap, 7)))) ```
+[1838] code_public_0957_1: ```dsl_fire result.pct_change(open, 7) ```
+[1839] code_public_0429_1: ```dsl_fire result = div(sub(volume, ts_lastmean(volume, 1), 5)), ts_last(shift(volume, 1), 45)) ```
+[1840] code_public_0660_1: ```dslf(le(low, xs_median(low)), neg(div(sub(low, xs_mean(low)), xs_std(low))), 0.0) ```
+[1841] code_public_0324_1: ```dslf(ts_mean(pct_change(close, 1), 7), ts_var(pct_change(close, 1), 90)) ```
+[1842] code_public_0533_0: ```dsl_fire result ts_win_cumsum(pct_change(vwap, 1), 15) ```
+[1843] code_public_0505_0: ```dsl_fire result
+[1844] code_public_0919_0: ```dsl_fire result ts_), 0.pct_change(open, 60), log10 log(add(1.0, maximum(pct_change(open, 60), sub(high, 5), 0.0) ```
+[1845] code_public_0821_1: ```dsl_fire result.0) ```
+[1846] code_public_0896_1: ```dslf(volume, 10000.0) ```
+[1847] code_public_0134_0: ```dsl_fire result ts_argmaxmin(vwap, 9) ```
+[1848] code_public_0422_0: ```dslical_ical_ical_ical_not logical_not logical_not10le(ts_std(pct_change(close, 1), 20), xs_mean(ts_std(pct_change(cl
+[1849] code_public_0611_0: ```dsl_fire result = diff(vwap, 30) ```
+[1850] code_public_0641_0: ```dsl_fire result = minimum(pct_change(market_cap, 10), 0.0) ```
+[1851] code_public_0589_1: ```dsl_fire result = ts_win_cumsum(pct_change(vwap, 1), 20) ```
+[1852] code_public_0941_1: ```dsl_fire result = div(sub(close, ts_min(low, 120)), sub(ts_max(high, 120), ts_min(low, 120))) ```
+[1853] code_public_0332_1: ```dsl_fire result = log(recip, 3b)) ```
+[1854] code_public_0628_0: ```dsl_fire result = sub
+[1855] code_public_0074_0: ```dsl_fire result = where(logical_xor(ne(sign(pct_change(close, 1)), -1.0), lt(close, ts_mean(close, 20))), pct_change(
+[1856] code_public_0032_0: ```dsl_fire result = where(logical_and(le(volume, ts_mean(volume, 20)), ne(sign(pct_change(close, 1)), -1.0)), pct_chang
+[1857] code_public_0161_0: ```dsl_fire result = ts_argmaxmin(close, 30) ```
+[1858] code_public_0317_0: ```dsl_fire result = ts_corr(log1p(volume), log(market_cap), 90) ```
+[1859] code_public_0784_0: ```dsl_fire result 30) ```
+[1860] code_public_0889_0: ```dsl_fire result = where(logical_or(lt(close, ts_mean(close, 20)), le(volume, ts_mean(volume, 20))), pct_change(close,
+[1861] code_public_0351_0: ```dsl_fire result ts_argmaxmin(vwap, 30) ```
+[1862] code_public_0327_0: ```dsl_fire result = add(log(recip(pb)), log(market_cap)) ```
+[1863] code_public_0189_0: ```dsl_fire result = where(gt(sqrt(recip(pb)), xs_mean(sqrt(recip(pb)))), neg(log(market_cap)), 0.0) ```
+[1864] code_public_0458_0: ```dsl_fire result = cbrt(pct_change(vwap, 2)) ```
+[1865] code_public_0985_1: ```dsl_fire result.0)) ```
+[1866] code_public_0139_0: ```dsl_fire result = mod(volume, 100000.0) ```
+[1867] code_public_0783_0: ```dsl_fire result ts_argmax 45) ```
+[1868] code_public_0354_1: ```dsl_fire result = log10(add(1.0, absolute(pct_change(vwap, 3)))) ```
+[1869] code_public_0088_1: ```dsl_fire result = ts_argmaxmin(volume, 45) ```
+[1870] code_public_0895_0: ```dsl_fire result = pct_change(vwap, 10) ```
+[1871] code_public_0824_1: ```dsl_fire result = sub(close, ts_quantile(close, 5, 0.2)) ```
+[1872] code_public_0711_0: ```dsl_fire result = power(absolute(pct_change(low, 7)), 0.25) ```
+[1873] code_public_0681_1: ```dsl_fire result = minimum(pct_change(pb, 15), 0.0) ```
+[1874] code_public_0924_1: ```dsl_fire result.pct_change(open, 5) ```
+[1875] code_public_0969_1: ```dsl_fire result = log10(add(1.1.1.1.1000.1)) mod() ```
+[1876] code_public_0063_1: ```dsl_fire result = exp(minimum(div(sub(vwap, xs_mean(vwap)), xs_std(vwap)), 1.0)) ```
+[1877] code_public_0249_0: ```dsl_fire result ts_), 0.0) ```
+[1878] code_public_0435_1: ```dsl_fire result = absolute(pct_change(close, 10))) ```
+[1879] code_public_0508_1: ```dsl_fire result = maskreg_res(open, xs_mean(open)), neg(div(sub(open, xs_mean(open)), xs_std(open)), 0.0) ```
+[1880] code_public_0698_1: ```dsl_fire result.pct_change(open, 2) ```
+[1881] code_public_0722_0: ```dsl_fire result
+[1882] code_public_0915_0: ```dsl_fire result = xs_prod(addadd(1.0, pct_change(vwap, 30))) ```
+[1883] code_public_0596_1: ```dslf(close, 60) ```
+[1884] code_public_0453_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(low, 2))) ```
+[1885] code_public_0357_1: ```dsl_fire result.0)) ```
+[1886] code_public_0506_1: ```dsl_fire result = sub(pb, xs_quantile(pb, 0.5)) ```
+[1887] code_public_0517_0: ```dsl_fire result = ts_win_cumsum(pct_change(volume, 1), 30) ```
+[1888] code_public_0211_0: ```dsl_fire result = sub(volume, xs_quantile(volume, 0.5)) ```
+[1889] code_public_0562_0: ```dsl_fire result.0) ```
+[1890] code_public_0571_1: ```dsl_fire result = div(absolute(log1p(ts_memean(volume, 20)), 20)), xs_sum(absolute(log1p(ts_mememememets_std(pct_chan
+[1891] code_public_0142_0: ```dsl_fire result = where(logical_and(gt(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), xs_mean(div(sub(re
+[1892] code_public_0925_1: ```dslf(ts_mean(pct_change(close, 1), 20), ts_var(pct_change(close, 1), 60)) ```
+[1893] code_public_0031_1: ```dsl_fire result = exp(minimum(div(sub(low, xs_mean(low)), xs_std(low)), 4.0)) ```
+[1894] code_public_0596_0: ```dsl_fire result = diff(close, 60) ```
+[1895] code_public_0336_0: ```dsl_fire result ts_  ```
+[1896] code_public_0729_0: ```dsl_fire result
+[1897] code_public_0920_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(vwap, 10))) ```
+[1898] code_public_0505_1: ```dsl_fire result = exp(minimum(pct_change(vwap, 2), 0.1)) ```
+[1899] code_public_0866_0: ```dsl_fire result = exp(minimum(div(sub(v, xs_mean(vwap)), xs_std(volume)), 2.0)) ```
+[1900] code_public_0461_1: ```dsl_fire result = power(absolute(pct_change(high, 2)), 0.5) ```
+[1901] code_public_0052_0: ```dsl_fire result = add(sqrt(recip(pb)), neg(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap)
+[1902] code_public_0406_1: ```dsl_fire result = minimum(maximum(div(sub(pb, group_mean(pb, industry)), group_std(pb, industry)), -2.0), 2.0) ```
+[1903] code_public_0040_1: ```dsl_fire result = where(logical_xor(gt(divdiv(sub(close, vwap), vwap), xs_mean(div(sub(close, vwap), vwap))), gt(neg(
+[1904] code_public_0876_1: ```dsl_fire result = exp(minimminimum(div(sub(high, xs_mean(high)), xs_std(high)), 3.0)) ```
+[1905] code_public_0302_1: ```dsl_fire result = where(logical_or(gt(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))), x
+[1906] code_public_0755_0: ```dsl_fire result ts_stdddd(ltadd(1.0, pct_change(close, 1)), 0.0), 10) ```
+[1907] code_public_0945_1: ```dsl_fire result.0ical_l_l_l_l_l_fire result = where(lt(close, ts_min(low, 20)), 0.0) ```
+[1908] code_public_0196_1: ```dsl_fire result = ts_win_cumsum(pct_change(pb, 1), 15) ```
+[1909] code_public_0961_1: ```dsl_fire result.0) ```
+[1910] code_public_0530_1: ```dsl_fire result = log10(add(1.0, absolute(pct_change(v, 2)))) ```
+[1911] code_public_0929_0: ```dsl_fire result ts_argmaxmin(close, 10) ```
+[1912] code_public_0875_0: ```dsl_fire result ts_reg_res(pct_change(low, 10), 0.0) ```
+[1913] code_public_0710_1: ```dsl_fire result = sub(volume, xs_quantile(volume, 0.2)) ```
+[1914] code_public_0217_0: ```dsl_fire result ts_ ```
+[1915] code_public_0431_1: ```dsl_fire result.25) ```
+[1916] code_public_0046_1: ```dsl_fire result = where(eq(sign(sub(high, xs_mean(high))), 1.0), div(sub(high, xs_mean(high)), xs_std(high)), 0.0) ``
+[1917] code_public_0768_0: ```dsl_fire result
+[1918] code_public_0594_1: ```dsl_fire result = sub(market_cap, xs_mean(market_cap)) ```
+[1919] code_public_0145_1: ```dsl_fire result = log(market_cap)) ```
+[1920] code_public_0474_1: ```dsl_fire result = squarebpct_change(open, 5)) ```
+[1921] code_public_0130_1: ```dsl_fire result = sub(div(volume, xs_sum(volume)), div(volume, xs_sum(volume))) ```
+[1922] code_public_0446_1: ```dsl_fire result = sqrt(absolute(pct_change(vwap, 3))) ```
+[1923] code_public_0606_0: ```dsl_fire result = minimum(pct_change(high, 2), 0.0) ```
+[1924] code_public_0571_0: ```dsl_fire result = div(absolute(pct_change(close, 20)), xs_sum(absolute(pct_change(close, 20)))) ```
+[1925] code_public_0149_0: ```dsl_fire result = where(le(volume, xs_median(volume)), neg(div(sub(volume, xs_mean(volume)), xs_std(volume))), 0.0) `
+[1926] code_public_0436_1: ```dsl_fire result = where(logical_or(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap)))), gt(log1p(ts_mean(volume, 
+[1927] code_public_0337_0: ```dsl_fire result = add(neg(log(market_cap)), div(sub(close, vwap), vwap)) ```
+[1928] code_public_0728_0: ```dsl_fire result ts_reg_resd(pct_change(vwap, 1),add(vwap, shift(vwap, 1)), 0.0)) ```
+[1929] code_public_0096_0: ```dsl_fire result
+[1930] code_public_0294_0: ```dsl_fire result = minimum(maximum(div(sub(low, xs_mean(low)), xs_std(low)), -3.0), 3.0) ```
+[1931] code_public_0433_0: ```dsl_fire result ts_reg_res(pct_change(low, 3)))) ```
+[1932] code_public_0423_1: ```dsl_fire result = neg(mul(div(ts_mean(volume, 5), ts_mean(volume, 90)), pct_change(close, 5)) ```
+[1933] code_public_0039_1: ```dsl_fire result = sub(vwap, ts_quantile(vwap, 5, 0.7)) ```
+[1934] code_public_0963_0: ```dsl_fire result = sub(pb, xs_quantile(pb, 0.7)) ```
+[1935] code_public_0468_1: ```dsl_fire result = where(logical_xor(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap)))), eq(sign(pct_change(close
+[1936] code_public_0096_1: ```dsl_fire resultl_fire result = div(sub(close, ts_min(low, 45)), sub(ts_max(high, 45), ts_min(low, 45))) ```
+[1937] code_public_0813_0: ```dsl_fire result. 100000000.
+[1938] code_public_0532_0: ```dsl_fire result
+[1939] code_public_0550_0: ```dsl_fire result = mod(logical_and(gt(market_cap, xs_mean(mark_cap)), div(sub(market_cap, xs_mean(market_cap)), xs_std
+[1940] code_public_0062_1: ```dsl_fire result = xs_corr(pct_change(close, 20), div(sub(close, vwap), vwap)) ```
+[1941] code_public_0009_0: ```dsl_fire result.reg_res(pct_change(open, 7)) ```
+[1942] code_public_0959_0: ```dsl_fire result = xs_prodgaddadd(1.0, pct_change(v, 30))) ```
+[1943] code_public_0219_1: ```dsl_fire result = absolute(pct_change(close, 90)) ```
+[1944] code_public_0793_1: ```dsl_fire result = xs_prod(add(1.0, pct_change(v, 7))) ```
+[1945] code_public_0315_1: ```dsl_fire result = sub(div(volume, market_cap), xs_quantile(div(volume, market_cap), 0.2)) ```
+[1946] code_public_0173_0: ```dsl_fire result = minimum(maximum(div(sub(high, group_mean(high, industry)), group_std(high, industry)), -3.0), 3.0) 
+[1947] code_public_0536_1: ```dsl_fire result = div(sub(close, ts_last(sh), shift(close, 1), ts_last(shift(close, 1), 30)) ```
+[1948] code_public_0187_0: ```dsl_fire result = where(logical_and(gt(sqrt(recip(pb)), xs_mean(sqrt(recip(pb)))), gt(pct_change(close, 20), xs_mean(
+[1949] code_public_0139_1: ```dslfximumsum(volume, 1000.0) ```
+[1950] code_public_0441_0: ```dsl_fire result ts_), 0.pct_change(pb, 7), ts_quantile(pct_change(pb, 1), 90) ```
+[1951] code_public_0666_0: ```dsl_fire result = where(logical_and(gt(log1p(ts_mean(volume, 20)), xs_mean(log1p(ts_mean(volume, 20)))), gt(pct_chang
+[1952] code_public_0159_1: ```dsl_fire result = power(absolute(pct_change(volume, 5)), 0.25) ```
+[1953] code_public_0445_0: ```dsl_fire result ts_reg_res(pct_change(market_cap, 10)), 0.0) ```
+[1954] code_public_0175_0: ```dsl_fire result = ts_argmaxmin(close, 10) ```
+[1955] code_public_0278_1: ```dsl_fire result = minimum(pct_change(high, 5), 0.0) ```
+[1956] code_public_0535_0: ```dsl_fire result = add(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))), log1p(ts_mean(vol
+[1957] code_public_0810_1: ```dsl_fire result = where(le(log1p(ts_mean(volume, 20)), group_mean(log1p(ts_mean(volume, 20)), industry)), neg(div(sub
+[1958] code_public_0016_1: ```dsl_fire result = sub(close, ts_quantile(close, 60, 0.8)) ```
+[1959] code_public_0067_0: ```dsl_fire result ts_), 0.0) ```
+[1960] code_public_0053_0: ```dsl_fire result = absolute(pct_change(vwap, 15))rt(pct_change(vwap, 15), 0.) ```
+[1961] code_public_0613_1: ```dslf(ts_prod(add(1.0, pct_change(close, 1)), 7), 1.0) ```
+[1962] code_public_0896_0: ```dslffff 10000.0) ```
+[1963] code_public_0118_0: ```dsl_fire result ts_), 0.0) ```
+[1964] code_public_0174_0: ```dsl_fire result ts_win_cumsum(pct_change(vwap, 1), 45) ```
+[1965] code_public_0169_0: ```dsl_fire result 30) ```
+[1966] code_public_0814_0: ```dsl_fire result = minimum(pct_change(low, 10), 0.0) ```
+[1967] code_public_0612_0: ```dsl_fire result = sub(vwap, xs_median(vwap)) ```
+[1968] code_public_0233_0: ```dsl_fire result = where(logical_and(lt(close, ts_mean(close, 20)), le(volume, ts_mean(volume, 20))), pct_change(close
+[1969] code_public_0382_1: ```dsl_fire result = xs_corr(pct_change(close, 75), volume) ```
+[1970] code_public_0076_0: ```dsl_fireirefgf) result = div(market_cap, group_mean(market_cap, industry)), div(sub(market_cap, group_mean(market_cap
+[1971] code_public_0928_0: ```dsl_fire result ts_sum(pct_change(volume, 1), 20) ```
+[1972] code_public_0993_0: ```dsl_fire result(absolute(pct_change(pb, 10)), 0.5) ```
+[1973] code_public_0244_0: ```dsl_fire result = div(sub(market_cap, xs_median(market_cap)), xs_std(market_cap)) ```
+[1974] code_public_0974_0: ```dsl_fire result = where(logical_not logical_not(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap))))), recip(pb), 
+[1975] code_public_0930_0: ```dsl_fire result = where(logical_xor(logical_xor(gt(div(sub(close, vwap), vwap), xs_mean(div(sub(close, vwap), vwap)))
+[1976] code_public_0069_0: ```dsl_fire result.pct_change(vwap, 30)) ```
+[1977] code_public_0059_0: ```dsl_fire result = div(sub(div(sub(neg(div(sub(log(market_cap), x)), x div(sub(neg(log(market_cap))), xs_mean(neg(div(
+[1978] code_public_0434_1: ```dsl_fire result = squarebpct_change(vwap, 60)) ```
+[1979] code_public_0049_1: ```dsl_fire result = sub(div(volume, market_cap), xs_med(div))) ```
+[1980] code_public_0796_0: ```dsl_fire result = minimum(maximum(div(sub(low, xs_mean(low)), xs_std(low)), -2.0), 2.0) ```
+[1981] code_public_0960_1: ```dsl_fire result = div(sub(close, ts_last(sh), shift(close, 1), ts_last(shift(close, 1), 10)) ```
+[1982] code_public_0689_0: ```dsl_fire result ts_prod(addadd(1.0, pct_change(high, 30)), 30) ```
+[1983] code_public_0753_0: ```dsl_fire result = cbrt(pct_change(vwap, 7)) ```
+[1984] code_public_0615_0: ```dsl_fire result ts_argmax(volume, 20) ```
+[1985] code_public_0306_0: ```dsl_fire result.0) ```
+[1986] code_public_0862_0: ```dsl_fire result = sub(low, xs_quantile(low, 0.8)) ```
+[1987] code_public_0065_1: ```dsl_fire result.25) ```
+[1988] code_public_0582_1: ```dsl_fire result 0.pct_change(vwap, 10), ```
+[1989] code_public_0655_0: ```dsl_fire result = add(div(sub(sqrt(recip(pb)), group_mean(sqrt(recip(pb)), industry)), group_std(sqrt(recip(pb)), ind
+[1990] code_public_0734_1: ```dsl_fire result = power(absolute(pct_change(market_cap, 2)), 0.25) ```
+[1991] code_public_0515_0: ```dsl_fire result = where(logical_or(gt(neg(div(sub(log(market_cap), xs_mean(log(market_cap))), xs_std(log(market_cap))
+[1992] code_public_0460_0: ```dsl_fire result absolute(pct_change(op 0.1)))) ```
+[1993] code_public_0863_0: ```dsl_fire result.0), pct_change(close, 2), 0.0) ```
+[1994] code_public_0629_0: ```dsl_fire result = where(logical_and(gt(log(recip(pb)), xs_mean(log(recip(pb)))), gt(pct_change(close, 20), xs_mean(pc
+[1995] code_public_0436_0: ```dsl_fire result = where(logical_or(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap)))), gt(log1p(ts_mean(volume, 
+[1996] code_public_0948_0: ```dsl_fire result
+[1997] code_public_0094_1: ```dsl_fire result = ts_win_cumsum(pct_change(market_cap, 1), 45) ```
+[1998] code_public_0441_1: ```dsl_fire result = maximum(pct_change(pb, 7), 0.0) ```
+[1999] code_public_0680_1: ```dsl_fire result ts_), 0.0) ```
+[2000] code_public_0208_1: ```dsl_fire result = div(sub(vwap, ts_last), closel_l_l_l_l_l_l_l_fire result = div(sub(vwap, ts_last(shift(vwap, 1), 30

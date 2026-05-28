@@ -1,0 +1,600 @@
+[1] code_gen_0579: ```dsl_fire result = sub(recip(pb), neg(pct_change(close, 5))) ```
+[2] code_gen_0566: ```dsl_fire result = ts_win_cumsum(pct_change(close, 60), div(volume, market_cap), ```
+[3] code_gen_0553: ```dsl_fireirefgreg_resregpct_change(close, 30) ```
+[4] code_gen_0151: ```dsl_fire result = ts_argmaxmin(close, 5) ```
+[5] code_gen_0365: ```dsl_fire result = div(sub(close, ts_min(low, 20)), sub(ts_maxpbmax(market_cap, 20))) ```
+[6] code_gen_0078: ```dsl_fire result = where(gtregt(recip(pb), xs_mean(recip(pb))), log(market_cap), 0.(recip(pb), log(market_cap)), 0.0) 
+[7] code_gen_0389: ```dsl_fire resultl_fire resultl_fire resultl_fire resultl_fire result</think>
+[8] code_gen_0302: ```dsl_fire result = ts_reg_res(pct_change(close, 5), log(market_cap), 0.0) ```
+[9] code_gen_0416: ```dsl_fire result = where(gt(pct_change(close, 5), xs_mean(pct_change(close, 5))), pct_change(close, 5), 0.0) ```
+[10] code_gen_0114: ```dsl_fire result = pb, 5) ```
+[11] code_gen_0321: ```dsl_fire result = mod(logical_change(ts_mean(volume, 100.8)) ```
+[12] code_gen_0205: ```dsl_fire result = absolute(div(sub(pb, group_mean(pb, industry)), group_std(pb, industry)), -1.0), 3.0) ```
+[13] code_gen_0202: ```dsl_fire result = where(gt(vwap, xs_mean(vwap)), div(sub(vwap, xs_mean(vwap)), xs_std(vwap)), 0.0) ```
+[14] code_gen_0198: ```dsl_fire result = where(gt(vwap, xs_mean(vwap)), div(sub(vwap, xs_mean(vwap)), xs_std(vwap)), 0.0) ```
+[15] code_gen_0025: ```dsl_fire result = 45) ```
+[16] code_gen_0112: ```dsl_fire result ts_argmax(pb, 30) ```
+[17] code_gen_0219: ```dsl_fire result = where(gt(pct_change(close, 7), xs_mean(pct_change(close, 7)), 0.0) ```
+[18] code_gen_0288: ```dsl_fire result = div(sub(ts_std(pct_change(close, 1), 20), group_mean(pct_change(close, 1 minim pct_change(close, 1)
+[19] code_gen_0217: ```dsl_fire result = where(gt(pct_change(close, 10), xs_mean(pct_change(close, 10), 0.0) ```
+[20] code_gen_0121: ```dsl_fire result = ts_argmaxmin(market_cap, 7) ```
+[21] code_gen_0127: ```dsl_fire result = ts_argmaxmin(volume, 5) ```
+[22] code_gen_0327: ```dsl_fire result = absolute(div(sub(recip(pb), xs_mean(recip(pb)))), xs_std(recip(pb)))) ```
+[23] code_gen_0326: ```dsl_fire result = ts_win_cumsum(pct_change(close, 60), div(volume, market_cap), ```
+[24] code_gen_0311: ```dsl_fire result = where(logical_or(gt(log(market_cap), xs_mean(log(market_cap))), gt(log1p(ts_mean(volume, 20)), xs_m
+[25] code_gen_0291: ```dsl_fire result = add(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), log(market_cap)) ```
+[26] code_gen_0014: ```dsl_fire result = ts_reg_res(pct_change(close, 1), pct_change(volume, 1), 0.0) ```
+[27] code_gen_0000: ```dsl_fire result = pct_change(close, 45) ```
+[28] code_gen_0085: ```dsl_fire resultlog1p(ts_mean(volume, 2), log(market_cap), 2) ```
+[29] code_gen_0521: ```dsl_fire result = add(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), neg(pct_change(close, 20))) ```
+[30] code_gen_0369: ```dsl_fire resultl_fire resultl_fire resultl_fire resultl_fire result</think>
+[31] code_gen_0153: ```dsl_fire result = ts_argmaxmin(close, 7) ```
+[32] code_gen_0477: ```dsl_fire result = xs_prod(add(1.0, pct_change(close, 30))) ```
+[33] code_gen_0026: ```dsl_fire result = ts_reg_res(pct_change(close, 1), pct_change(volume, 1), 0.0) ```
+[34] code_gen_0506: ```dsl_fire result
+[35] code_gen_0166: ```dsl_fire result = where(gt(pct_change(close, 10), xs_mean(pct_change(close, 10), 0.0) ```
+[36] code_gen_0414: ```dsl_fireire resultl_fire resultl_fire resultl_fire result = where(ltrecip, xs_mean(close)), 0.0), div(sub(high, xs_me
+[37] code_gen_0052: ```dsl_fire result = sub(ts_std(pct_change(close, 1), 7), ts_std(pct_change(close, 1), 1max(ts_std(pct_change(close, 1),
+[38] code_gen_0109: ```dsl_fire result ts_argmaxmin(pb, 30) ```
+[39] code_gen_0301: ```dsl_fireire) result 30) ```
+[40] code_gen_0195: ```dsl_fire result = where(gt()), xs_mean(volume)), 0.0) ```
+[41] code_gen_0247: ```dsl_fire result = ts_ct_change(close, 5), log(market_cap), 0.0) ```
+[42] code_gen_0451: ```dsl_fire result = where(gt(pct_change(close, 5), xs_mean(pct_change(pb, 5))), pct_change(close, 5), 0.0) ```
+[43] code_gen_0284: ```dsl_fire result = log(ts_mean(pct_change(close, 1), 5), ts_std(pct_change(close, 1), 120)) ```
+[44] code_gen_0366: ```dsl_fire result =blog(market_cap), xs_argmax(log(market_cap)) ```
+[45] code_gen_0099: ```dsl_fire result = log(recip(pb)), log(market_cap)) ```
+[46] code_gen_0260: ```dsl_fire result = div(sub(close, ts_min(low, 60)), sub(ts_max(high, 60), ts_min(low, 60))) ```
+[47] code_gen_0037: ```dsl_fire result =absolute(pct_change(close, 1)), 0.0) ```
+[48] code_gen_0049: ```dsl_fire result = add(recip(pb), neg(pct_change(close, 20))) ```
+[49] code_gen_0230: ```dsl_fire result.0 result = xs_produb(add(1.0, pct_change(close, 30)), group_mean(pct_change(close, 30), industry)), g
+[50] code_gen_0252: ```dsl_fire result = rec), 90)  ```
+[51] code_gen_0094: ```dsl_fireireiref), 0.0) ```
+[52] code_gen_0088: ```dsl_fire result = sub(ts_std(pct_change(close, 1), 20), xs_mean(ts_std(pct_change(close, 1), 20))), div(volume, marke
+[53] code_gen_0375: ```dsl_fire result =gbbbrtreg_res(pct_change(close, 1), rec), div(sub(volume, ts_mean(volume, 20)), ts_mean(volume, 20))
+[54] code_gen_0504: ```dsl_fire result = ts_reg_res(pct_change(close, 1), pct_change(volume, 1), 0.0) ```
+[55] code_gen_0264: ```dsl_fire result = ts_reg_res(pct_change(close, 1), pct_change(volume, 1), 0.0) ```
+[56] code_gen_0067: ```dsl_fire resultlog1p(ts_me(volume, 100)), log(market_cap), log(market_cap), 0.0) ```
+[57] code_gen_0082: ```dsl_fireireiref), 0.0), 1) ```
+[58] code_gen_0075: ```dsl_fire result = log10(ts_mean(v, ```
+[59] code_gen_0378: ```dsl_fire result =b, log(vwap), ```
+[60] code_gen_0126: ```dsl_fire result ts_argmaxmin(volume, 30) ```
+[61] code_gen_0270: ```dsl_fire result = ts_reg_res(pct_change(close, 1), pct_change(volume, 1), 0.0) ```
+[62] code_gen_0372: ```dsl_fire result ts_argmaxmin(volume, 7)), log10(market_cap)) ```
+[63] code_gen_0110: ```dsl_fire result ts_argmax(pb, 7) ```
+[64] code_gen_0471: ```dsl_fire result =freg_res(pct_change(close, 1), pct_change(volume, 1), 60) ```
+[65] code_gen_0512: ```dsl_fire result = recip(pb)) ```
+[66] code_gen_0269: ```dsl_fire result 0.0) ```
+[67] code_gen_0229: ```dsl_fire result = add(recip(pb), div(volume, market_cap), 60)), log(market_cap)) ```
+[68] code_gen_0523: ```dsl_fireirefg ts_reg_res(pct_change(close, 1), log(market_cap), 60) ```
+[69] code_gen_0115: ```dsl_fire result = ts_argmaxmin(pb, 5) ```
+[70] code_gen_0106: ```dsl_fire result ts_argmaxts_argmax(pb, 7) ```
+[71] code_gen_0498: ```dsl_fire result = ts_stdg(pct_change(close, 1), 30) ```
+[72] code_gen_0204: ```dsl_fire result = sub(pb, xs_quantile(pb, 0.5)) ```
+[73] code_gen_0019: ```dsl_fire result = ts_prod(add(1.0, pct_change(close, 1)), 0.0) ```
+[74] code_gen_0163: ```dsl_fire result = where(gt(open, xs_mean(open)), div(sub(open, xs_mean(open)), xs_std(open)), 0.0) ```
+[75] code_gen_0374: ```dsl_fire result = neg(pct_change(close, 5)), 0.0) ```
+[76] code_gen_0057: ```dsl_fireireirefreg_res(pct_change(close, 1), div(volume, market_cap), div(sub(recip(pb), group_mean(recip(pb), indust
+[77] code_gen_0011: ```dsl_fire result = ts_prod(add(1.0, pct_change(volume, 1)), 0.0) ```
+[78] code_gen_0194: ```dsl_fire result = where(gt(volume, xs_mean(volume)), div(sub(volume, xs_mean(volume)), xs_std(volume)), 0.0) ```
+[79] code_gen_0210: ```dsl_fire result = where(gt(pb, xs_mean(pb)), xs_std(pb)), 0.0) ```
+[80] code_gen_0022: ```dsl_fire result = ts_reg_res(pct_change(close, 1), pct_change(volume, 1), 0.0) ```
+[81] code_gen_0496: ```dsl_fire result = 100. ```
+[82] code_gen_0165: ```dsl_fire result = abf, group_absolute(pct_change(close, 100.0), industry)), neg(div(sub(close, vwap), vwap))) ```
+[83] code_gen_0377: ```dsl_fire resultl_fire resultl_fire resultl_fire result = ts_argmaxts_std(pct_change(close, 1), 30) ```
+[84] code_gen_0076: ```dsl_fireireirereg_res(pct_change(close, 1), 0.recip(pb), div(pct_change(close, 1), ts_mean(pct_change(close, 1),_std(
+[85] code_gen_0169: ```dsl_fire result = where(gt(pct_change(close, 7), xs_mean(pct_change(close, 7)), 0.0) ```
+[86] code_gen_0460: ```dsl_fireire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), gt(log(market_cap), xs_mean(log(market_cap)
+[87] code_gen_0234: ```dsl_fire result 1reg_res(pct_change(close, 60), log(market_cap), 45) ```
+[88] code_gen_0597: ```dsl_fire result = ts_argmaxmin(market_cap, 100) ```
+[89] code_gen_0080: ```dsl_fire result = ts_reg_res(pct_change(close, 30), log(market_cap), 45) ```
+[90] code_gen_0040: ```dsl_fire result = log(ts_mean(pct_change(close, 1), 5), ts_var(pct_change(close, 1), 30)) ```
+[91] code_gen_0005: ```dsl_fire result = neg(pct_change(close, 30)) ```
+[92] code_gen_0081: ```dsl_fire result = log10(ts_mean(v, ```
+[93] code_gen_0559: ```dsl_fireireire) ```
+[94] code_gen_0249: ```dsl_fire result = neg(pct_change(close, 30)) ```
+[95] code_gen_0007: ```dsl_fire result = ts_prod(add(1.0, pct_change(close, 1)), 0.0) ```
+[96] code_gen_0463: ```dsl_fireire result.0) ```
+[97] code_gen_0373: ```dsl_fire resultl_fire resultshumsum(volume, 1), 10) ```
+[98] code_gen_0356: ```dsl_fire result = pct_change(close, 30) ```
+[99] code_gen_0554: ```dsl_fire result = div(sub(div(volume, market_cap), group_mean(div(volume, market_cap), industry)), group_std(div(volu
+[100] code_gen_0306: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), gt(log(market_cap), xs_mean(log(market_cap))),
+[101] code_gen_0467: ```dsl_fire result = ts_reg_res(pct_change(clo), log(market_cap), 45) ```
+[102] code_gen_0181: ```dsl_fire result = absolute(div(sub(low, group_mean(low, industry)), group_std(low, industry)))), -1.0), 1.0) ```
+[103] code_gen_0420: ```dsl_fireire resultabsoluteabsolute(pct_change(close, 7))) ```
+[104] code_gen_0142: ```dsl_fire result = pct_change(vwap, 30) ```
+[105] code_gen_0557: ```dsl_fire result = where(gt(log(market_cap), xs_mean(log(market_cap))), log1p(ts_mean(volume, 20)), 0.0) ```
+[106] code_gen_0062: ```dsl_fire result = ts_reg_res(pct_change(close, 30), log(market_cap), 45) ```
+[107] code_gen_0336: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), gt(log(market_cap), xs_mean(log(market_cap))),
+[108] code_gen_0508: ```dsl_fireire result xs_prod(add(1.0, pct_change(close, 1)), 0.) ```
+[109] code_gen_0084: ```dsl_fire result = where(gtregt(recip(pb), xs_mean(recip(pb))), log(market_cap), 0.0) ```
+[110] code_gen_0159: ```dsl_fire result = where(gt(open, group_mean(open, industry)), div(sub(open, group_mean(low, industry)), group_std(ope
+[111] code_gen_0154: ```dsl_fire result = pct_change(close, 30) ```
+[112] code_gen_0289: ```dsl_fire result = add(logical_and(gt(pct_change(close, 20), xs_mean(pct_change(close, 20)))), neg(log(recip(pb))), lo
+[113] code_gen_0200: ```dsl_fire result = where(gt(vwap, xs_mean(vwap)), div(sub(vwap, xs_mean(vwap)), xs_std(vwap)), 0.0) ```
+[114] code_gen_0443: ```dsl_fire result = where(lt(vwap, xs_mean(vwap)), 0.0), 0.0) ```
+[115] code_gen_0170: ```dsl_fire result = where(gt(pct_change(close, 45), xs_mean(pct_change(close, 45), 0.0) ```
+[116] code_gen_0323: ```dsl_fire result = where(gt(pct_change(close, 20), xs_mean(pct_change(close, 20))), add(log(recip(pb)), log1p(ts_mean(
+[117] code_gen_0536: ```dsl_fire result = add(div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), industry)), neg(pct_c
+[118] code_gen_0544: ```dsl_fireireflog1p(ts_mean(volume, 1)), div(sub(log1p(ts_mean(volume, 20)), group_mean(log1p(ts_mean(volume, 20)), ind
+[119] code_gen_0119: ```dsl_fire result = ts_argmaxmin(market_cap, 100) ```
+[120] code_gen_0539: ```dsl_fire result = where(logicalask(gt(recip(pb), xs_mean(recip(pb))), log1p(ts_mean(volume, 20)), 0.0) ```
+[121] code_gen_0458: ```dsl_fireire result = where(logical_and(gt(market_cap, xs_mean(market_cap)), 0.0), gt(market_cap, xs_mean(market_cap))
+[122] code_gen_0571: ```dsl_fire result 30) ```
+[123] code_gen_0516: ```dsl_fire result =```
+[124] code_gen_0459: ```dsl_fire result = where(logical_and(gt(pct_change(close, 1), xs_mean(pct_change(close, 1)), 0.0) ```
+[125] code_gen_0100: ```dsl_fireireiref), 0.0) ```
+[126] code_gen_0481: ```dsl_fire result),
+[127] code_gen_0083: ```dsl_fire result = where(gt(log(market_cap), xs_mean(log(market_cap))), gt(log1p(ts_mean(volume, 20)), xs_mean(log1p(t
+[128] code_gen_0318: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), gt(log(market_cap), xs_mean(log(market_cap))),
+[129] code_gen_0077: ```dsl_fire result = where(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap)))), recip(pb), 0.(market_cap), log1p(ts_
+[130] code_gen_0105: ```dsl_fire result = log(recip(pb)), log(market_cap)) ```
+[131] code_gen_0562: ```dsl_fireirefgf(log1p(ts_mean(volume, 45)), group_mean(log1p(ts_mean(volume, 45)), industry)), group_std(log1p(ts_mean
+[132] code_gen_0520: ```dsl_fireireiref),ts_std(pct_change(close, 1), 20), ts_std(pct_change(close, 1), 120)) ```
+[133] code_gen_0464: ```dsl_fire resultl_fire resultl_fire result 100.0 ```
+[134] code_gen_0474: ```dsl_fire result =absolutereg_res(pct_change(close, 60)), log(market_cap), 30) ```
+[135] code_gen_0048: ```dsl_fire result = log(ts_mean(pct_change(close, 1), 5), ts_var(pct_change(close, 1), 30)) ```
+[136] code_gen_0502: ```dsl_fire result = ts_std(pct_change(close, 1), 20) ```
+[137] code_gen_0551: ```dsl_fire result = where(logical_and(gt(log(market_cap), xs_mean(log(market_cap))), gt(log1p(ts_mean(volume, 20)), xs_
+[138] code_gen_0172: ```dsl_fireire result = sub(high, xs_quantile(high, 0.8)) ```
+[139] code_gen_0428: ```dsl_fire result = sub(v, xs_qureg_res(volume, 0.5)) ```
+[140] code_gen_0422: ```dsl_fire result = where(gt(pct_change(close, 5), xs_mean(pct_change(close, 5), 0.0) ```
+[141] code_gen_0033: ```dsl_fire result =absolute(pct_change(close, 7)) ```
+[142] code_gen_0013: ```dsl_fire result =high, 90) ```
+[143] code_gen_0355: ```dsl_fireirereg_res(pb, ts_argmax(pb, 30)), pct_change(pb, 30prod(add(1.0, pct_change(close, 30)), 0.0) ```
+[144] code_gen_0041: ```dsl_fire result = add(recip(pb), neg(pct_change(close, 20))) ```
+[145] code_gen_0337: ```dsl_fire result log(gt(pct_change(close, 5), log(market_cap), 30) ```
+[146] code_gen_0272: ```dsl_fire result = recip(pb)) ```
+[147] code_gen_0293: ```dsl_fire result = add(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), log(market_cap)) ```
+[148] code_gen_0065: ```dsl_fire result = where(gt(log(market_cap), xs_mean(log(market_cap))), log1p(ts_mean(volume, 20)), 0.0) ```
+[149] code_gen_0380: ```dsl_fire result =b,ts_argmaxmin(vwap, 5) ```
+[150] code_gen_0185: ```dsl_fire result = where(gt(low, xs_mean(low)), xs_std(low)), 0.0) ```
+[151] code_gen_0543: ```dsl_fire result = sub(recip(pb), neg(pct_change(close, 7))), 0.8)) ```
+[152] code_gen_0051: ```dsl_fire result = add(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), neg(pct_change(close, 20))) ```
+[153] code_gen_0529: ```dsl_fire result = add(logical_and(gt(pct_change(close, 20), xs_mean(pct_change(close, 20)))), neg(log(recip(pb))), lo
+[154] code_gen_0347: ```dsl_fire result = ts_argmaxmin(pb, 30) ```
+[155] code_gen_0475: ```dsl_fireire result = where(logical_xor(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap)))), rec)), 1.0), log1p(ts
+[156] code_gen_0199: ```dsl_fire result = where(gt(vwap, group_mean(vwap, industry)), div(sub(vwap, group_mean(vwap, industry)), group_std(vw
+[157] code_gen_0400: ```dsl_fireire resultl_fire result = where(gt(op), xs_mean(open)), 0.0), div(sub(open, xs_mean(open)), xs_std(open)), 0.
+[158] code_gen_0273: ```dsl_fire result =fgreg_res(pct_change(close, 7), 0.0) ```
+[159] code_gen_0324: ```dsl_fire result = where(logicalask(gt(recip(pb), xs_mean(recip(pb))), log1p(ts_mean(volume, 20)), 0.0) ```
+[160] code_gen_0045: ```dsl_fire result = add(recip(pb), neg(pct_change(close, 20))) ```
+[161] code_gen_0283: ```dsl_fireirefg ts_corr(pct_change(close, 1), div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb),
+[162] code_gen_0537: ```dsl_fire result = sub(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), div(pct_change(close, 60), ts_std(p
+[163] code_gen_0063: ```dsl_fire result = log10(ts_mean(volume, 10000.8)) ```
+[164] code_gen_0239: ```dsl_fire result.0) ```
+[165] code_gen_0206: ```dsl_fire result = where(gt(pb, xs_mean(pb)), xs_std(pb)), 0.0) ```
+[166] code_gen_0406: ```dsl_fire result = where(gt(pct_change(close, 5), xs_mean(pct_change(close, 5))), pct_change(close, 5), 0.0) ```
+[167] code_gen_0519: ```dsl_fire result = 120) ```
+[168] code_gen_0137: ```dsl_fire result = ts_argmaxmin(vwap, 5) ```
+[169] code_gen_0466: ```dsl_fireirereg_res(pct_change(close, 5), log(market_cap), 45) ```
+[170] code_gen_0376: ```dsl_fire result ts_argmaxmin(vwap, 30) ```
+[171] code_gen_0191: ```dsl_fire result = where(gt(volume, group_mean(volume, industry)), div(sub(volume, group_mean(volume, industry)), grou
+[172] code_gen_0017: ```dsl_fire result =absolute(pct_change(close, 60)) ```
+[173] code_gen_0473: ```dsl_fireire resultl_reg_res(pct_change(clolo pct_change(clo pct_change(close, 20), log(pct_change(close, 20), ts_ts_s
+[174] code_gen_0281: ```dsl_fire result = recipreb) ```
+[175] code_gen_0513: ```dsl_fire result =fgreg_res(pct_change(close, 7), 0.0) ```
+[176] code_gen_0246: ```dsl_fire result = ts_win_cumsum(pct_change(close, 1), 30) ```
+[177] code_gen_0573: ```dsl_fire result = sub(recip(pb), neg(pct_change(close, 5))), 0.8)) ```
+[178] code_gen_0433: ```dsl_fire result = where(gt(pct_change(close, 5), xs_mean(pct_change(close, 5), 0.0) ```
+[179] code_gen_0295: ```dsl_fireire resultabsolute(pct_change(close, 5)), log(market_cap)) ```
+[180] code_gen_0424: ```dsl_fireire result = where(logical_and(gt(low, xs_mean(low)), xs_std(low)), gt(low, xs_mean(low)), 0.0) ```
+[181] code_gen_0149: ```dsl_fire result = ts_argmaxmin(close, 5) ```
+[182] code_gen_0548: ```dsl_fire resultabsolute(pct_change(close, 5)), log(market_cap), 0.0) ```
+[183] code_gen_0012: ```dsl_fire result = pct_change(close, 30) ```
+[184] code_gen_0310: ```dsl_fireire result = sub(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), div(pct_change(close, 20), ts_st
+[185] code_gen_0265: ```dsl_fire result),  ```
+[186] code_gen_0581: ```dsl_fire result = where(logical_and(gt(log(market_cap), xs_mean(log(market_cap))), gt(log1p(ts_mean(volume, 20)), xs_
+[187] code_gen_0370: ```dsl_fire result =bmean(volume, ts_argmax(volume, 30)), ts_argmax(volume, 30)) ```
+[188] code_gen_0419: ```dsl_fire result = where(lt(pct_change(close, 1), xs_mean(pct_change(close, 1)), 0.0) ```
+[189] code_gen_0409: ```dsl_fire result = where(logical_and(gt(high, xs_mean(high)), xs_std(high)), 0.0) ```
+[190] code_gen_0341: ```dsl_fire result = where(logical_and(gt(log(market_cap), xs_mean(log(market_cap))), gt(log1p(ts_mean(volume, 20)), xs_
+[191] code_gen_0071: ```dsl_fire result = where(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap)))), recip(pb), 0.0) ```
+[192] code_gen_0351: ```dsl_fire result = ts_argmaxmin(pb, 7) ```
+[193] code_gen_0525: ```dsl_fire result = add(recip(pb), pct_change(close, 5recip(pb), log(market_cap)) ```
+[194] code_gen_0586: ```dsl_fire result = mod(pb, ts_argmax(pb, 30)), ts_argmax(pb, 30)) ```
+[195] code_gen_0111: ```dsl_fire result = ts_argmaxmin(pb, 5) ```
+[196] code_gen_0303: ```dsl_fire result = sub(recip(pb), neg(pct_change(close, 7))), 0.8)) ```
+[197] code_gen_0371: ```dsl_fire result = ts_argmaxmin(vute(volume, 5) ```
+[198] code_gen_0304: ```dsl_fireireflog1p(ts_mean(volume, 1)), div(sub(log1p(ts_mean(volume, 20)), group_mean(log1p(ts_mean(volume, 20)), ind
+[199] code_gen_0070: ```dsl_fireireirereg_res(pct_change(close, 1), 0.0), div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))) ```
+[200] code_gen_0494: ```dsl_fire result = div(ummean 100) ```
+[201] code_gen_0588: ```dsl_fire result =b, 5), ```
+[202] code_gen_0309: ```dsl_fire result = sub(recip(pb), log(market_cap)) ```
+[203] code_gen_0212: ```dsl_fireire result = sub(m 35)) ```
+[204] code_gen_0493: ```dsl_fire result),
+[205] code_gen_0023: ```dsl_fire result = ts_prod(add(1.0, pct_change(volume, 1)), 0.0) ```
+[206] code_gen_0143: ```dsl_fire result = ts_argmaxmin(vwap, 5) ```
+[207] code_gen_0407: ```dsl_fire result = where(gt(div(sub(high, group_mean(high, industry)), group_std(high, industry)), div(sub(h, group_me
+[208] code_gen_0564: ```dsl_fire result = where(logicalask(gt(recip(pb), xs_mean(recip(pb))), log1p(ts_mean(volume, 20)), 0.0) ```
+[209] code_gen_0449: ```dsl_fire result = where(logical_and(gt(pb, xs_mean(pb)), xs_std(pb)), 0.0) ```
+[210] code_gen_0361: ```dsl_fireire resultabsolute(pct_change(close, 5)), ts_argmax(market_cap, 5)) ```
+[211] code_gen_0164: ```dsl_fireire result = sub(high, xs_quantile(high, 0.8)) ```
+[212] code_gen_0298: ```dsl_fire result = where(gt(log(market_cap), xs_mean(log(market_cap))), log1p(ts_mean(volume, 20)), 0.0) ```
+[213] code_gen_0174: ```dsl_fire result = where(gt(pct_change(close, 10), xs_mean(pct_change(close, 10), 0.0) ```
+[214] code_gen_0214: ```dsl_fire result = where(gt(pct_change(close, 10), xs_mean(pct_change(close, 10), 0.0) ```
+[215] code_gen_0277: ```dsl_fire resultlogical_reg_res(pct_change(close, 20), pct_change(close, 60) ```
+[216] code_gen_0251: ```dsl_fire result = pct_change(close, 60) ```
+[217] code_gen_0036: ```dsl_fire result = pct_change(close, 20) ```
+[218] code_gen_0394: ```dsl_fire resultabsolute(pct_change(close, 1)), 0.0) ```
+[219] code_gen_0032: ```dsl_fire result = pct_change(close, 7) ```
+[220] code_gen_0367: ```dsl_fire result = ts_argmaxmin(volume, 30) ```
+[221] code_gen_0046: ```dsl_fireire result = where(lt(pct_change(close, 1), neg(ts_std(pct_change(close, 1), 20))), neg(pct_change(close, 20)
+[222] code_gen_0089: ```dsl_fire result = where(gt(log(market_cap), xs_mean(log(market_cap))), gt(log1p(ts_mean(volume, 20)), xs_mean(log1p(t
+[223] code_gen_0059: ```dsl_fire result = where(gtreg_change(recip(pb), xs_mean(recip(pb))), log(market_cap), 0.0) ```
+[224] code_gen_0108: ```dsl_fire result ts_argmaxts_argmax(pb, 7) ```
+[225] code_gen_0292: ```dsl_fire result =absolute(ts_std(pct_change(close, 1), 7), ts_std(pct_change(close, 1), 120)) ```
+[226] code_gen_0129: ```dsl_fire result = ts_argmaxmin(volume, 5) ```
+[227] code_gen_0379: ```dsl_fireire resultl_fire resultl_fire result 100.0), 60) ```
+[228] code_gen_0344: ```dsl_fire result = ts_corr(pct_change(close, 10), div(market_cap), 45) ```
+[229] code_gen_0009: ```dsl_fire result =absolute(pct_change(close, 60)) ```
+[230] code_gen_0339: ```dsl_fire result = mod(logical_change(gt(recip(pb), xs_mean(recip(pb))) ```
+[231] code_gen_0132: ```dsl_fire result ts_argmaxmin(volume, 30) ```
+[232] code_gen_0479: ```dsl_fire resultl_fire resultl_fire result =ffffbbbbbbbb 90) ```
+[233] code_gen_0155: ```dsl_fire result = ts_argmaxmin(close, 5) ```
+[234] code_gen_0368: ```dsl_fire result = pct_change(volume, 30) ```
+[235] code_gen_0178: ```dsl_fire result = where(gt(pct_change(close, 45), xs_mean(pct_change(close, 45), 0.0) ```
+[236] code_gen_0290: ```dsl_fireire result = where(log1p(ts_mean(volume, 20)), xs_mean(log1p(ts_mean(volume, 20))))), neg(pct_change(close, 2
+[237] code_gen_0492: ```dsl_fire result = rec), 90)  ```
+[238] code_gen_0231: ```dsl_fire resultlog1p(ts_mean(volume, 5)), ts_mean(log1p(ts_mean(volume, 20)))), neg(pct_change(close, 20)), 0.0) ```
+[239] code_gen_0279: ```dsl_fire result = 120) ```
+[240] code_gen_0287: ```dsl_fire result = recip(pb) ```
+[241] code_gen_0574: ```dsl_fireireflogical_not(gt(div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), industry)), 0.0)
+[242] code_gen_0187: ```dsl_fire result = where(gt(low, xs_mean(low)), xs_std(low)), 0.0) ```
+[243] code_gen_0434: ```dsl_fire result = where(gt(volume, xs_mean(volume)), xs_std(volume)), 0.0) ```
+[244] code_gen_0334: ```dsl_fireireflogical_and(gt(div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), industry)), 0.0)
+[245] code_gen_0087: ```dsl_fire result = log10(recip(pb)), log(market_cap)) ```
+[246] code_gen_0531: ```dsl_fire result = add(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), log(market_cap)) ```
+[247] code_gen_0238: ```dsl_fire resultlog1p(ts_mean(volume, 30)), 0.0) ```
+[248] code_gen_0383: ```dsl_fire resultl_fire resultl_fire resultl_fire result = ts_argmaxts_std(pct_change(close, 1), 30) ```
+[249] code_gen_0534: ```dsl_fireireirefgreg_res(pct_change(close, 20), recip(pb), 0.0) ```
+[250] code_gen_0117: ```dsl_fire result = ts_argmaxmin(market_cap, 100) ```
+[251] code_gen_0220: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), gt(log(market_cap), xs_mean(log(market_cap))))
+[252] code_gen_0452: ```dsl_fire result = sub(m 3 ```
+[253] code_gen_0413: ```dsl_fire result = minimum(maximum(div(sub(high, group_mean(high, industry)), group_std(high, industry)), -1ry.0), 3.0
+[254] code_gen_0384: ```dsl_fire resultabsolute(pct_change(vwap, 5)), 0.0) ```
+[255] code_gen_0092: ```dsl_fire result = 1_reg_res(pct_change(close, 5), 5), 1) ```
+[256] code_gen_0160: ```dsl_fire result = where(gt(open, xs_mean(open)), div(sub(open, xs_mean(open)), xs_std(open)), 0.0) ```
+[257] code_gen_0415: ```dsl_fireire result minimum(maximum(div(sub(low, group_mean(low, industry)), group_std(low, industry)), -1 1low, 0.0))
+[258] code_gen_0402: ```dsl_fire result = where(gt(div(sub(high, xs_mean(high)), xs_std(high)), 0.0) ```
+[259] code_gen_0144: ```dsl_fire result =vwmin(vwap, 5) ```
+[260] code_gen_0006: ```dsl_fire result = div(sub(ts_std(pct_change(close, 1), 20), group_mean(pct_change(close, 1 1 ```
+[261] code_gen_0018: ```dsl_fire result = ts_reg_res(pct_change(close, 1), pct_change(volume, 1), 60) ```
+[262] code_gen_0282: ```dsl_fireireireffr(log1p(ts_mean(volume, 20)), xs_mean(log1p(ts_mean(volume, 20))))), neg(pct_change(close, 20)), 0.0)
+[263] code_gen_0470: ```dsl_fireire resultl_fire result =bbbbbbbbbbbbbrt(pct_change(close, 20), pct_change(close, 20)) ```
+[264] code_gen_0152: ```dsl_fire result ts_argmaxts_argmax(close, 30) ```
+[265] code_gen_0430: ```dsl_fire result = where(gt(pct_change(close, 20), xs_mean(pct_change(close, 20))), neg(pct_change(close, 20)), 0.0) `
+[266] code_gen_0232: ```dsl_fire result.0) ```
+[267] code_gen_0113: ```dsl_fire result = ts_argmaxmin(pb, 5) ```
+[268] code_gen_0186: ```dsl_fire result = where(gt(low, xs_mean(low)), xs_std(low))), ```
+[269] code_gen_0346: ```dsl_fire result = mod(pb, ts_argmax(pb, 30)), ts_argmax(pb, 30)) ```
+[270] code_gen_0500: ```dsl_fire result = div(sub(h ```
+[271] code_gen_0004: ```dsl_fire result = pct_change(close, 30) ``` ```
+[272] code_gen_0096: ```dsl_fire result = where(gtregt(recip(pb), xs_mean(recip(pb))), log(market_cap), 0.0) ```
+[273] code_gen_0064: ```dsl_fireireireflogical_and(gt(div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), industry)), 0
+[274] code_gen_0116: ```dsl_fire result = pct_change(close, 30) ```
+[275] code_gen_0427: ```dsl_fireire result = where(gt(pct_change(close, 5), xs_mean(pct_change(close, 5), 0.0) ```
+[276] code_gen_0442: ```dsl_fire result = where(gt(vwap, xs_mean(vwap)), div(sub(vwap, xs_mean(vwap)), xs_std(vwap)), 0.0) ```
+[277] code_gen_0054: ```dsl_fireire result = where(log1p(ts_mean(volume, 20)), pct_change(close, 20)), 0.5) ```
+[278] code_gen_0445: ```dsl_fireirereg_res(pim, group_mean(pb, industry)), div(sub(pb, group_mean(pb, industry)), group_std(pb, industry)) ``
+[279] code_gen_0008: ```dsl_fire result = pct_change(close, 30) ```
+[280] code_gen_0213: ```dsl_fire result = absolute(div(sub(market_cap, group_mean(market_cap, industry)), group_std(market_cap, industry))) `
+[281] code_gen_0354: ```dsl_fire result = ts_argmaxmin(pb, 7) ```
+[282] code_gen_0572: ```dsl_fire result = ts_reg_res(pct_change(close, 5), log(market_cap), 0.0) ```
+[283] code_gen_0362: ```dsl_fire result ts_argmaxmin(market_cap, 100) ```
+[284] code_gen_0268: ```dsl_fire result =
+[285] code_gen_0348: ```dsl_fire result =b, 5), ```
+[286] code_gen_0545: ```dsl_fireire resultlogical_ggg(log(market_cap)), xs_mean(log(market_cap)))), gt(log1p(ts_mean(volume, 20)), xs_mean(lo
+[287] code_gen_0015: ```dsl_fire result = ts_prod(add(1.0, pct_change(close, 1)), 0.0) ```
+[288] code_gen_0431: ```dsl_fire result = where(le(volume, group_mean(volume, industry)), div(sub(volume, ts_mean(volume, 20)), ts_std(volume
+[289] code_gen_0527: ```dsl_fire result = recip(pb) ```
+[290] code_gen_0488: ```dsl_fire result = div(sub(h ```
+[291] code_gen_0497: ```dsl_fire resultlogift(recip(pb)), log(market_cap)) ```
+[292] code_gen_0123: ```dsl_fire result = ts_argmaxmin(market_cap, 100) ```
+[293] code_gen_0359: ```dsl_fire result = ts_argmaxmin(market_cap, 100) ```
+[294] code_gen_0223: ```dsl_fire result.0 result = xs_produb(add(1.0, pct_change(close, 30)), group_mean(pct_change(close, 30), industry)), g
+[295] code_gen_0278: ```dsl_fire result = div(sub(ts_std(pct_change(close, 1), 20),), group_mean(ts_std(pct_change(close, 1), 20), industry))
+[296] code_gen_0103: ```dsl_fire resultlog1p(ts_mean(volume, 100.0)), 1.0) ```
+[297] code_gen_0357: ```dsl_fire result = ts_argmaxmin(market_cap, 100) ```
+[298] code_gen_0134: ```dsl_fire result = pct_change(close, 30) ```
+[299] code_gen_0495: ```dsl_fire result =bbbbbbbbbbbbbbbbbb pct_change(close, 60), pct_change(close, 60) ```
+[300] code_gen_0447: ```dsl_fire result = where(gt(pb, group_mean(pb, industry)), div(sub(pb, group_mean(pb, industry)), group_std(pb, indust
+[301] code_gen_0010: ```dsl_fire result = ts_reg_res(pct_change(close, 1), pct_change(volume, 1), 0.0) ```
+[302] code_gen_0060: ```dsl_fireirefgreg_resreg_res(div(volume, market_cap), div( log(div(volume), ts_mean(volume, 20))),volume, market_cap))
+[303] code_gen_0197: ```dsl_fireire result = absolute(div(sub(vwap, group_mean(vwap, industry)), group_std(vwap, industry))) ```
+[304] code_gen_0533: ```dsl_fire result = add(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), log(market_cap)) ```
+[305] code_gen_0561: ```dsl_fire result = mod(logical_change(ts_mean(volume, 10000.8)) ```
+[306] code_gen_0598: ```dsl_fire result = pct_change(close, 30) ```
+[307] code_gen_0227: ```dsl_fire result 1reg_res(pct_change(close, 60), log(market_cap), 45) ```
+[308] code_gen_0518: ```dsl_fire result = div(sub(ts_std(pct_change(close, 1), 20),), group_mean(ts_std(pct_change(close, 1), 20), industry))
+[309] code_gen_0101: ```dsl_fire result = where(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap)))), log1p(ts_mean(volume, 20)), 0.0) ```
+[310] code_gen_0580: ```dsl_fireire result = sub(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), div(pct_change(close, 10), ts_st
+[311] code_gen_0261: ```dsl_fire result),
+[312] code_gen_0453: ```dsl_fire result = absolute(div(sub(pct, group_change(market_cap, industry)), group_std(pct_change(close, 100.0), indu
+[313] code_gen_0028: ```dsl_fire result = pct_change(close, 30) ```
+[314] code_gen_0388: ```dsl_fire result =brt(close, log(market_cap), 60) ```
+[315] code_gen_0542: ```dsl_fire result = ts_reg_res(pct_change(close, 5), log(market_cap), 0.0) ```
+[316] code_gen_0030: ```dsl_fire result = ts_reg_res(pct_change(close, 1), pct_change(volume, 1), 60) ```
+[317] code_gen_0342: ```dsl_fire result = where(gtreg.recip(pb), xs_mean(recip(pb))), log(market_cap), 0.0) ```
+[318] code_gen_0258: ```dsl_fire result = ts_stdg(pct_change(close, 1), 30) ```
+[319] code_gen_0300: ```dsl_fireirefgreg_resreg_res(div(volume, market_cap), xs_mean(div(volume, market_cap)))), add(div(volume, market_cap),
+[320] code_gen_0250: ```dsl_fireire result 30) ```
+[321] code_gen_0596: ```dsl_fire result = pct_change(close, 30) ```
+[322] code_gen_0387: ```dsl_fire resultl_fire resultl_fire resultl_fire resultabsolute(pct_change(close, 5), ts_argmax(close, 5)) ```
+[323] code_gen_0410: ```dsl_fireire resultl_fire resultl_fire resultl_fire result = where(lt(h), xs_mean(pct_change(close, 45), 0.0) ```
+[324] code_gen_0456: ```dsl_fire result = where(logical_and(gt(pct_change(close, 20), xs_mean(pct_change(close, 20))), gt(recip(pb), xs_mean(
+[325] code_gen_0131: ```dsl_fire result = ts_argmaxmin(volume, 5) ```
+[326] code_gen_0098: ```dsl_fire result = xs_corr(pct_change(close, 5), log(market_cap), 0.0) ```
+[327] code_gen_0440: ```dsl_fire result = where(gt(vwap, xs_mean(vwap)), div(sub(vwap, xs_mean(vwap)), xs_std(vwap)), 0.0) ```
+[328] code_gen_0069: ```dsl_fire result = log10(recip(pb)), log(market_cap)) ```
+[329] code_gen_0095: ```dsl_fire result = where(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap)))), recip(pb), 0.0) ```
+[330] code_gen_0188: ```dsl_fire result = sub(v, xs_qureg_qureg_res(volume, 0.5)) ```
+[331] code_gen_0450: ```dsl_fire result = where(gt(pct_change(close, 45), xs_mean(pb)), 0.0) ```
+[332] code_gen_0560: ```dsl_fireire resultabsolute(pct_change(close, 5)), log(market_cap), 0.0) ```
+[333] code_gen_0316: ```dsl_fire result = sub(ts_std(pct_change(close, 1), 20), ts_std(pct_change(close, 1), 120)) ```
+[334] code_gen_0461: ```dsl_fire result = where(logical_or(gt(pct_change(close, 20), xs_mean(pct_change(close, 20))), gt(div(sub(recip(pb), g
+[335] code_gen_0120: ```dsl_fire result = pct_change(market_cap, 100.0) ```
+[336] code_gen_0271: ```dsl_fire result.0) ```
+[337] code_gen_0468: ```dsl_fire result = where(lt(pct, ts_change(std), xs_mean(pct_change(close, 1),)), recip(pb)) ```
+[338] code_gen_0201: ```dsl_fire result = where(gt(vwap, xs_mean(vwap)), div(sub(vwap, xs_mean(vwap)), xs_std(vwap)), 0.0) ```
+[339] code_gen_0259: ```dsl_fire resultabsolute(pct_change(close, 1)), 0.) ```
+[340] code_gen_0156: ```dsl_fireire result = sub(open, xs_quantile(oplose, 0.8)) ```
+[341] code_gen_0540: ```dsl_fireirefgreg_resreg_res(div(volume, market_cap), xs_mean(div(volume, market_cap)))), add(div(volume, market_cap),
+[342] code_gen_0555: ```dsl_fire result = sub(recip(pb), neg(pct_change(close, 7))), 0.0) ```
+[343] code_gen_0224: ```dsl_fire resultlog1p(ts_mean(volume, 5)), 0.0) ```
+[344] code_gen_0073: ```dsl_fire result = ts_reg_res(pct_change(close, 2), log(market_cap), 45) ```
+[345] code_gen_0242: ```dsl_fire result = ts_reg_res(pct_change(close, 1), pct_change(volume, 1), 0.0) ```
+[346] code_gen_0175: ```dsl_fire result = where(gt(low, group_mean(low, industry)), group_std(low, industry.0), le(low, industry)), 0.0) ```
+[347] code_gen_0437: ```dsl_fire result = absolute(div(sub(vwap, group_mean(vwap, industry)), group_std(vwap, industry))) ```
+[348] code_gen_0107: ```dsl_fire result ts_argmaxmin(pb, 30) ```
+[349] code_gen_0161: ```dsl_fire result = where(gt(oplose, xs_mean(opim)), div(sub(open, xs_mean(open)), xs_std(open)), 0.0) ```
+[350] code_gen_0274: ```dsl_fire result = ts_stdgmaxminwts_std(pct_change(close, 1), 7), ts_std(pct_change(close, 1), 120)) ```
+[351] code_gen_0570: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), gt(log(market_cap), xs_mean(log(market_cap))),
+[352] code_gen_0296: ```dsl_fire result = add(div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), industry)), neg(log(m
+[353] code_gen_0589: ```dsl_fire resultl_fire resultl_fire result = ts_argmaxts_std(pb, 1), 60) ```
+[354] code_gen_0485: ```dsl_fire result = div(sub(div(volume, market_cap), group_mean(div(volume, market_cap), industry)), group_std(div(volu
+[355] code_gen_0122: ```dsl_fire result = pct_change(market_cap, 200p.0) ```
+[356] code_gen_0020: ```dsl_fire result = pct_change(close, 30) ```
+[357] code_gen_0595: ```dsl_fireirereg_res(pb, ts_argmax(pb, 30)), pct_change(pb, 30prod(add(1.0, pct_change(close, 30)), 0.0) ```
+[358] code_gen_0432: ```dsl_fire result = where(gt(pct_change(close, 20), xs_mean(pct_change(close, 20))), pct_change(close, 20), 0.0) ```
+[359] code_gen_0532: ```dsl_fire result =absolute(ts_std(pct_change(close, 1), 7), ts_std(pct_change(close, 1), 120)) ```
+[360] code_gen_0472: ```dsl_fire resultlogical_fire result.0), 60) ```
+[361] code_gen_0408: ```dsl_fire resultl_fire resultl_fire result = where(lt(h 1), xs_mean(pct_change(close, 1), 0.0), 0.0) ```
+[362] code_gen_0275: ```dsl_fire result = pct_change(close, 7) ```
+[363] code_gen_0503: ```dsl_fire result = div(sub(volume, ts_mean(volume, 20)), ts_mean(volume, 20)) ```
+[364] code_gen_0314: ```dsl_fire result = xs_reg_res(div(volume, market_cap), pct_change(close, 20), 0.0) ```
+[365] code_gen_0489: ```dsl_fire result = neg(pct_change(close, 30)) ```
+[366] code_gen_0590: ```dsl_fire result =b, 0.0) ```
+[367] code_gen_0055: ```dsl_fire result = add(div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), industry)), 0.0) ```
+[368] code_gen_0382: ```dsl_fire result log(vwap, 5) ```
+[369] code_gen_0074: ```dsl_fire result = xs_corr(div(volume, market_cap), div(div(volume, market_cap), market_cap) ```
+[370] code_gen_0215: ```dsl_fire result = where(gt(pct_change(close, 20), group_mean(pct_change(close, 20), industry)), 0.0) ```
+[371] code_gen_0157: ```dsl_fire result = minimabsolute(minimum(div(sub(oplose, group_mean(oplose, industry)), group_std(oplose, industry)), 
+[372] code_gen_0189: ```dsl_fire result = abf,minreg_res(div(sub(volume, group_mean(volume, industry)), group_std(volume, industry)), -1.0), 
+[373] code_gen_0549: ```dsl_fire result = sub(recip(pb), log(market_cap)) ```
+[374] code_gen_0328: ```dsl_fire result = sub(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), div(pct_change(close, 20), ts_std(p
+[375] code_gen_0211: ```dsl_fire result = where(gt(pb, xs_mean(pb)), xs_std(pb)), 0.0) ```
+[376] code_gen_0225: ```dsl_fire result.0) ```
+[377] code_gen_0158: ```dsl_fire result = where(gt(open, xs_mean(open)), div(sub(open, xs_mean(open)), xs_std(open)), 0.0) ```
+[378] code_gen_0066: ```dsl_fire result = where(gtreg_res(recip(pb), xs_mean(recip(pb))), log(market_cap), 0.0) ```
+[379] code_gen_0469: ```dsl_fire result = logical_corr(div(volume, market_cap), xs_mean(div(volume, market_cap))), add(recip(pb), neg(log(mar
+[380] code_gen_0203: ```dsl_fire result = where(gt(vwap, xs_mean(vwap)), div(sub(vwap, xs_mean(vwap)), xs_std(vwap)), 0.0) ```
+[381] code_gen_0021: ```dsl_fire result =absolute(pct_change(close, 60)) ```
+[382] code_gen_0128: ```dsl_fire result ts_argmaxmin(volume, 30) ```
+[383] code_gen_0307: ```dsl_fire result log(gtreg_res(pct_change(close, 20), log(market_cap), 30) ```
+[384] code_gen_0522: ```dsl_fireireireffr(log1p(ts_mean(volume, 20)), xs_mean(log1p(ts_mean(volume, 20))))), neg(pct_change(close, 20)), 0.0)
+[385] code_gen_0435: ```dsl_fire result = where(gt(pct_change(close, 20), xs_mean(pct_change(close, 20))), pct_change(close, 20), 0.0) ```
+[386] code_gen_0396: ```dsl_fire result = sub(open, xs_qureg_res(pct_change(close, 75)) ```
+[387] code_gen_0193: ```dsl_fire result = where(gt(volume, xs_mean(volume)), div(sub(volume, xs_mean(volume)), xs_std(volume)), 0.0) ```
+[388] code_gen_0338: ```dsl_fire resultabsolute(pct_change(close, 5)), log(market_cap), 0.0) ```
+[389] code_gen_0027: ```dsl_fire result = ts_std(minimum(pct_change(close, 1), 0.0),ts_std(pct_change(close, 1), 20), ts_std(pct_change(close
+[390] code_gen_0044: ```dsl_fire result = log(ts_mean(pct_change(close, 1), 5), ts_var(pct_change(close, 1), 30)) ```
+[391] code_gen_0446: ```dsl_fire result = where(gt(pb, xs_mean(pb)), xs_std(pb)), 0.0) ```
+[392] code_gen_0391: ```dsl_fireire resultabsolute(pct_change(close, 5)), ts_argmax(close, 5)) ```
+[393] code_gen_0593: ```dsl_fire result = ts_argmaxmin(pb, 30) ```
+[394] code_gen_0038: ```dsl_fire result = ts_reg_res(pct_change(close, 1), pct_change(volume, 1), 0.0) ```
+[395] code_gen_0510: ```dsl_fire result = ts_stdgrecip(pb), 20) ```
+[396] code_gen_0118: ```dsl_fire result = pct_change(close, 30) ```
+[397] code_gen_0591: ```dsl_fire result = ts_argmaxmin(pb, 7) ```
+[398] code_gen_0526: ```dsl_fireireirefreg_res(pct_change(close, 20), pct_change(close, 1), ```
+[399] code_gen_0340: ```dsl_fireire result = sub(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), div(pct_change(close, 10), ts_st
+[400] code_gen_0395: ```dsl_fire result = logg(close) ```
+[401] code_gen_0448: ```dsl_fire result = where(gt(pct_change(close, 10), xs_mean(pb)), 0.0) ```
+[402] code_gen_0343: ```dsl_fireirefgreg_resreg(pct_change(close, 10), log(market_cap), 30) ```
+[403] code_gen_0047: ```dsl_fire result = add(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), neg(pct_change(close, 5))) ```
+[404] code_gen_0221: ```dsl_fire result = logical_corr(pct_change(close, 1), xs_mean(pct_change(close, 1)), gt(recip(pb), xs_mean(recip(pb)))
+[405] code_gen_0240: ```dsl_fire result =
+[406] code_gen_0491: ```dsl_fire result = pct_change(close, 60) ```
+[407] code_gen_0385: ```dsl_fireirereg_res(vwap, ts_argmax```
+[408] code_gen_0568: ```dsl_fire result = sub(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), div(pct_change(close, 20), ts_std(p
+[409] code_gen_0097: ```dsl_fire resultlog1p(ts_mean(volume, 5), log(market_cap), 45) ```
+[410] code_gen_0263: ```dsl_fire result = div(sub(volume, ts_mean(volume, 20)), ts_mean(volume, 20)) ```
+[411] code_gen_0228: ```dsl_fire result = logical_corr(pct_change(close, 1), xs_mean(pct_change(close, 1)), gt(recip(pb), xs_mean(recip(pb)))
+[412] code_gen_0180: ```dsl_fireire result = sub(low, xs_quantile(low, 0.5)) ```
+[413] code_gen_0436: ```dsl_fire resultabsolute(pct_change(vwap, 7)) ```
+[414] code_gen_0133: ```dsl_fire result = ts_argmaxmin(volume, 5) ```
+[415] code_gen_0285: ```dsl_fire result = add(recip(pb), pct_change(close, 5recip(pb), log(market_cap)) ```
+[416] code_gen_0312: ```dsl_fire result = where(gtregt(recip(pb), xs_mean(recip(pb))), log(market_cap), 0.0) ```
+[417] code_gen_0241: ```dsl_fire result),
+[418] code_gen_0102: ```dsl_fire result = where(gtregt(recip(pb), xs_mean(recip(pb))), log(market_cap), 0.0) ```
+[419] code_gen_0438: ```dsl_fire result = where(gt(pct_change(close, 5), xs_mean(pct_change(close, 5), 0.0) ```
+[420] code_gen_0335: ```dsl_fireire resultlogical_or(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap)))), gt(log1p(ts_mean(volume, 20)), 
+[421] code_gen_0256: ```dsl_fire result = 100. ```
+[422] code_gen_0587: ```dsl_fire resultl_fire resultl_fire result
+[423] code_gen_0412: ```dsl_fireiref 2005)) ```
+[424] code_gen_0576: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), gt(log(market_cap), xs_mean(log(market_cap))),
+[425] code_gen_0403: ```dsl_fire result = where(gt(op.), xs_mean(opian(open, xs_std(open)), le(high, xs_mean(high)), 0.0) ```
+[426] code_gen_0177: ```dsl_fire result = where(gt(pct_change(close, 7), xs_mean(pct_change(close, 7)), 0.0) ```
+[427] code_gen_0550: ```dsl_fireire result = sub(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), div(pct_change(close, 20), ts_st
+[428] code_gen_0135: ```dsl_fire result = ts_argmaxmin(volume, 5) ```
+[429] code_gen_0538: ```dsl_fire result = where(gt(log(market_cap), xs_mean(log(market_cap))), log1p(ts_mean(volume, 20)), 0.0) ```
+[430] code_gen_0426: ```dsl_fireirereg_res(pct_change(close, 45), xs_mean(pct_change(close, 45), 0.0) ```
+[431] code_gen_0125: ```dsl_fire result = ts_argmaxmin(market_cap, 100) ```
+[432] code_gen_0208: ```dsl_fire result = where(gt(pb, xs_mean(pb)), xs_std(pb)), 0.0) ```
+[433] code_gen_0439: ```dsl_fireireff logical_c)), le(maxim```
+[434] code_gen_0130: ```dsl_fire result = pct_change(volume, 5) ```
+[435] code_gen_0478: ```dsl_fire result 0.0) ```
+[436] code_gen_0546: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), gt(log(market_cap), xs_mean(log(market_cap))),
+[437] code_gen_0184: ```dsl_fire result = where(gt(low, xs_mean(low)), xs_std(low)) ```
+[438] code_gen_0091: ```dsl_fire resultlog1p(ts_mean(volume, 5), log(market_cap), 45) ```
+[439] code_gen_0353: ```dsl_fire result = ts_argmaxmin(pb, 30) ```
+[440] code_gen_0319: ```dsl_fireirefgreg_resregpct_change(close, 30) ```
+[441] code_gen_0245: ```dsl_fire result = div(sub(div(volume, market_cap), group_mean(div(volume, market_cap), industry)), group_std(div(volu
+[442] code_gen_0147: ```dsl_fire result = ts_argmaxmin(close, 5) ```
+[443] code_gen_0524: ```dsl_fire result = log(ts_mean(pct_change(close, 1), 5), ts_std(pct_change(close, 1), 120)) ```
+[444] code_gen_0207: ```dsl_fire result = where(gt(pb, group_mean(pb, industry)), div(sub(pb, group_mean(pb, industry)), group_std(pb, indust
+[445] code_gen_0104: ```dsl_fire result = ts_corr(pct_change(close, 10), div(volume, ts_mean(volume, 20)), log(market_cap), 30) ```
+[446] code_gen_0360: ```dsl_fire result = pct_change(close, 5) ```
+[447] code_gen_0558: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), gt(log(market_cap), xs_mean(log(market_cap))),
+[448] code_gen_0079: ```dsl_fire result = ts_reg_res(pct_change(close, 30), log(market_cap), 30) ```
+[449] code_gen_0322: ```dsl_fireirefgf(log1p(ts_mean(volume, 45)), group_mean(log1p(ts_mean(volume, 45)), industry)), group_std(log1p(ts_mean
+[450] code_gen_0168: ```dsl_fire result = where(gt(pct_change(close, 10), xs_mean(pct_change(close, 10), 0.0) ```
+[451] code_gen_0058: ```dsl_fire result = where(gt(log(market_cap), xs_mean(log(market_cap))), log1p(ts_mean(volume, 20)), 0.0) ```
+[452] code_gen_0476: ```dsl_fire result = add(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), div(volume, market_cap)) ```
+[453] code_gen_0578: ```dsl_fire resultabsolute(pct_change(close, 5)), log(market_cap), 0.0) ```
+[454] code_gen_0315: ```dsl_fire result = sub(recip(pb), neg(pct_change(close, 7))), 0.0) ```
+[455] code_gen_0547: ```dsl_fire result log(gtreg_res(pct_change(close, 20), log(market_cap), 30) ```
+[456] code_gen_0350: ```dsl_fire result =b, 0.0) ```
+[457] code_gen_0162: ```dsl_fire result = where(gt(open, xs_mean(open)), xs_std(open)), 45) ```
+[458] code_gen_0146: ```dsl_fire result = pct_change(close, 30) ```
+[459] code_gen_0584: ```dsl_fire result = ts_corr(pct_change(close, 10), div(market_cap), 45) ```
+[460] code_gen_0483: ```dsl_fire result = ts_bbbbbgmax(close, 45), ts_max(close, 45)) ```
+[461] code_gen_0043: ```dsl_fire result = add(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), neg(pct_change(close, 20))) ```
+[462] code_gen_0404: ```dsl_fireire resultabsolute(pct_change(close, 7)), 0.5) ```
+[463] code_gen_0124: ```dsl_fire result = pct_change(close, 30) ```
+[464] code_gen_0330: ```dsl_fire result = where(logical_and(gt(recip(pb), xs_mean(recip(pb))), gt(log(market_cap), xs_mean(log(market_cap))),
+[465] code_gen_0429: ```dsl_fire result =absoluteabsolute(pct_change(close, 1)), div(sub(absolute(pct_change(close, 1)), group_mean(pct_chang
+[466] code_gen_0425: ```dsl_fireire resultl_fire resultl_fire result = where(logical_and(gt(low, xs_mean(low)), xs_std(low)), gt(low, xs_mean
+[467] code_gen_0381: ```dsl_fire resultl_fire resultl_fire resultl_fire result = ts_argmaxts_winpct_change(close, 30), ts_argmax(close, 30) `
+[468] code_gen_0068: ```dsl_fire result 1_fire result = ts_reg_res(div(volume, market_cap), pct_change(close, 1), 60) ```
+[469] code_gen_0034: ```dsl_fire result = ts_reg_res(pct_change(close, 1), pct_change(volume, 1), 0.0) ```
+[470] code_gen_0179: ```dsl_fire result = where(gt(pct_change(close, 7), xs_mean(pct_change(close, 7)), 0.0) ```
+[471] code_gen_0501: ```dsl_fire result),
+[472] code_gen_0138: ```dsl_fire result ts_argmaxmin(vwap, 5) ```
+[473] code_gen_0509: ```dsl_fire result 0.0) ```
+[474] code_gen_0592: ```dsl_fire result ts_argmaxmin(pb, 7) ```
+[475] code_gen_0003: ```dsl_fire result = ts_prod(add(1.0, pct_change(volume, 1)), 0.0) ```
+[476] code_gen_0002: ```dsl_fire result = ts_reg_res(pct_change(close, 1), pct_change(volume, 1), 45) ```
+[477] code_gen_0325: ```dsl_fireireire)  ```
+[478] code_gen_0454: ```dsl_fireire result = where(logical_and(gt(market_cap, xs_mean(market_cap)), xs_std(market_cap)), 0.0) ```
+[479] code_gen_0173: ```dsl_fire result = absolute(sub(high, group_mean(high, industry)), group_std(high, industry)) ```
+[480] code_gen_0484: ```dsl_fire result = 45) ```
+[481] code_gen_0582: ```dsl_fire result = where(gtreg.recip(pb), xs_mean(recip(pb))), log(market_cap), 0.0) ```
+[482] code_gen_0294: ```dsl_fireireirefgreg_res(pct_change(close, 20), recip(pb), 0.0) ```
+[483] code_gen_0556: ```dsl_fire result = sub(ts_std(pct_change(close, 1), 20), ts_std(pct_change(close, 1), 120)) ```
+[484] code_gen_0507: ```dsl_fire result = ts_bbbbbbbbbbg(pct_change(close, 5), log(market_cap), 0.0) ```
+[485] code_gen_0183: ```dsl_fire result = where(gt(low, group_mean(low, industry)), group_std(low, industry.0), le(low, industry)), 0.0) ```
+[486] code_gen_0141: ```dsl_fire result = ts_argmaxmin(vwap, 7) ```
+[487] code_gen_0585: ```dsl_fire result = sub(recip(pb), neg(pct_change(close, 10))) ```
+[488] code_gen_0136: ```dsl_fire result ts_argmaxmin(vwap, 5) ```
+[489] code_gen_0541: ```dsl_fireire) result 30) ```
+[490] code_gen_0364: ```dsl_fire result = ts_argmaxts_win.0) ```
+[491] code_gen_0061: ```dsl_fire resultlog1p(ts_me(volume, 100)), log(market_cap), log(market_cap), 0.0) ```
+[492] code_gen_0594: ```dsl_fire result = ts_argmaxmin(pb, 7) ```
+[493] code_gen_0267: ```dsl_fire result = ts_bbbbbbbbbbg(pct_change(close, 5), log(market_cap), 0.0) ```
+[494] code_gen_0399: ```dsl_fire result = where(logical_and(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap))), gt(div(sub(high, vwap), v
+[495] code_gen_0514: ```dsl_fire result = ts_stdgmaxmin(pct_change(close, 7), 0.0) ```
+[496] code_gen_0331: ```dsl_fire result.reg_resregres(pct_change(close, 5), log(market_cap), 30) ```
+[497] code_gen_0244: ```dsl_fire result = log(pct_change(close, 5), log(market_cap), 0.0) ```
+[498] code_gen_0139: ```dsl_fire result = ts_argmaxmin(vwap, 5) ```
+[499] code_gen_0216: ```dsl_fire result = where(gt(pct_change(close, 10), xs_mean(pct_change(close, 10), 0.0) ```
+[500] code_gen_0441: ```dsl_fire result = where(logical_and(gt(high, xs_mean(high)), xs_std(high)), gt(high, xs_mean(high)), 0.0) ```
+[501] code_gen_0565: ```dsl_fireireire)  ```
+[502] code_gen_0517: ```dsl_fire resultlogical_reg_res(pct_change(close, 20), pct_change(close, 60) ```
+[503] code_gen_0243: ```dsl_fire result = ts_bbbbbgmax(close, 45), ts_max(close, 45)) ```
+[504] code_gen_0444: ```dsl_fireire resultl_fire resultabsolute(pct_change(pb, 7)), xs_quantile(pct_change(pb, 75, 0.8))) ```
+[505] code_gen_0397: ```dsl_fire result = minimum(maximum(div(sub(oplose, group_mean(oplose, industry)), group_std(open, industry)), -1.0), 3
+[506] code_gen_0567: ```dsl_fire result = absolute(div(sub(recip(pb), xs_mean(recip(pb)))), xs_std(recip(pb)))) ```
+[507] code_gen_0583: ```dsl_fireirefgreg_resreg(pct_change(close, 10), log(market_cap), 30) ```
+[508] code_gen_0233: ```dsl_fire result = ts_reg_res(pct_change(close, 5), log(market_cap), 45) ```
+[509] code_gen_0050: ```dsl_fireire result = where(lt(pct_change(close, 1), neg(ts_std(pct_change(close, 1), 20))), neg(pct_change(close, 20)
+[510] code_gen_0499: ```dsl_fire resultabsolute(pct_change(close, 1)), 0.) ```
+[511] code_gen_0072: ```dsl_fire result = where(gtregt(recip(pb), xs_mean(recip(pb))), log(market_cap), 0.0) ```
+[512] code_gen_0530: ```dsl_fireire result = where(log1p(ts_mean(volume, 20)), xs_mean(log1p(ts_mean(volume, 20))))), neg(pct_change(close, 2
+[513] code_gen_0255: ```dsl_fire result =bbbborfreg_res(pct_change(close, 5), log(market_cap), 0.0) ```
+[514] code_gen_0480: ```dsl_fire result =
+[515] code_gen_0145: ```dsl_fire result = ts_argmaxmin(vwap, 5) ```
+[516] code_gen_0363: ```dsl_fire result =gbb,ts_argmax```
+[517] code_gen_0599: ```dsl_fire result = ts_argmaxmin(market_cap, 30) ```
+[518] code_gen_0329: ```dsl_fire result = where(logical_and(gt(log(market_cap), xs_mean(log(market_cap))), gt(log1p(ts_mean(volume, 20)), xs_
+[519] code_gen_0332: ```dsl_fire result = ts_reg_res(pct_change(close, 5), log(market_cap), 0.0) ```
+[520] code_gen_0528: ```dsl_fire result = sub(ts_std(pct_change(close, 1), 20), ts_std(pct_change(close, 1), 120)) ```
+[521] code_gen_0535: ```dsl_fireire resultabsolute(pct_change(close, 5)), log(market_cap)) ```
+[522] code_gen_0053: ```dsl_fire result = add(recip(pb), neg(pct_change(close, 7))) ```
+[523] code_gen_0086: ```dsl_fire result = xs_corr(div(volume, market_cap), div(div(volume, market_cap), market_cap) ```
+[524] code_gen_0262: ```dsl_fire result = ts_reg_res(pct_change(close, 1), pct_change(volume, 1), 0.0) ```
+[525] code_gen_0276: ```dsl_fire result =```
+[526] code_gen_0515: ```dsl_fire result = pct_change(close, 7) ```
+[527] code_gen_0320: ```dsl_fireire resultabsolute(pct_change(close, 5)), log(market_cap), 0.0) ```
+[528] code_gen_0226: ```dsl_fire result = ts_reg_res(pct_change(close, 5), log(market_cap), 45) ```
+[529] code_gen_0257: ```dsl_fire resultlogreg_res(pct_change(close, 30), pct_change(close, 60) ```
+[530] code_gen_0398: ```dsl_fire resultl_fire resultl_fire result = where(gt(op), xs_mean(open)), 0.0), 0.0) ```
+[531] code_gen_0465: ```dsl_fire result =freg_resregadd(1.0, pct_change(high, 100)), 0.0) ```
+[532] code_gen_0024: ```dsl_fire result = pct_change(close, 5) ```
+[533] code_gen_0093: ```dsl_fire result = log10(recip(pb)), log(market_cap)) ```
+[534] code_gen_0056: ```dsl_fire result = add(div(sub(recip(pb), group_mean(recip(pb), industry)), group_std(recip(pb), industry)), neg(pct_c
+[535] code_gen_0148: ```dsl_fire result ts_argmaxts_argmax(close, 75) ```
+[536] code_gen_0358: ```dsl_fire result = pct_change(close, 30) ```
+[537] code_gen_0299: ```dsl_fire result = where(logicalask(gt(recip(pb), xs_mean(recip(pb))), log1p(ts_mean(volume, 20)), 0.0) ```
+[538] code_gen_0352: ```dsl_fire result ts_argmaxts_argmax(pb, 75) ```
+[539] code_gen_0486: ```dsl_fire result = ts_win_cumsum(pct_change(close, 1), 30) ```
+[540] code_gen_0150: ```dsl_fire result = pct_change(close, 30) ```
+[541] code_gen_0016: ```dsl_fire result = pct_change(close, 30) ```
+[542] code_gen_0418: ```dsl_fire result = where(gt(h 1), xs_mean(high)), 0.0) ```
+[543] code_gen_0563: ```dsl_fireire resultlogical_ggg(log(market_cap)), xs_mean(log(market_cap))) ```
+[544] code_gen_0039: ```dsl_fire result = ts_std(minimum(pct_change(close, 1), 0.0), 1.0) ```
+[545] code_gen_0345: ```dsl_fire result = sub(recip(pb), neg(pct_change(close, 10))) ```
+[546] code_gen_0176: ```dsl_fire result = where(gt(pct_change(close, 10), xs_mean(pct_change(close, 10), 0.0) ```
+[547] code_gen_0308: ```dsl_fire resultabsolute(pct_change(close, 5)), log(market_cap), 0.0) ```
+[548] code_gen_0031: ```dsl_fire result = ts_prod(add(1.0, pct_change(volume, 1)), 0.0) ```
+[549] code_gen_0190: ```dsl_fire result = where(gt(pct_change(close, 10), xs_mean(pct_change(close, 10), 0.0) ```
+[550] code_gen_0266: ```dsl_fire result
+[551] code_gen_0411: ```dsl_fire result = where(gt(pct_change(close, 20), xs_mean(pct_change(close, 20))), ```
+[552] code_gen_0090: ```dsl_fire result = where(gtregt(recip(pb), xs_mean(recip(pb))), log(market_cap), 0.0) ```
+[553] code_gen_0222: ```dsl_fire result = add(recip(pb), div(volume, market_cap), 60)), log(market_cap)) ```
+[554] code_gen_0490: ```dsl_fireire resultabsolute(pct_change(close, 1)), 0.0) ```
+[555] code_gen_0280: ```dsl_fireireiref),ts_std(pct_change(close, 1), 20), ts_std(pct_change(close, 1), 120)) ```
+[556] code_gen_0401: ```dsl_fire result = where(logical_and(gt(open, xs_mean(open)), xs_std(open)), 0.0) ```
+[557] code_gen_0286: ```dsl_fireireirefreg_res(pct_change(close, 20), pct_change(close, 1), ```
+[558] code_gen_0313: ```dsl_fireire result 45) ```
+[559] code_gen_0182: ```dsl_fire result = where(gt(low, xs_mean(low)), xs_std(low)) ```
+[560] code_gen_0417: ```dsl_fire result = where(gt(pct_change(close, 20), xs_mean(pct_change(close, 20))), pct_change(close, 20), 0.0) ```
+[561] code_gen_0575: ```dsl_fireire resultlogical_or(gt(neg(log(market_cap)), xs_mean(neg(log(market_cap)))), gt(log1p(ts_mean(volume, 20)), 
+[562] code_gen_0140: ```dsl_fire result = pct_change(vwap, 30) ```
+[563] code_gen_0236: ```dsl_fire result = add(recip(pb), neg(div(sub(close, vwap), vwap))) ```
+[564] code_gen_0423: ```dsl_fire result = where(logical_and(gt(low, group_mean(low, industry)), div(sub(low, group_mean(low, industry)), grou
+[565] code_gen_0577: ```dsl_fire result log(gt(pct_change(close, 5), log(market_cap), 30) ```
+[566] code_gen_0029: ```dsl_fire result =high, 30) ```
+[567] code_gen_0487: ```dsl_fire result = ts_ct_change(close, 5), log(market_cap), 0.0) ```
+[568] code_gen_0218: ```dsl_fire result = where(gt(pct_change(close, 45), xs_mean(pct_change(close, 45), 0.0) ```
+[569] code_gen_0405: ```dsl_fireire result =absolute(pct_change(close, 1)), div(sub(close, shift(close, 1)), shift(close, 1)) ```
+[570] code_gen_0297: ```dsl_fire result = sub(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), div(pct_change(close, 60), ts_std(p
+[571] code_gen_0349: ```dsl_fire resultl_fire resultl_fire resultshast(lt(pb, ts_), ts_last(sh),, 20) ```
+[572] code_gen_0209: ```dsl_fire result = where(gt(pb, xs_mean(pb)), xs_std(pb)), 0.0) ```
+[573] code_gen_0237: ```dsl_fire result. 1000. 1000.000.000.000.000.) ```
+[574] code_gen_0505: ```dsl_fire result),  ```
+[575] code_gen_0254: ```dsl_fire result = div(sub(ts_std(pct_change(close, 1), 20), group_mean(pct_change(close, 1 1 ```
+[576] code_gen_0457: ```dsl_fireireff),g(div(sub(market_cap, xs_mean(market_cap)), xs_std(market_cap)), 0.0) ```
+[577] code_gen_0569: ```dsl_fire result = where(logical_and(gt(log(market_cap), xs_mean(log(market_cap))), gt(log1p(ts_mean(volume, 20)), xs_
+[578] code_gen_0390: ```dsl_fire result =brt(ts_argmax(close, 75), ts_argmax(close, 75)) ```
+[579] code_gen_0392: ```dsl_fire result ts_argmaxts_argmaxts_std(pct_change(close, 1), 30) ```
+[580] code_gen_0482: ```dsl_fire result = ts_reg_res(pct_change(close, 1), pct_change(volume, 1), 0.0) ```
+[581] code_gen_0421: ```dsl_fire result = log10(sub(low, group_mean(low, industry)), group_std(low, industry)) ```
+[582] code_gen_0248: ```dsl_fire result = div(sub(h ```
+[583] code_gen_0305: ```dsl_fireire resultlogical_ggg(log(market_cap)), xs_mean(log(market_cap)))), gt(log1p(ts_mean(volume, 20)), xs_mean(lo
+[584] code_gen_0035: ```dsl_fire result = ts_reg_res(pct_change(close, 7), log(market_cap), 0.0) ```
+[585] code_gen_0192: ```dsl_fire result = where(gt(pct_change(close, 10), xs_mean(pct_change(close, 10), 0.0) ```
+[586] code_gen_0386: ```dsl_fire result = pct_change(close, 30) ```
+[587] code_gen_0552: ```dsl_fire result = where(gtregt(recip(pb), xs_mean(recip(pb))), log(market_cap), 0.0) ```
+[588] code_gen_0253: ```dsl_fireire result),  ```
+[589] code_gen_0393: ```dsl_fire resultl_fire resultl_fire resultl_fire result =
+[590] code_gen_0167: ```dsl_fire result = where(gt(neg(log(market_cap)), group_mean(neg(log(market_cap)), industry)), div(sub(high, group_mea
+[591] code_gen_0001: ```dsl_fire result =high, 45
+[592] code_gen_0333: ```dsl_fire result = sub(recip(pb), xs_mean(recip(pb))) ```
+[593] code_gen_0317: ```dsl_fire result = where(gt(pct_change(close, 1), xs_mean(pct_change(close, 1)), 0.0) ```
+[594] code_gen_0042: ```dsl_fireire result = where(log1p(ts_mean(volume, 20)), pct_change(close, 20)), 0.5) ```
+[595] code_gen_0235: ```dsl_fire result = logical_corf log1p(ts_memean(volume, 20)), market_cap), 0.0) ```
+[596] code_gen_0196: ```dsl_fire result = sub(vwap, xs_quantile(vwap, 0.8)) ```
+[597] code_gen_0511: ```dsl_fire result.0) ```
+[598] code_gen_0171: ```dsl_fire result = where(gt(pct_change(close, 7), xs_mean(pct_change(close, 7)), 0.0) ```
+[599] code_gen_0462: ```dsl_fire result = add(div(sub(recip(pb), xs_mean(recip(pb))), xs_std(recip(pb))), log1p(ts_mean(volume, 20)))), add(l
+[600] code_gen_0455: ```dsl_fire result = where(logical_and(gt(pct_change(close, 20), group_mean(pct_change(close, 20), industry)), div(sub(p
