@@ -1,0 +1,221 @@
+cd ~/work/minimind-fire-project
+git commit -m "Save FIRE DSL experiment workflow and results"
+git push -u origin server-experiments
+
+可以。推荐做法是：**把代码、日志、CSV 结果、实验配置推到 GitHub；模型权重 `.pth` 先不要直接推**，因为 GitHub 单文件超过 100MB 会被拒绝，公开仓库也不适合放太大的 checkpoint。
+
+下面按服务器路径：
+
+```bash
+cd ~/work/minimind-fire-project
+```
+
+来写。
+
+## 1. 先检查大文件
+
+```bash
+find . -type f -size +90M -not -path "./.git/*" -print
+```
+
+如果看到类似：
+
+```text
+./minimind/out/fire_dsl_baseline_128.pth
+```
+
+这些先不要普通 `git add`。
+
+## 2. 检查是否已经是 git 仓库
+
+```bash
+git status
+git remote -v
+```
+
+如果能看到 remote，比如：
+
+```text
+origin  https://github.com/你的用户名/你的仓库.git
+```
+
+说明已经连着 GitHub。
+
+如果不是 git 仓库：
+
+```bash
+git init
+git remote add origin https://github.com/你的用户名/你的仓库.git
+```
+
+如果 remote 错了：
+
+```bash
+git remote set-url origin https://github.com/你的用户名/你的仓库.git
+```
+
+## 3. 建议先建一个分支
+
+```bash
+git checkout -b server-experiments
+```
+
+如果分支已存在：
+
+```bash
+git checkout server-experiments
+```
+
+## 4. 写 `.gitignore`
+
+在项目根目录执行：
+
+```bash
+cat > .gitignore <<'EOF'
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# large model weights
+*.pth
+*.pt
+*.bin
+*.safetensors
+
+# optional runtime caches
+.cache/
+wandb/
+runs/
+EOF
+```
+
+这样不会误传大模型权重。
+
+## 5. 添加你应该保存的内容
+
+建议上传这些：
+
+```bash
+git add PROJECT_README.md TODO_CHECKLIST.md requirements.txt
+git add docs reports scripts
+git add fire-dsl-data/README.md fire-dsl-data/docs fire-dsl-data/tools
+git add results logs experiments
+git add .gitignore
+```
+
+如果 `requirements.txt` 不存在或某个目录不存在，Git 会提示，问题不大。
+
+不要直接：
+
+```bash
+git add .
+```
+
+因为可能把大文件也加进去。
+
+## 6. 看看即将提交什么
+
+```bash
+git status
+```
+
+确认没有 `.pth`、`.pt`、`.bin` 这类大文件。
+
+也可以检查 staged 文件大小：
+
+```bash
+git diff --cached --stat
+```
+
+## 7. 提交
+
+```bash
+git commit -m "Add MiniMind FIRE DSL experiment workflow and results"
+```
+
+## 8. 推送到 GitHub
+
+```bash
+git push -u origin server-experiments
+```
+
+如果 GitHub 要登录，推荐用 GitHub token 或 `gh`。
+
+如果服务器装了 GitHub CLI：
+
+```bash
+gh auth login
+git push -u origin server-experiments
+```
+
+如果用 HTTPS token，GitHub 密码处填 Personal Access Token，不是 GitHub 登录密码。
+
+---
+
+## 如果你想保存模型权重怎么办？
+
+### 方案 A：不上传权重，只上传结果
+
+推荐。报告一般不需要权重，只需要：
+
+```text
+训练命令
+训练日志
+预测 CSV
+评分结果
+错误分析
+summary_table.csv
+```
+
+### 方案 B：用 Git LFS 上传权重
+
+如果你真的要上传 `.pth`：
+
+```bash
+git lfs install
+git lfs track "*.pth"
+git add .gitattributes
+git add minimind/out/fire_dsl_baseline_128.pth
+git commit -m "Add model checkpoint with Git LFS"
+git push
+```
+
+但注意：Git LFS 有额度限制，公开仓库也会暴露模型文件。
+
+---
+
+## 推荐你现在执行的最安全流程
+
+```bash
+cd ~/work/minimind-fire-project
+
+find . -type f -size +90M -not -path "./.git/*" -print
+
+git status
+git checkout -b server-experiments || git checkout server-experiments
+
+cat > .gitignore <<'EOF'
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+*.pth
+*.pt
+*.bin
+*.safetensors
+.cache/
+wandb/
+runs/
+EOF
+
+git add PROJECT_README.md TODO_CHECKLIST.md .gitignore
+git add docs reports scripts results logs experiments
+git add fire-dsl-data/README.md fire-dsl-data/docs fire-dsl-data/tools
+
+git status
+git commit -m "Save server experiment workflow and results"
+git push -u origin server-experiments
+```
+
+之后你在 GitHub 上就能看到服务器上的代码、日志和实验结果。模型权重先留在服务器即可。
