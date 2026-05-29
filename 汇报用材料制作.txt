@@ -1,0 +1,305 @@
+对，接下来代码不能只“跑出分数”，而要自动留下汇报用材料。你们最终展示至少需要这 5 类记录：
+
+```text
+1. 每个实验的配置：模型、数据、温度、训练轮数、优化方法
+2. 每个实验的指标：Exact / Format / Parse OK / Executable
+3. 每个实验的错误分布：format / parse / execution / semantic
+4. 优化前后对比表：baseline vs domain_sft vs normalization vs rerank vs curriculum
+5. 典型案例：优化成功案例、失败案例、仍然错误案例
+```
+
+建议你现在在服务器上补两个“汇报记录脚本”。
+
+**1. 建立统一实验记录目录**
+
+```bash
+cd ~/work/minimind-fire-project
+mkdir -p reports/figures reports/tables reports/cases results logs experiments
+```
+
+**2. 新增汇报汇总脚本**
+
+```bash
+cat > scripts/make_report_artifacts.py <<'PY'
+import csv
+from pathlib import Path
+from collections import Counter, defaultdict
+
+ROOT = Path(__file__).resolve().parents[1]
+SUMMARY = ROOT / "results" / "summary_table.csv"
+REPORT = ROOT / "reports" / "experiment_report_summary.md"
+TABLE = ROOT / "reports" / "tables" / "metrics_for_ppt.csv"
+
+KEY_RUNS = [
+    "fire_dsl_baseline_e3",
+    "fire_dsl_domain_sft",
+    "fire_dsl_domain_sft_t001",
+    "fire_dsl_domain_sft_t001_norm",
+    "fire_dsl_domain_sft_rerank5_t02",
+    "fire_dsl_curriculum_128_l2",
+    "fire_dsl_domain_256_l4",
+]
+
+def read_summary():
+    if not SUMMARY.exists():
+        raise SystemExit(f"Missing {SUMMARY}")
+    with SUMMARY.open("r", encoding="utf-8-sig", newline="") as f:
+        return list(csv.DictReader(f))
+
+def pct(v):
+    try:
+        return f"{float(v):.2f}%"
+    except Exception:
+        return str(v)
+
+def main():
+    rows = read_summary()
+    rows = [r for r in rows if r.get("eval_set") == "generalization"]
+
+    selected = []
+    for name in KEY_RUNS:
+        matches = [r for r in rows if r.get("run_name") == name]
+        if matches:
+            selected.append(matches[-1])
+
+    if not selected:
+        selected = rows
+
+    TABLE.parent.mkdir(parents=True, exist_ok=True)
+    with TABLE.open("w", encoding="utf-8-sig", newline="") as f:
+        fields = [
+            "run_name",
+            "model_type",
+            "exact_dsl_match",
+            "fenced_code_format",
+            "python_parse_ok",
+            "fire_dsl_executable",
+            "format_error_rows",
+            "parse_error_rows",
+            "execution_error_rows",
+            "notes",
+        ]
+        w = csv.DictWriter(f, fieldnames=fields)
+        w.writeheader()
+        for r in selected:
+            w.writerow({k: r.get(k, "") for k in fields})
+
+    best = max(selected, key=lambda r: float(r.get("fire_dsl_executable") or 0))
+
+    lines = []
+    lines.append("# 实验结果汇总\n")
+    lines.append("## 核心结论\n")
+    lines.append(f"- 当前 generalization 最优实验：`{best['run_name']}`。")
+    lines.append(f"- FIRE DSL executable：{pct(best['fire_dsl_executable'])}。")
+    lines.append(f"- fenced code format：{pct(best['fenced_code_format'])}。")
+    lines.append(f"- python parse ok：{pct(best['python_parse_ok'])}。\n")
+
+    lines.append("## Generalization 指标对比\n")
+    lines.append("| 实验 | 优化方法 | Exact | Format | Parse OK | Executable | 备注 |")
+    lines.append("|---|---|---:|---:|---:|---:|---|")
+    for r in selected:
+        lines.append(
+            f"| `{r.get('run_name','')}` "
+            f"| {r.get('model_type','')} "
+            f"| {pct(r.get('exact_dsl_match',''))} "
+            f"| {pct(r.get('fenced_code_format',''))} "
+            f"| {pct(r.get('python_parse_ok',''))} "
+            f"| {pct(r.get('fire_dsl_executable',''))} "
+            f"| {r.get('notes','')} |"
+        )
+
+    lines.append("\n## 错误数量对比\n")
+    lines.append("| 实验 | Format Error | Parse Error | Execution Error |")
+    lines.append("|---|---:|---:|---:|")
+    for r in selected:
+        lines.append(
+            f"| `{r.get('run_name','')}` "
+            f"| {r.get('format_error_rows','')} "
+            f"| {r.get('parse_error_rows','')} "
+            f"| {r.get('execution_error_rows','')} |"
+        )
+
+    REPORT.parent.mkdir(parents=True, exist_ok=True)
+    REPORT.write_text("\n".join(lines), encoding="utf-8")
+    print(f"wrote {REPORT}")
+    print(f"wrote {TABLE}")
+
+if __name__ == "__main__":
+    main()
+PY
+```
+
+运行：
+
+```bash
+python scripts/make_report_artifacts.py
+```
+
+你之后汇报时直接看：
+
+```bash
+cat reports/experiment_report_summary.md
+```
+
+PPT 表格可以用：
+
+```text
+reports/tables/metrics_for_ppt.csv
+```
+
+**3. 新增典型案例抽取脚本**
+
+这个用于展示“优化前错、优化后对”的案例，PPT 很直观。
+
+```bash
+cat > scripts/make_case_comparison.py <<'PY'
+import csv
+import sys
+from pathlib import Path
+
+def read_csv(path):
+    with Path(path).open("r", encoding="utf-8-sig", newline="") as f:
+        return {r["id"]: r for r in csv.DictReader(f)}
+
+def main(before_csv, after_csv, out_csv, limit=30):
+    before = read_csv(before_csv)
+    after = read_csv(after_csv)
+
+    rows = []
+    for k, b in before.items():
+        if k not in after:
+            continue
+        a = after[k]
+        before_pred = b.get("prediction", "")
+        after_pred = a.get("prediction", "")
+        expected = a.get("expected_code", "") or a.get("expected_dsl", "")
+
+        changed = before_pred.strip() != after_pred.strip()
+        if changed:
+            rows.append({
+                "id": k,
+                "split_type": a.get("split_type", ""),
+                "family": a.get("family", ""),
+                "prompt": a.get("prompt", ""),
+                "expected": expected,
+                "before_prediction": before_pred,
+                "after_prediction": after_pred,
+                "manual_judgement": "",
+                "ppt_note": "",
+            })
+
+    out = Path(out_csv)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    with out.open("w", encoding="utf-8-sig", newline="") as f:
+        fields = [
+            "id", "split_type", "family", "prompt", "expected",
+            "before_prediction", "after_prediction",
+            "manual_judgement", "ppt_note"
+        ]
+        w = csv.DictWriter(f, fieldnames=fields)
+        w.writeheader()
+        for r in rows[:limit]:
+            w.writerow(r)
+
+    print(f"wrote {out}, rows={min(len(rows), limit)}")
+
+if __name__ == "__main__":
+    if len(sys.argv) < 4:
+        print("Usage: python scripts/make_case_comparison.py before.csv after.csv out.csv")
+        raise SystemExit(2)
+    main(sys.argv[1], sys.argv[2], sys.argv[3])
+PY
+```
+
+比如比较 `domain_sft_t001` 和 normalization：
+
+```bash
+python scripts/make_case_comparison.py \
+  results/fire_dsl_domain_sft_t001_generalization_predictions.csv \
+  results/fire_dsl_domain_sft_t001_norm_generalization_predictions.csv \
+  reports/cases/domain_sft_t001_vs_norm_cases.csv
+```
+
+比较 `domain_sft_t001` 和 rerank：
+
+```bash
+python scripts/make_case_comparison.py \
+  results/fire_dsl_domain_sft_t001_generalization_predictions.csv \
+  results/fire_dsl_domain_sft_rerank5_t02_generalization_predictions.csv \
+  reports/cases/domain_sft_t001_vs_rerank_cases.csv
+```
+
+**4. 每次跑完优化后必须执行这 4 条**
+
+以后每完成一个实验，统一执行：
+
+```bash
+python scripts/score_fire_predictions.py <你的_prediction_csv> \
+  2>&1 | tee logs/<run_name>_generalization_score.log
+
+python scripts/analyze_fire_errors.py <你的_prediction_csv> results/<run_name>_generalization_errors.csv \
+  2>&1 | tee logs/<run_name>_generalization_errors.log
+
+python scripts/append_score_summary.py \
+  --score_log logs/<run_name>_generalization_score.log \
+  --prediction_csv <你的_prediction_csv> \
+  --run_name <run_name> \
+  --model_type <优化方法名> \
+  --train_data fire_operator_dsl_sft_code.jsonl \
+  --from_weight fire_dsl_domain_pretrain \
+  --hidden_size 128 \
+  --num_layers 2 \
+  --max_seq_len 512 \
+  --batch_size 2 \
+  --learning_rate 3e-4 \
+  --epochs 3 \
+  --eval_set generalization \
+  --notes "<一句话说明这个实验>"
+
+python scripts/make_report_artifacts.py
+```
+
+**5. PPT 最终展示建议**
+
+你们最后展示不要只放一堆日志，建议放这三张表：
+
+第一张：优化路线表
+
+| 阶段 | 方法 | 是否重训 | 目的 |
+|---|---|---|---|
+| Baseline | Full SFT | 是 | 跑通基础流程 |
+| 优化1 | Domain Pretrain + SFT | 是 | 学习 FIRE DSL 领域分布 |
+| 优化2 | Temperature 0.01 | 否 | 降低随机性 |
+| 优化3 | Output Normalization | 否 | 修复格式错误 |
+| 优化4 | Verifier Reranking | 否 | 选择可执行候选 |
+| 优化5 | Curriculum Learning | 是 | 从简单到复杂学习 DSL |
+
+第二张：核心指标柱状图，直接用：
+
+```text
+reports/tables/metrics_for_ppt.csv
+```
+
+重点画：
+
+```text
+fire_dsl_executable
+python_parse_ok
+fenced_code_format
+```
+
+第三张：案例对比，直接用：
+
+```text
+reports/cases/domain_sft_t001_vs_norm_cases.csv
+reports/cases/domain_sft_t001_vs_rerank_cases.csv
+```
+
+选 2-3 个最直观案例：
+
+```text
+优化前：格式错 / 函数错 / 不可执行
+优化后：格式正确 / parse ok / executable
+```
+
+你现在的代码记录目标就是：**每个优化都能自动留下 summary row、score log、error csv、case csv、report markdown**。这样最后写报告和做 PPT 时，不需要重新翻终端历史。

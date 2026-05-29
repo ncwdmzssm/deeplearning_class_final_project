@@ -219,3 +219,95 @@ git push -u origin server-experiments
 ```
 
 之后你在 GitHub 上就能看到服务器上的代码、日志和实验结果。模型权重先留在服务器即可。
+
+这是因为你的本地 `server-experiments` 和 GitHub 上的 `origin/server-experiments` 都各自有新提交，Git 不知道该用 merge 还是 rebase 合并。
+
+建议你用 **rebase**，历史更干净。
+
+先在服务器执行：
+
+```bash
+cd ~/work/minimind-fire-project
+git branch --show-current
+git status
+```
+
+如果当前不是 `server-experiments`，先切过去：
+
+```bash
+git switch server-experiments
+```
+
+然后先把你服务器上的新结果提交掉：
+
+```bash
+git add scripts results logs experiments
+git add ./*.md ./*.txt .gitignore PROJECT_README.md TODO_CHECKLIST.md requirements.txt 2>/dev/null || true
+
+git status
+git commit -m "Add round 3 optimization scripts and results"
+```
+
+如果提示：
+
+```text
+nothing to commit
+```
+
+说明没有新文件需要提交，可以继续。
+
+然后拉取远程更新并 rebase：
+
+```bash
+git pull --rebase origin server-experiments
+```
+
+如果没有冲突，会看到类似：
+
+```text
+Successfully rebased and updated refs/heads/server-experiments.
+```
+
+然后推送：
+
+```bash
+git push -u origin server-experiments
+```
+
+如果 rebase 时出现冲突，按这个流程：
+
+```bash
+git status
+```
+
+打开冲突文件，手动处理 `<<<<<<<`, `=======`, `>>>>>>>`，处理完后：
+
+```bash
+git add 冲突文件路径
+git rebase --continue
+```
+
+全部完成后再：
+
+```bash
+git push -u origin server-experiments
+```
+
+如果你只是想用 merge，不想 rebase，也可以执行：
+
+```bash
+git pull --no-rebase origin server-experiments
+git push -u origin server-experiments
+```
+
+但我更建议你现在用：
+
+```bash
+git pull --rebase origin server-experiments
+```
+
+另外注意：不要用 `git add .`，因为你的项目里可能还有 `minimind/` 这种嵌套仓库或模型权重。优先只 add：
+
+```bash
+scripts results logs experiments docs reports *.md *.txt
+```

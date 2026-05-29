@@ -1,0 +1,470 @@
+可以。建议你在服务器上按这个顺序做：
+
+```text
+1. 输出规范化 normalization：不重训，最快
+2. verifier reranking：不重训，多候选 + 执行器筛选
+3. curriculum learning：需要重训，最后跑
+```
+
+下面命令默认服务器目录是：
+
+```bash
+cd ~/work/minimind-fire-project
+```
+
+先开一个长期会话，避免断连：
+
+```bash
+tmux new -s fire_opt
+cd ~/work/minimind-fire-project
+mkdir -p scripts results logs experiments
+cp results/summary_table.csv results/summary_table_before_round3.csv
+```
+
+**一、任务 1：输出规范化优化**
+
+新建脚本：
+
+```bash
+cat > scripts/normalize_fire_predictions.py <<'PY'
+import csv, re, sys
+from pathlib import Path
+
+def normalize(text: str) -> str:
+    t = (text or "").replace("\r", "\n").strip()
+    t = re.sub(r"</?think>", "", t)
+    t = re.sub(r"<\|.*?\|>", "", t)
+    t = re.sub(r"dsl[_\s-]*f+i+r+e+", "dsl_fire", t, flags=re.I)
+    t = t.replace("```dsl_ffire", "```dsl_fire").replace("```dsdsl_fire", "```dsl_fire")
+
+    block = re.search(r"```(?:\s*dsl_fire|\s*fire|\s*code|\s*python)?\s*(.*?)```", t, flags=re.S | re.I)
+    body = block.group(1).strip() if block else t
+
+    m = re.search(r"result\s*=\s*(.+)", body, flags=re.S | re.I)
+    expr = m.group(1) if m else body
+    expr = expr.split("```")[0].replace("`", "").strip()
+    expr = re.sub(r"\s+", " ", expr).rstrip("。；;，, ")
+
+    return f"```dsl_fire\nresult = {expr}\n```"
+
+inp = Path(sys.argv[1])
+out = Path(sys.argv[2])
+out.parent.mkdir(parents=True, exist_ok=True)
+
+with inp.open("r", encoding="utf-8-sig", newline="") as f:
+    rows = list(csv.DictReader(f))
+    fields = list(rows[0].keys())
+
+if "raw_prediction" not in fields:
+    fields.append("raw_prediction")
+
+with out.open("w", encoding="utf-8-sig", newline="") as f:
+    w = csv.DictWriter(f, fieldnames=fields)
+    w.writeheader()
+    for r in rows:
+        r["raw_prediction"] = r.get("prediction", "")
+        r["prediction"] = normalize(r.get("prediction", ""))
+        w.writerow(r)
+PY
+```
+
+运行：
+
+```bash
+python scripts/normalize_fire_predictions.py \
+  results/fire_dsl_domain_sft_t001_generalization_predictions.csv \
+  results/fire_dsl_domain_sft_t001_norm_generalization_predictions.csv
+
+python scripts/score_fire_predictions.py \
+  results/fire_dsl_domain_sft_t001_norm_generalization_predictions.csv \
+  2>&1 | tee logs/fire_dsl_domain_sft_t001_norm_generalization_score.log
+
+python scripts/analyze_fire_errors.py \
+  results/fire_dsl_domain_sft_t001_norm_generalization_predictions.csv \
+  results/fire_dsl_domain_sft_t001_norm_generalization_errors.csv \
+  2>&1 | tee logs/fire_dsl_domain_sft_t001_norm_generalization_errors.log
+```
+
+写入汇总表：
+
+```bash
+python scripts/append_score_summary.py \
+  --score_log logs/fire_dsl_domain_sft_t001_norm_generalization_score.log \
+  --prediction_csv results/fire_dsl_domain_sft_t001_norm_generalization_predictions.csv \
+  --run_name fire_dsl_domain_sft_t001_norm \
+  --model_type domain_pretrain_plus_sft_postprocess \
+  --train_data fire_operator_dsl_sft_code.jsonl \
+  --from_weight fire_dsl_domain_pretrain \
+  --hidden_size 128 \
+  --num_layers 2 \
+  --max_seq_len 512 \
+  --batch_size 2 \
+  --learning_rate 3e-4 \
+  --epochs 3 \
+  --eval_set generalization \
+  --notes "domain_sft temperature 0.01 plus output normalization"
+```
+
+检查：
+
+```bash
+tail -n 5 results/summary_table.csv
+cat logs/fire_dsl_domain_sft_t001_norm_generalization_score.log
+```
+
+和这个基准比：
+
+```text
+domain_sft_t001 generalization:
+format 91.83%
+parse_ok 55.67%
+executable 37.17%
+```
+
+**二、任务 2：Verifier Reranking**
+
+先生成 5 份候选：
+
+```bash
+mkdir -p results/rerank_candidates logs/rerank_candidates
+
+for i in 1 2 3 4 5
+do
+  python scripts/batch_fire_infer.py \
+    --eval_jsonl fire-dsl-data/eval/fire_operator_dsl_eval_code_generalization.jsonl \
+    --output_csv results/rerank_candidates/domain_sft_t02_c${i}_generalization.csv \
+    --save_dir minimind/out \
+    --weight fire_dsl_domain_sft \
+    --hidden_size 128 \
+    --num_hidden_layers 2 \
+    --device cuda \
+    --temperature 0.2 \
+    --top_p 0.95 \
+    2>&1 | tee logs/rerank_candidates/domain_sft_t02_c${i}_generalization.log
+done
+```
+
+新建筛选脚本：
+
+```bash
+cat > scripts/select_best_fire_candidate.py <<'PY'
+import ast, csv, re, sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "fire-dsl-data" / "tools"))
+from fire_operator_dsl import make_synthetic_data, verify_expression
+
+def normalize(text):
+    t = (text or "").replace("\r", "\n").strip()
+    t = re.sub(r"</?think>", "", t)
+    t = re.sub(r"<\|.*?\|>", "", t)
+    t = re.sub(r"dsl[_\s-]*f+i+r+e+", "dsl_fire", t, flags=re.I)
+    block = re.search(r"```(?:\s*dsl_fire|\s*fire|\s*code|\s*python)?\s*(.*?)```", t, flags=re.S | re.I)
+    body = block.group(1).strip() if block else t
+    m = re.search(r"result\s*=\s*(.+)", body, flags=re.S | re.I)
+    expr = m.group(1) if m else body
+    expr = expr.split("```")[0].replace("`", "").strip()
+    expr = re.sub(r"\s+", " ", expr).rstrip("。；;，, ")
+    return f"```dsl_fire\nresult = {expr}\n```", expr
+
+def parse_ok(expr):
+    try:
+        ast.parse(expr, mode="eval")
+        return True
+    except Exception:
+        return False
+
+def main(out_path, in_paths):
+    data = make_synthetic_data(seed=7, n_days=120, n_assets=10)
+    tables = []
+    for p in in_paths:
+        with Path(p).open("r", encoding="utf-8-sig", newline="") as f:
+            tables.append(list(csv.DictReader(f)))
+
+    fields = list(tables[0][0].keys())
+    for x in ["selected_candidate", "candidate_scores"]:
+        if x not in fields:
+            fields.append(x)
+
+    out = Path(out_path)
+    out.parent.mkdir(parents=True, exist_ok=True)
+
+    with out.open("w", encoding="utf-8-sig", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields)
+        w.writeheader()
+
+        for idx in range(len(tables[0])):
+            base = dict(tables[0][idx])
+            best = None
+            notes = []
+
+            for ci, table in enumerate(tables, 1):
+                norm, expr = normalize(table[idx].get("prediction", ""))
+                parsed = parse_ok(expr)
+                executable = False
+
+                if parsed:
+                    try:
+                        verify_expression(expr, data)
+                        executable = True
+                    except Exception:
+                        pass
+
+                score = (100 if executable else 0) + (20 if parsed else 0)
+                notes.append(f"c{ci}:score={score},parse={parsed},exec={executable}")
+
+                if best is None or score > best[0]:
+                    best = (score, ci, norm)
+
+            base["prediction"] = best[2]
+            base["selected_candidate"] = best[1]
+            base["candidate_scores"] = " | ".join(notes)
+            w.writerow(base)
+
+if __name__ == "__main__":
+    main(sys.argv[1], sys.argv[2:])
+PY
+```
+
+筛选并评估：
+
+```bash
+python scripts/select_best_fire_candidate.py \
+  results/fire_dsl_domain_sft_rerank5_t02_generalization_predictions.csv \
+  results/rerank_candidates/domain_sft_t02_c1_generalization.csv \
+  results/rerank_candidates/domain_sft_t02_c2_generalization.csv \
+  results/rerank_candidates/domain_sft_t02_c3_generalization.csv \
+  results/rerank_candidates/domain_sft_t02_c4_generalization.csv \
+  results/rerank_candidates/domain_sft_t02_c5_generalization.csv
+
+python scripts/score_fire_predictions.py \
+  results/fire_dsl_domain_sft_rerank5_t02_generalization_predictions.csv \
+  2>&1 | tee logs/fire_dsl_domain_sft_rerank5_t02_generalization_score.log
+
+python scripts/analyze_fire_errors.py \
+  results/fire_dsl_domain_sft_rerank5_t02_generalization_predictions.csv \
+  results/fire_dsl_domain_sft_rerank5_t02_generalization_errors.csv \
+  2>&1 | tee logs/fire_dsl_domain_sft_rerank5_t02_generalization_errors.log
+```
+
+写入汇总表：
+
+```bash
+python scripts/append_score_summary.py \
+  --score_log logs/fire_dsl_domain_sft_rerank5_t02_generalization_score.log \
+  --prediction_csv results/fire_dsl_domain_sft_rerank5_t02_generalization_predictions.csv \
+  --run_name fire_dsl_domain_sft_rerank5_t02 \
+  --model_type domain_pretrain_plus_sft_verifier_rerank \
+  --train_data fire_operator_dsl_sft_code.jsonl \
+  --from_weight fire_dsl_domain_pretrain \
+  --hidden_size 128 \
+  --num_layers 2 \
+  --max_seq_len 512 \
+  --batch_size 2 \
+  --learning_rate 3e-4 \
+  --epochs 3 \
+  --eval_set generalization \
+  --notes "5 candidates at temperature 0.2, select by parse/executable verifier"
+```
+
+检查：
+
+```bash
+tail -n 8 results/summary_table.csv
+cat logs/fire_dsl_domain_sft_rerank5_t02_generalization_score.log
+```
+
+**三、任务 3：Curriculum Learning**
+
+先拆训练集：
+
+```bash
+cat > scripts/split_fire_curriculum.py <<'PY'
+import json, re
+from pathlib import Path
+
+inp = Path("fire-dsl-data/train/fire_operator_dsl_sft_code.jsonl")
+out_dir = Path("fire-dsl-data/train")
+
+hard_ops = (
+    "where", "logical_", "group_", "ts_corr", "ts_reg",
+    "ts_quantile", "xs_quantile", "ts_argmaxmin"
+)
+
+def assistant_text(obj):
+    for m in obj.get("conversations", []):
+        if m.get("role") == "assistant":
+            return m.get("content", "")
+    return ""
+
+def extract_expr(text):
+    m = re.search(r"result\s*=\s*(.*?)\s*```", text, flags=re.S)
+    return m.group(1).strip() if m else text.strip()
+
+def max_depth(s):
+    d = mx = 0
+    for ch in s:
+        if ch == "(":
+            d += 1
+            mx = max(mx, d)
+        elif ch == ")":
+            d = max(0, d - 1)
+    return mx
+
+def level(expr):
+    funcs = re.findall(r"\b[A-Za-z_][A-Za-z0-9_]*\s*\(", expr)
+    nfunc = len(funcs)
+    depth = max_depth(expr)
+    has_hard = any(op in expr for op in hard_ops)
+
+    if nfunc <= 2 and depth <= 2 and not has_hard:
+        return "simple"
+    if nfunc <= 5 and depth <= 4 and not expr.startswith("where("):
+        return "medium"
+    return "hard"
+
+buckets = {"simple": [], "medium": [], "hard": []}
+
+with inp.open("r", encoding="utf-8") as f:
+    for line in f:
+        if not line.strip():
+            continue
+        obj = json.loads(line)
+        expr = extract_expr(assistant_text(obj))
+        buckets[level(expr)].append(line)
+
+for name in ["simple", "medium", "hard"]:
+    path = out_dir / f"fire_operator_dsl_sft_code_{name}.jsonl"
+    with path.open("w", encoding="utf-8") as f:
+        f.writelines(buckets[name])
+    print(name, len(buckets[name]), path)
+PY
+
+python scripts/split_fire_curriculum.py
+wc -l fire-dsl-data/train/fire_operator_dsl_sft_code_*.jsonl
+```
+
+开始训练：
+
+```bash
+cd ~/work/minimind-fire-project/minimind/trainer
+
+python train_full_sft.py \
+  --data_path ../../fire-dsl-data/train/fire_operator_dsl_sft_code_simple.jsonl \
+  --epochs 1 \
+  --batch_size 2 \
+  --learning_rate 3e-4 \
+  --num_workers 0 \
+  --device cuda:0 \
+  --dtype float16 \
+  --hidden_size 128 \
+  --num_hidden_layers 2 \
+  --max_seq_len 512 \
+  --from_weight fire_dsl_domain_pretrain \
+  --save_dir ../out \
+  --save_weight fire_dsl_curr_s1_simple \
+  2>&1 | tee ../../logs/train_fire_dsl_curr_s1_simple.log
+
+python train_full_sft.py \
+  --data_path ../../fire-dsl-data/train/fire_operator_dsl_sft_code_medium.jsonl \
+  --epochs 1 \
+  --batch_size 2 \
+  --learning_rate 2e-4 \
+  --num_workers 0 \
+  --device cuda:0 \
+  --dtype float16 \
+  --hidden_size 128 \
+  --num_hidden_layers 2 \
+  --max_seq_len 512 \
+  --from_weight fire_dsl_curr_s1_simple \
+  --save_dir ../out \
+  --save_weight fire_dsl_curr_s2_medium \
+  2>&1 | tee ../../logs/train_fire_dsl_curr_s2_medium.log
+
+python train_full_sft.py \
+  --data_path ../../fire-dsl-data/train/fire_operator_dsl_sft_code.jsonl \
+  --epochs 2 \
+  --batch_size 2 \
+  --learning_rate 1e-4 \
+  --num_workers 0 \
+  --device cuda:0 \
+  --dtype float16 \
+  --hidden_size 128 \
+  --num_hidden_layers 2 \
+  --max_seq_len 512 \
+  --from_weight fire_dsl_curr_s2_medium \
+  --save_dir ../out \
+  --save_weight fire_dsl_curr_s3_full \
+  2>&1 | tee ../../logs/train_fire_dsl_curr_s3_full.log
+
+cd ~/work/minimind-fire-project
+```
+
+评估 generalization：
+
+```bash
+RUN_NAME=fire_dsl_curriculum_128_l2 \
+WEIGHT=fire_dsl_curr_s3_full \
+MODEL_TYPE=domain_pretrain_plus_curriculum_sft \
+TRAIN_DATA=fire_operator_dsl_sft_code_simple_medium_full \
+FROM_WEIGHT=fire_dsl_domain_pretrain_to_simple_to_medium \
+HIDDEN_SIZE=128 \
+NUM_LAYERS=2 \
+MAX_SEQ_LEN=512 \
+BATCH_SIZE=2 \
+LEARNING_RATE=curriculum_3e-4_2e-4_1e-4 \
+EPOCHS=1+1+2 \
+DEVICE=cuda \
+TEMPERATURE=0.01 \
+EVAL_SET=generalization \
+NOTES="curriculum: simple 1 epoch, medium 1 epoch, full 2 epochs" \
+bash scripts/run_fire_eval.sh
+```
+
+如果 generalization 超过 `37.17% executable`，再补 public：
+
+```bash
+RUN_NAME=fire_dsl_curriculum_128_l2 \
+WEIGHT=fire_dsl_curr_s3_full \
+MODEL_TYPE=domain_pretrain_plus_curriculum_sft \
+TRAIN_DATA=fire_operator_dsl_sft_code_simple_medium_full \
+FROM_WEIGHT=fire_dsl_domain_pretrain_to_simple_to_medium \
+HIDDEN_SIZE=128 \
+NUM_LAYERS=2 \
+MAX_SEQ_LEN=512 \
+BATCH_SIZE=2 \
+LEARNING_RATE=curriculum_3e-4_2e-4_1e-4 \
+EPOCHS=1+1+2 \
+DEVICE=cuda \
+TEMPERATURE=0.01 \
+EVAL_SET=public \
+NOTES="curriculum: simple 1 epoch, medium 1 epoch, full 2 epochs" \
+bash scripts/run_fire_eval.sh
+```
+
+最后总检查：
+
+```bash
+tail -n 15 results/summary_table.csv
+cat logs/fire_dsl_curriculum_128_l2_generalization_score.log
+cat logs/fire_dsl_curriculum_128_l2_generalization_errors.log
+```
+
+你下一轮报告里就比较这几行：
+
+```text
+fire_dsl_domain_sft_t001
+fire_dsl_domain_sft_t001_norm
+fire_dsl_domain_sft_rerank5_t02
+fire_dsl_curriculum_128_l2
+```
+
+判断标准很简单：
+
+```text
+能超过 37.17% executable：算有效优化。
+format 提升但 executable 不升：只能算格式优化。
+parse_ok 提升但 executable 不升：说明语法更像 Python，但 FIRE DSL 函数/参数仍错。
+curriculum 失败：说明当前复杂度划分或训练轮次还需要调整。
+```
