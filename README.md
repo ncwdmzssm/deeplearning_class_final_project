@@ -48,6 +48,8 @@ git switch server-experiments
 git switch -c server-experiments origin/server-experiments
 ```
 
+如果改变代码，请新建分支，具体操作在下文
+
 ### 1.2 MiniMind 源码说明
 
 本仓库默认不上传 `minimind/` 目录和模型权重，因为它们较大且属于外部项目/运行产物。`.gitignore` 中已经忽略：
@@ -93,7 +95,6 @@ minimind/trainer/train_pretrain.py
 ```text
 Python 3.10+ / 3.11+ / 3.12
 CUDA GPU 推荐，但不是所有脚本都必须 GPU
-RTX 4060 Laptop 8GB 显存可跑小模型实验
 ```
 
 ### 2.2 创建环境

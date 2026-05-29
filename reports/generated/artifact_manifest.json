@@ -1,0 +1,23 @@
+﻿{
+  "tables": [
+    "reports\\tables\\metrics_for_ppt.csv",
+    "reports\\tables\\metrics_for_ppt.md"
+  ],
+  "figures": [
+    "reports\\figures\\01_generalization_metrics_bar.png",
+    "reports\\figures\\02_executable_progress.png",
+    "reports\\figures\\03_error_rows_stacked.png",
+    "reports\\figures\\04_public_vs_generalization.png",
+    "reports\\figures\\05_optimization_contribution.png"
+  ],
+  "diagrams": [
+    "reports\\diagrams\\01_data_model_loss_eval_flow.mmd",
+    "reports\\diagrams\\02_sft_loss_flow.mmd",
+    "reports\\diagrams\\03_optimization_pipeline.mmd"
+  ],
+  "reports": [
+    "reports\\experiment_report_summary.md",
+    "reports\\generated\\experiment_summary_for_ppt.md",
+    "reports\\generated\\slide_storyboard.md"
+  ]
+}

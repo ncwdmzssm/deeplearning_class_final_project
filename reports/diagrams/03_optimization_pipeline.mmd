@@ -1,0 +1,7 @@
+﻿flowchart LR
+  A["Baseline SFT"] --> B["Domain Pretrain + SFT"]
+  B --> C["Low-temperature Decoding"]
+  C --> D["Output Normalization"]
+  D --> E["Multi-candidate Generation"]
+  E --> F["FIRE DSL Verifier Reranking"]
+  F --> G["Score and Error Analysis"]

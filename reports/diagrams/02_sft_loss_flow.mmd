@@ -1,0 +1,9 @@
+﻿flowchart LR
+  A["Conversation"] --> B["Tokenize"]
+  B --> C["Build Labels"]
+  C --> D["Mask system/user/padding = -100"]
+  C --> E["Assistant Tokens Supervised"]
+  D --> F["Shift Logits and Labels"]
+  E --> F
+  F --> G["Cross Entropy ignore_index=-100"]
+  G --> H["Backpropagation"]

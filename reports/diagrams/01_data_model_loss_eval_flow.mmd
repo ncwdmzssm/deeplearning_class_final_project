@@ -1,0 +1,11 @@
+﻿flowchart LR
+  A["JSONL 数据"] --> B["Chat Template"]
+  B --> C["Tokenizer"]
+  C --> D["input_ids / labels"]
+  D --> E["MiniMind Transformer"]
+  E --> F["Logits"]
+  F --> G["Cross Entropy Loss"]
+  G --> H["Optimizer Update"]
+  H --> I["Checkpoint"]
+  I --> J["Inference"]
+  J --> K["Evaluation"]

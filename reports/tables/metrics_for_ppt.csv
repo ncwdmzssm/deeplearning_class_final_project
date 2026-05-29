@@ -1,6 +1,11 @@
-﻿run_name,model_type,exact_dsl_match,fenced_code_format,python_parse_ok,fire_dsl_executable,format_error_rows,parse_error_rows,execution_error_rows,notes
-fire_dsl_baseline_e3,full_sft,0.00,65.17,51.33,26.17,209,292,443,baseline SFT 3 epochs
-fire_dsl_domain_sft,domain_pretrain_plus_sft,0.00,90.83,55.67,35.67,55,266,386,domain pretrain 2 epochs then SFT 3 epochs
-fire_dsl_domain_sft_t001,domain_pretrain_plus_sft,0.00,91.83,55.67,37.17,49,266,377,domain_sft inference temperature 0.01
-fire_dsl_domain_sft_t001_norm,domain_pretrain_plus_sft_postprocess,0.00,100.00,56.17,37.17,0,263,377,domain_sft temperature 0.01 plus output normalization
-fire_dsl_domain_256_l4,domain_pretrain_plus_sft,0.33,68.67,43.50,25.83,188,339,445,domain_pretrain_sft auto pipeline
+﻿run_name,display_name,model_type,eval_set,exact_dsl_match,fenced_code_format,python_parse_ok,fire_dsl_executable,format_error_rows,parse_error_rows,execution_error_rows,notes
+fire_dsl_baseline_e3,Baseline SFT,full_sft,generalization,0.00,65.17,51.33,26.17,209,292,443,baseline SFT 3 epochs
+fire_dsl_domain_sft,Domain Pretrain + SFT,domain_pretrain_plus_sft,generalization,0.00,90.83,55.67,35.67,55,266,386,domain pretrain 2 epochs then SFT 3 epochs
+fire_dsl_domain_sft_t001,Low-temp Decoding,domain_pretrain_plus_sft,generalization,0.00,91.83,55.67,37.17,49,266,377,domain_sft inference temperature 0.01
+fire_dsl_domain_sft_t001_norm,Output Normalization,domain_pretrain_plus_sft_postprocess,generalization,0.00,100.00,56.17,37.17,0,263,377,domain_sft temperature 0.01 plus output normalization
+fire_dsl_domain_sft_rerank5_t02,Verifier Reranking,domain_pretrain_plus_sft_verifier_rerank,generalization,0.00,100.00,76.33,52.50,0,142,285,"5 candidates at temperature 0.2, select by parse/executable verifier"
+fire_dsl_domain_256_l4,Larger Model 256/4,domain_pretrain_plus_sft,generalization,0.33,68.67,43.50,25.83,188,339,445,domain_pretrain_sft auto pipeline
+fire_dsl_baseline_e3,Baseline SFT,full_sft,public,13.40,35.70,29.40,21.60,1286,1412,1568,baseline SFT 3 epochs
+fire_dsl_domain_sft,Domain Pretrain + SFT,domain_pretrain_plus_sft,public,19.05,90.20,64.65,45.70,196,707,1086,domain pretrain 2 epochs then SFT 3 epochs
+fire_dsl_domain_sft_rerank5_t02,Verifier Reranking,domain_pretrain_plus_sft_verifier_rerank,public,21.15,100.00,77.05,55.05,0,459,899,"5 candidates at temperature 0.2, select by parse/executable verifier"
+fire_dsl_domain_256_l4,Larger Model 256/4,domain_pretrain_plus_sft,public,39.30,60.85,50.05,44.35,783,999,1113,domain_pretrain_sft auto pipeline
