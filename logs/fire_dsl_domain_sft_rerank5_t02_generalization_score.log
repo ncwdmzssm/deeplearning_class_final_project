@@ -1,0 +1,14 @@
+/home/student/work/minimind-fire-project/fire-dsl-data/tools/fire_operator_dsl.py:414: FutureWarning: Downcasting behavior in Series and DataFrame methods 'where', 'mask', and 'clip' is deprecated. In a future version this will not infer object dtypes or cast all-round floats to integers. Instead call result.infer_objects(copy=False) for object inference, or cast round floats explicitly. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  return x.where(cond, y)
+/home/student/work/minimind-fire-project/fire-dsl-data/tools/fire_operator_dsl.py:121: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  return _to_frame(value, reference).fillna(False).astype(bool)
+file: results/fire_dsl_domain_sft_rerank5_t02_generalization_predictions.csv
+scored_rows: 600
+skipped_todo_rows: 0
+exact_dsl_match: 0.00%
+fenced_code_format: 100.00%
+python_parse_ok: 76.33%
+fire_dsl_executable: 52.50%
+format_error_rows: 0
+parse_error_rows: 142
+execution_error_rows: 285

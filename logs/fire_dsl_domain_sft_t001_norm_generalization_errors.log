@@ -1,0 +1,4 @@
+file: results/fire_dsl_domain_sft_t001_norm_generalization_predictions.csv
+parse_error: 263
+semantic_mismatch: 223
+execution_error: 114
