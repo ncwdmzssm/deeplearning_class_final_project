@@ -1,0 +1,6 @@
+﻿run_name,model_type,exact_dsl_match,fenced_code_format,python_parse_ok,fire_dsl_executable,format_error_rows,parse_error_rows,execution_error_rows,notes
+fire_dsl_baseline_e3,full_sft,0.00,65.17,51.33,26.17,209,292,443,baseline SFT 3 epochs
+fire_dsl_domain_sft,domain_pretrain_plus_sft,0.00,90.83,55.67,35.67,55,266,386,domain pretrain 2 epochs then SFT 3 epochs
+fire_dsl_domain_sft_t001,domain_pretrain_plus_sft,0.00,91.83,55.67,37.17,49,266,377,domain_sft inference temperature 0.01
+fire_dsl_domain_sft_t001_norm,domain_pretrain_plus_sft_postprocess,0.00,100.00,56.17,37.17,0,263,377,domain_sft temperature 0.01 plus output normalization
+fire_dsl_domain_256_l4,domain_pretrain_plus_sft,0.33,68.67,43.50,25.83,188,339,445,domain_pretrain_sft auto pipeline
