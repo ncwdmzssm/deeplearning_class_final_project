@@ -13,6 +13,42 @@ sys.path.insert(0, str(ROOT / "fire-dsl-data" / "tools"))
 from fire_operator_dsl import make_synthetic_data, verify_expression  # noqa: E402
 
 
+FENCE_RE = re.compile(r"```+\s*dsl_f*ire[a-z_]*\s*(.*?)\s*```+", flags=re.DOTALL | re.IGNORECASE)
+
+
+def clean_generation(text: str) -> str:
+    text = (text or "").strip()
+    text = re.sub(r"</?think>", "\n", text, flags=re.IGNORECASE)
+    text = re.sub(r"```+\s*dsl_f*ire[a-z_]*", "```dsl_fire", text, flags=re.IGNORECASE)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
+def normalize_prediction(text: str) -> str:
+    text = clean_generation(text)
+    block = FENCE_RE.search(text)
+    if block:
+        expr = re.sub(r"^\s*result\s*=\s*", "", block.group(1).strip())
+        expr = expr.split("```", 1)[0].strip()
+        return f"```dsl_fire\nresult = {expr}\n```"
+
+    line = re.search(r"result\s*=\s*(.+)", text, flags=re.DOTALL)
+    if line:
+        expr = re.sub(r"^\s*result\s*=\s*", "", line.group(1).split("```", 1)[0].strip())
+        return f"```dsl_fire\nresult = {expr}\n```"
+
+    expr_like = re.search(
+        r"\b(?:add|sub|mul|div|neg|pct_change|ts_[a-z_]+|xs_[a-z_]+|group_[a-z_]+|where|mask)\s*\(.+",
+        text,
+        flags=re.DOTALL,
+    )
+    if expr_like:
+        expr = expr_like.group(0).split("```", 1)[0].strip()
+        return f"```dsl_fire\nresult = {expr}\n```"
+
+    return text
+
+
 def extract_dsl(text: str) -> str:
     text = (text or "").strip()
     match = re.search(r"```dsl_fire\s*result\s*=\s*(.*?)\s*```", text, flags=re.DOTALL | re.IGNORECASE)
@@ -44,8 +80,9 @@ def verify_ok(expr: str, data) -> bool:
 
 
 def quality(pred: str, data):
-    expr = extract_dsl(pred)
-    fenced = is_fenced_code(pred)
+    normalized = normalize_prediction(pred)
+    expr = extract_dsl(normalized)
+    fenced = is_fenced_code(normalized)
     parsed = parse_ok(expr)
     executed = parsed and verify_ok(expr, data)
     return (1 if executed else 0, 1 if parsed else 0, 1 if fenced else 0, -len(expr))
@@ -73,10 +110,12 @@ def main():
         qs = quality(secondary.get("prediction", ""), data)
         if qs > qp:
             chosen = dict(secondary)
+            chosen["prediction"] = normalize_prediction(chosen.get("prediction", ""))
             chosen["notes"] = ((chosen.get("notes") or "") + f" | chosen_from={args.secondary_tag}").strip()
             choose_secondary += 1
         else:
             chosen = dict(primary)
+            chosen["prediction"] = normalize_prediction(chosen.get("prediction", ""))
             chosen["notes"] = ((chosen.get("notes") or "") + f" | chosen_from={args.primary_tag}").strip()
         output_rows.append(chosen)
 

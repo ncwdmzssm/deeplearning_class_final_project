@@ -41,6 +41,12 @@ eval/fire_operator_dsl_eval_code_public.jsonl
 - `train/fire_operator_dsl_pretrain_domain.jsonl`: short domain/operator text for continued pretraining.
 - `train/fire_operator_dsl_sft_train.jsonl`: auxiliary SFT data where the answer is only the bare DSL expression, not a code block.
 - `train/fire_operator_dsl_sft_reasoning_short.jsonl`: optional short-reasoning data.
+- `train/fire_operator_dsl_sft_structured_cot_codeblock.jsonl`: structured CoT data with field/operator/window/direction slots.
+- `train/fire_operator_dsl_sft_mixed_cot_80_20.jsonl`: 80% plain SFT + 20% structured CoT mixed data.
+- `train/fire_operator_dsl_sft_structured_cot_arity_codeblock.jsonl`: operator-arity-aware structured CoT data with explicit parameter-count checks.
+- `train/fire_operator_dsl_sft_mixed_cot_arity_90_10.jsonl`: 90% plain SFT + 10% arity-aware CoT mixed data.
+- `train/fire_operator_dsl_sft_mixed_cot_arity_80_20.jsonl`: 80% plain SFT + 20% arity-aware CoT mixed data.
+- `train/fire_operator_dsl_sft_mixed_cot_arity_70_30.jsonl`: 70% plain SFT + 30% arity-aware CoT mixed data.
 - `train/*_ideas_augmented.jsonl`: augmentation-only rows mapped from `ideas(1).json`.
 - `docs/operator_catalog.csv`: normalized operator list.
 - `docs/operator_dsl_case_library.csv`: validated source DSL case library.

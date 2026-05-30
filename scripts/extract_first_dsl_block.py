@@ -5,15 +5,29 @@ import re
 from pathlib import Path
 
 
-def normalize_expression(text: str) -> str:
+FENCE_RE = re.compile(r"```+\s*dsl_f*ire[a-z_]*\s*(.*?)\s*```+", flags=re.DOTALL | re.IGNORECASE)
+
+
+def clean_generation(text: str) -> str:
     text = (text or "").strip()
+    text = re.sub(r"</?think>", "\n", text, flags=re.IGNORECASE)
+    text = re.sub(r"```+\s*dsl_f*ire[a-z_]*", "```dsl_fire", text, flags=re.IGNORECASE)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
+def normalize_expression(text: str) -> str:
+    text = clean_generation(text)
+    text = re.sub(r"^```dsl_fire\s*", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\s*```$", "", text)
     text = re.sub(r"^\s*result\s*=\s*", "", text)
+    text = text.split("```", 1)[0]
     return text.strip()
 
 
 def extract_first_dsl_block(text: str) -> str:
-    text = (text or "").strip()
-    block = re.search(r"```dsl_fire\s*(.*?)\s*```", text, flags=re.DOTALL | re.IGNORECASE)
+    text = clean_generation(text)
+    block = FENCE_RE.search(text)
     if block:
         expr = normalize_expression(block.group(1))
         return f"```dsl_fire\nresult = {expr}\n```"
@@ -21,6 +35,15 @@ def extract_first_dsl_block(text: str) -> str:
     line = re.search(r"result\s*=\s*(.+)", text, flags=re.DOTALL)
     if line:
         expr = normalize_expression(line.group(1).split("```", 1)[0])
+        return f"```dsl_fire\nresult = {expr}\n```"
+
+    expr_like = re.search(
+        r"\b(?:add|sub|mul|div|neg|pct_change|ts_[a-z_]+|xs_[a-z_]+|group_[a-z_]+|where|mask)\s*\(.+",
+        text,
+        flags=re.DOTALL,
+    )
+    if expr_like:
+        expr = normalize_expression(expr_like.group(0))
         return f"```dsl_fire\nresult = {expr}\n```"
 
     return text
